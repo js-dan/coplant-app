@@ -1,0 +1,12 @@
+{
+  "name": "coplant",
+  "displayName": "coplant",
+  "expo": {
+    "name": "coplant",
+    "slug": "coplant",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
