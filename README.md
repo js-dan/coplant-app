@@ -20,7 +20,7 @@ You need to have `Expo` installed on your mobile device
 ### Installing the projcet
 1. Clone the repository from GitHub:
 ```
-git clone '#'
+git clone 'https://github.com/js-dan/coplant-app.git'
 ```
 2. Install the project dependencies:
 ```
