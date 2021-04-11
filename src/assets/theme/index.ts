@@ -1,7 +1,11 @@
 export default {
   mainColors: {
     white: '#FFFF',
-    unfocusedBakground: '#9D9D9D',
+    darkGray: '#2B2A2A',
+    bakground: '#FFFAF4',
+    green: '#5AB196',
+    orange: '#E27143',
+    darkBlue: '#435D74',
   },
   fonts: {
     h1: {
@@ -16,7 +20,7 @@ export default {
       size: '21px',
     },
     body: {
-      family: 'Montserrat_400Regular',
+      family: 'Roboto_400Regular',
       size: '19px',
     },
     secondary: {
@@ -25,9 +29,9 @@ export default {
     },
   },
   margins: {
-    leftRight: '20px',
-    top: '44px',
-    bottom: '24px',
+    leftRight: '16px',
+    top: '46px',
+    bottom: '30px',
   },
   borderRadius: {
     button: '5px',
