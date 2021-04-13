@@ -1,7 +1,16 @@
 import * as React from "react";
 import { ImageSourcePropType } from "react-native";
+import {
+  CommentContainer,
+  CommentText,
+  CommentTitle,
+  CommentRating,
+  CommentDivider,
+  CommentStar,
+} from "./style";
 
-import { CommentContainer, CommentText, Icon } from "./style";
+import theme from "../../assets/theme";
+import icons from "../../assets/icons";
 
 export interface CommentComponentProps {
   stars?: number;
@@ -16,8 +25,14 @@ const CommentComponent: React.ElementType<CommentComponentProps> = ({
 }: CommentComponentProps) => {
   return (
     <CommentContainer>
-      <CommentText>{usersName}</CommentText>
-      <CommentText>{stars}</CommentText>
+      <CommentTitle>{usersName}</CommentTitle>
+      <CommentRating>
+        <CommentTitle>{stars}</CommentTitle>
+        <CommentDivider />
+        {[...Array(stars)].map(() => (
+          <CommentStar source={icons.socialMedia.star} />
+        ))}
+      </CommentRating>
       <CommentText>{usersComment}</CommentText>
     </CommentContainer>
   );
