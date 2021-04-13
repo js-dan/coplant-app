@@ -16,14 +16,25 @@ export const DescriptionText = styled.TextInput<ConfirmationProps>`
   width: 281.15px;
   height: 78.27px;
   color: "black";
-  font-size: ${theme.fonts.body.size};
-  font-family: ${theme.fonts.body.family};
+  font-size: ${theme.fonts.secondary.size};
+  font-family: ${theme.fonts.secondary.family};
   background-color: ${theme.mainColors.lightGray}
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px
 `;
 
 export const ConfirmationText = styled.Text<ConfirmationProps>`
   color: "black";
-  font-size: ${theme.fonts.body.size};
-  font-family: ${theme.fonts.body.family};
+  font-size: ${theme.fonts.secondary.size};
+  font-family: ${theme.fonts.secondary.family};
+  margin-bottom: 5px;
+  margin-top: 10px
+  margin-right: 15px
 `;
-
+export const ConfirmationArea = styled.View<ConfirmationProps>`
+  flex-direction: row
+  margin-bottom: 10px;
+  margin-top: 10px
+`;

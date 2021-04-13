@@ -4,35 +4,37 @@ import "react-datepicker/dist/react-datepicker.css";
 import {ButtonComponent} from "../"
 import { ImageSourcePropType } from "react-native";
 
-import { ConfirmationContainer, DescriptionText, ConfirmationText, Icon } from "./style";
+import { ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea, Icon } from "./style";
 
 export interface ConfirmationComponentProps {
-  dateStart?:Date;
-  dateEnd?:Date;
+  startDate?:Date;
+  endDate?:Date;
   value:number;
-  description:string;
+  description?:string;
 }
 
 const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
-  dateStart, dateEnd, value, description
+  startDate, endDate, value, description
 }: ConfirmationComponentProps) => {
-  const [startDate, setStartDate] = React.useState(new Date());
-  const [endDate, setEndDate] = React.useState(new Date());
+  var setStartDate, setEndDate;
+  [startDate, setStartDate] = React.useState(new Date());
+  [endDate, setEndDate] = React.useState(new Date());
   return (
     <ConfirmationContainer>
       <ConfirmationText>{"Data Inicio"}</ConfirmationText>
       <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
       <ConfirmationText>{"Data Fim"}</ConfirmationText>
       <DatePicker selected={endDate} onChange={date => setEndDate(date)} />
-      <DescriptionText placeholder="Descrição..." />
-      <ConfirmationText>{"Valor: "+value}</ConfirmationText>
-      <ButtonComponent
-        buttonColor="orange"
-        buttonText="Confirmar"
-        size="small"
-        width="large"
-      />
-      
+      <DescriptionText placeholder="Descrição..." >{description}</DescriptionText>
+      <ConfirmationArea>
+        <ConfirmationText>{"Valor: R$"+value}</ConfirmationText>
+        <ButtonComponent
+          buttonColor="orange"
+          buttonText="Confirmar"
+          size="small"
+          width="40%"
+        />
+      </ConfirmationArea>
     </ConfirmationContainer>
   );
 };
