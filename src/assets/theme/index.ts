@@ -1,11 +1,12 @@
 export default {
   mainColors: {
-    white: '#FFFF',
+    white: '#FFFFFF',
     darkGray: '#2B2A2A',
     bakground: '#FFFAF4',
     green: '#5AB196',
     orange: '#E27143',
     darkBlue: '#435D74',
+    lightGray: '#D9D9D9'
   },
   fonts: {
     h1: {

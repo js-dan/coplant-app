@@ -29,6 +29,7 @@
     "feather-icons": "^4.28.0",
     "metro-config": "^0.64.0",
     "react": "16.13.1",
+    "react-datepicker": "^3.7.0",
     "react-dom": "16.13.1",
     "react-native": "~0.63.3",
     "react-native-elements": "^3.0.0-alpha.1",
