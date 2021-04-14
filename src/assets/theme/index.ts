@@ -9,14 +9,15 @@ export default {
   },
   fonts: {
     h1: {
-      family: 'Montserrat_400Regular_600SemiBold',
+      family: 'Nunito_700Bold',
+      size: '29px',
     },
     h2: {
-      family: 'Montserrat_600SemiBold',
+      family: 'Nunito_600SemiBold',
       size: '26px',
     },
     h3: {
-      family: 'Montserrat_600SemiBold',
+      family: 'Roboto_500Medium',
       size: '21px',
     },
     body: {
@@ -24,7 +25,7 @@ export default {
       size: '19px',
     },
     secondary: {
-      family: 'Montserrat_400Regular',
+      family: 'Roboto_400Regular',
       size: '17px',
     },
   },
