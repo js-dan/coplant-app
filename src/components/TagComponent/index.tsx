@@ -20,4 +20,3 @@ const TagComponent: React.ElementType<TagComponentProps> = ({
 
 export default TagComponent;
 
-git remote add Header_Tag_Components https://github.com/js-dan/coplant-app.git
