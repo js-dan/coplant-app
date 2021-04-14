@@ -4,7 +4,7 @@ import { useFonts, Montserrat_400Regular, Montserrat_600SemiBold } from '@expo-g
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 
-import { Home } from './src/pages';
+import { Home, Evaluation } from './src/pages';
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -19,7 +19,7 @@ const App: React.FC = () => {
   return (
     <>
       <StatusBar backgroundColor="white" />
-      <Home />
+      <Evaluation />
     </>
   );
 };

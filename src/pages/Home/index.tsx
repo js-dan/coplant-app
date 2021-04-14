@@ -1,13 +1,9 @@
 import React from 'react';
-import { ButtonComponent, Screen } from '../../components';
+import { ButtonComponent, Screen, EvaluationComponent } from '../../components';
 
 const Home: React.FC = () => (
   <Screen>
-    <ButtonComponent
-      buttonColor="orange"
-      buttonText="eitaPlantinha"
-      size="small"
-    />
+   <ButtonComponent/>
   </Screen>
 );
 
