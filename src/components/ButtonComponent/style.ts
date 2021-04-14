@@ -20,7 +20,6 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonProps>`
 
   justify-content: center;
   align-items: center;
-  align: center;
   flex-direction: row;
 
   background-color: ${({ buttonColor }) => theme.mainColors[buttonColor]};
