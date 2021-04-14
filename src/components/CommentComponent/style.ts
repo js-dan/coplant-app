@@ -7,7 +7,8 @@ type CommentProps = {};
 export const CommentContainer = styled.View<CommentProps>`
   background-color: ${theme.mainColors.darkBlue};
   width: 80%
-  min-width: 240px
+  max-width: 240px
+  margin-right: 20px
   height: 150px
   border-radius: 10px
   padding-left: ${theme.margins.leftRight}
