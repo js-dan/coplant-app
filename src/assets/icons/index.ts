@@ -1,5 +1,7 @@
 import Google from './google.png';
 import Facebook from './facebook.png';
+import ArrowLeft from './arrow-left.png';
+import ShareIcon from './share.png';
 
 export default {
   feather: {
@@ -28,4 +30,8 @@ export default {
     google: Google,
     facebook: Facebook,
   },
+  header:{
+    ArrowLeft: ArrowLeft,
+    ShareIcon: ShareIcon,
+  }
 };

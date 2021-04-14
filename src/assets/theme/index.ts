@@ -6,10 +6,12 @@ export default {
     green: '#5AB196',
     orange: '#E27143',
     darkBlue: '#435D74',
+    black: '#000000',
   },
   fonts: {
     h1: {
       family: 'Montserrat_400Regular_600SemiBold',
+      size: '24px',
     },
     h2: {
       family: 'Montserrat_600SemiBold',
@@ -18,6 +20,10 @@ export default {
     h3: {
       family: 'Montserrat_600SemiBold',
       size: '21px',
+    },
+    h6: {
+      family: 'Roboto_400Regular',
+      size: '12px',
     },
     body: {
       family: 'Roboto_400Regular',
@@ -50,4 +56,8 @@ export default {
       largeThin: '90%',
     },
   },
+  tagSize:{
+    width: '80px',
+    padding: '5px'
+  }
 };
