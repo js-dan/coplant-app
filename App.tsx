@@ -1,10 +1,14 @@
-import React from 'react';
-import { useFonts, Montserrat_400Regular, Montserrat_600SemiBold } from '@expo-google-fonts/montserrat';
+import React from "react";
+import {
+  useFonts,
+  Montserrat_400Regular,
+  Montserrat_600SemiBold,
+} from "@expo-google-fonts/montserrat";
 
-import AppLoading from 'expo-app-loading';
-import { StatusBar } from 'react-native';
+import AppLoading from "expo-app-loading";
+import { StatusBar } from "react-native";
 
-import { Home } from './src/pages';
+import { Caregiver } from "./src/pages";
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -19,7 +23,7 @@ const App: React.FC = () => {
   return (
     <>
       <StatusBar backgroundColor="white" />
-      <Home />
+      <Caregiver />
     </>
   );
 };

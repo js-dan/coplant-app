@@ -1,5 +1,3 @@
-import Home from './Home';
-
-export {
-  Home,
-};
+import Home from "./Home";
+import Caregiver from "./Caregiver";
+export { Home, Caregiver };
