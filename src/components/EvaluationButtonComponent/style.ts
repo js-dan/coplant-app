@@ -8,7 +8,7 @@ export const EvaluationButtonContainer = styled.View<EvaluationButtonProps>`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 329px
+  width: 375px
   height: 180px
   background-color: ${theme.mainColors.bakground};
   border-radius: 10px

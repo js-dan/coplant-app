@@ -5,7 +5,9 @@ import theme from "../../assets/theme";
 type ComplimentsProps = {};
 
 export const ComplimentsContainer = styled.View<ComplimentsProps>`
-  width: 329px
+  justify-content: center;
+  align-items: center;
+  width: 375px
   height: 180px
   background-color: ${theme.mainColors.bakground};
   border-radius: 10px
