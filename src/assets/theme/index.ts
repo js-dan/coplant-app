@@ -1,11 +1,11 @@
 export default {
   mainColors: {
-    white: '#FFFF',
-    darkGray: '#2B2A2A',
-    bakground: '#FFFAF4',
-    green: '#5AB196',
-    orange: '#E27143',
-    darkBlue: '#435D74',
+    white: "#FFFF",
+    darkGray: "#2B2A2A",
+    background: "#FFFAF4",
+    green: "#5AB196",
+    orange: "#E27143",
+    darkBlue: "#435D74",
   },
   fonts: {
     h1: {
@@ -21,8 +21,8 @@ export default {
       size: '21px',
     },
     body: {
-      family: 'Roboto_400Regular',
-      size: '19px',
+      family: "Roboto_400Regular",
+      size: "19px",
     },
     secondary: {
       family: 'Roboto_400Regular',
@@ -30,25 +30,25 @@ export default {
     },
   },
   margins: {
-    leftRight: '16px',
-    top: '46px',
-    bottom: '30px',
+    leftRight: "16px",
+    top: "46px",
+    bottom: "30px",
   },
   borderRadius: {
-    button: '5px',
+    button: "5px",
   },
   buttonSize: {
     padding: {
-      small: '12px',
-      medium: '11px',
-      large: '11px',
-      largeThin: '11px',
+      small: "12px",
+      medium: "11px",
+      large: "11px",
+      largeThin: "11px",
     },
     default_width: {
-      small: '22%',
-      medium: '42%',
-      large: '90%',
-      largeThin: '90%',
+      small: "22%",
+      medium: "42%",
+      large: "90%",
+      largeThin: "90%",
     },
   },
 };
