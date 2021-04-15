@@ -4,5 +4,8 @@ import CaregiverDescriptionComponent from "./CaregiverDescriptionComponent";
 import Divider from "./DividerComponent";
 
 import PlantComponent from './PlantComponent'
+import AddPlantComponent from './AddPlantComponent'
+import AddPlantButtonComponent from './AddPlantButtonComponent'
 
-export { ButtonComponent, Screen, CaregiverDescriptionComponent, Divider, PlantComponent };
+
+export { ButtonComponent, Screen, CaregiverDescriptionComponent, Divider, PlantComponent, AddPlantComponent, AddPlantButtonComponent };

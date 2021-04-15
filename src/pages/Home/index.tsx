@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonComponent, Screen, PlantComponent } from '../../components';
+import { ButtonComponent, Screen, PlantComponent, AddPlantComponent } from '../../components';
 
 const Home: React.FC = () => (
   <Screen>
@@ -7,6 +7,7 @@ const Home: React.FC = () => (
     name={"Orquidea"}
     qtd={3}
    />
+   <AddPlantComponent/>
   </Screen>
 );
 
