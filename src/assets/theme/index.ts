@@ -9,24 +9,24 @@ export default {
   },
   fonts: {
     h1: {
-      family: "Montserrat_400Regular",
-      size: "26px",
+      family: 'Nunito_700Bold',
+      size: '29px',
     },
     h2: {
-      family: "Montserrat_600SemiBold",
-      size: "26px",
+      family: 'Nunito_600SemiBold',
+      size: '26px',
     },
     h3: {
-      family: "Montserrat_600SemiBold",
-      size: "21px",
+      family: 'Roboto_500Medium',
+      size: '21px',
     },
     body: {
       family: "Roboto_400Regular",
       size: "19px",
     },
     secondary: {
-      family: "Montserrat_400Regular",
-      size: "17px",
+      family: 'Roboto_400Regular',
+      size: '17px',
     },
   },
   margins: {
