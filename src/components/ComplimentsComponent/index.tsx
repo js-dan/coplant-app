@@ -7,17 +7,17 @@ import { ComplimentsContainer, ComplimentsText, MessageText} from "./style";
 
 
 export interface ComplimentsProps {
-  value?:number
+  message?:string
 }
 
 const ComplimentsComponent: React.ElementType<ComplimentsProps> = ({
-  value
+  message
 }: ComplimentsProps) => {
   return (
     <ComplimentsContainer>
      
       <ComplimentsText>{"Quais os elogios ao cuidador?"}</ComplimentsText>
-      <MessageText placeholder="Mensagem..." />
+      <MessageText placeholder="Mensagem...">{message}</MessageText>
       
     </ComplimentsContainer>
     

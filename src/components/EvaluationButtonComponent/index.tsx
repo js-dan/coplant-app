@@ -17,7 +17,8 @@ const EvaluationButtonComponent: React.ElementType<EvaluationButtonProps> = ({
         buttonColor="orange"
         buttonText="Confirmar"
         size="small"
-        width="40%"
+        width="100%"
+        textColor="white"
       />
     </EvaluationButtonContainer>
     

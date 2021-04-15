@@ -23,6 +23,7 @@ export const MessageText = styled.TextInput<ComplimentsProps>`
   background-color: ${theme.mainColors.lightGray}
   padding-bottom: 10px;
   padding-top: 10px;
+  padding-left: 15px;
   margin-bottom: 10px;
   margin-top: 10px
   align:center

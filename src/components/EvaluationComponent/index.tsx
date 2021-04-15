@@ -16,7 +16,7 @@ const EvaluationComponent: React.ElementType<EvaluationProps> = ({
   return (
     <EvaluationContainer>
       <EvaluationText>{"Avaliação do cuidador: "}</EvaluationText>
-      <Rating/>
+      <Rating>{value}</Rating>
     </EvaluationContainer>
     
   );
