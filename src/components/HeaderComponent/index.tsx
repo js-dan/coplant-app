@@ -17,9 +17,9 @@ const HeaderComponent: React.ElementType<HeaderComponentProps> = ({
 }: HeaderComponentProps) => {
   return (
     <HeaderContainer>
-       { arrowLeft && (<ArrowLeft source={arrowLeft as ImageSourcePropType} />) }
+       <ArrowLeft arrowLeft={arrowLeft} source={arrowLeft as ImageSourcePropType} />
        <HeaderText>{headerText}</HeaderText>
-       { shareIcon && (<ShareIcon source={shareIcon as ImageSourcePropType} />) }
+       <ShareIcon shareIcon={shareIcon} source={shareIcon as ImageSourcePropType} />
     </HeaderContainer>
   );
 };
