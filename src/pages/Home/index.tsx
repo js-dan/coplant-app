@@ -1,20 +1,12 @@
-import React from "react";
-import { ButtonComponent, Screen, Divider } from "../../components";
-import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
+import React from 'react';
+import { ButtonComponent, Screen, PlantComponent } from '../../components';
 
 const Home: React.FC = () => (
   <Screen>
-    <DescriptionComponent
-      description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
-      poder te ajudar a ter uma casa bem verde."
-    />
-    <Divider />
-    <ButtonComponent
-      buttonColor="orange"
-      buttonText="Contratar"
-      size="big"
-      textColor="white"
-    />
+   <PlantComponent
+    name={"Orquidea"}
+    qtd={3}
+   />
   </Screen>
 );
 

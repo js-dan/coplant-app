@@ -30,4 +30,5 @@ export default {
     facebook: Facebook,
     star: Star,
   },
+  
 };

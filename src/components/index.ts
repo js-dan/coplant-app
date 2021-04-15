@@ -3,4 +3,6 @@ import Screen from "./Screen";
 import CaregiverDescriptionComponent from "./CaregiverDescriptionComponent";
 import Divider from "./DividerComponent";
 
-export { ButtonComponent, Screen, CaregiverDescriptionComponent, Divider };
+import PlantComponent from './PlantComponent'
+
+export { ButtonComponent, Screen, CaregiverDescriptionComponent, Divider, PlantComponent };
