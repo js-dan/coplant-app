@@ -18,7 +18,7 @@ const Caregiver: React.FC = () => (
       <View style={{ height: 150, marginTop: 20 }}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <CommentComponent
-            usersName={"Daniel"}
+            usersName={"Daniela"}
             stars={5}
             usersComment={"Wow, amazing guys!"}
           />
