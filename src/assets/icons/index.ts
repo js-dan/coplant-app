@@ -2,6 +2,8 @@ import Google from "./google.png";
 import Facebook from "./facebook.png";
 import Star from "./Star.png";
 
+
+
 export default {
   feather: {
     check: "check",

@@ -21,7 +21,7 @@ const PlantComponent: React.ElementType<PlantComponentProps> = ({
 }: PlantComponentProps) => {
   return (
     <PlantContainer>
-      {name && (<PlantImage source={icons.plants.Orquidea}/>)}
+      {name && (<PlantImage source={require('../../assets/img/plants/'+name+'.png')}/>)}
       <PlantText>{qtd+'x '+name}</PlantText>
     </PlantContainer>
   );
