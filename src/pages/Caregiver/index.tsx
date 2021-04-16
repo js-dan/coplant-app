@@ -5,10 +5,12 @@ import DescriptionComponent from "../../components/CaregiverDescriptionComponent
 import CommentComponent from "../../components/CommentComponent";
 import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
+import YoutubePlayer from "react-native-youtube-iframe";
 
 const Caregiver: React.FC = () => (
   <Screen>
     <Background>
+      <YoutubePlayer height={300} play={true} videoId={"3iAPUKyLGyA"} />
       <DescriptionComponent
         description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
       poder te ajudar a ter uma casa bem verde."
@@ -34,7 +36,6 @@ const Caregiver: React.FC = () => (
           />
         </ScrollView>
       </View>
-
       <Divider />
       <ButtonContainer>
         <ButtonComponent
