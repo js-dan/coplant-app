@@ -20,6 +20,10 @@ export default {
       family: "Roboto_500Medium",
       size: "21px",
     },
+    h6: {
+      family: 'Roboto_400Regular',
+      size: '12px',
+    },
     body: {
       family: "Roboto_400Regular",
       size: "19px",
@@ -51,4 +55,8 @@ export default {
       largeThin: "90%",
     },
   },
+  tagSize:{
+    width: '80px',
+    padding: '5px'
+  }
 };
