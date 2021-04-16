@@ -6,17 +6,19 @@ import CommentComponent from "../../components/CommentComponent";
 import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
 import YoutubePlayer from "react-native-youtube-iframe";
+import HeaderComponent from "../../components/HeaderComponent";
 
 const Caregiver: React.FC = () => (
   <Screen>
     <Background>
+      <HeaderComponent headerText="Perfil Cuidador" />
       <YoutubePlayer height={300} play={true} videoId={"3iAPUKyLGyA"} />
       <DescriptionComponent
         description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
       poder te ajudar a ter uma casa bem verde."
       />
       <Divider />
-      <SectionTitle>Comentários</SectionTitle>
+      <SectionTitle> {"Comentários"} </SectionTitle>
       <View style={{ height: 150, marginTop: 20 }}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <CommentComponent

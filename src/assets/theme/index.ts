@@ -1,11 +1,12 @@
 export default {
   mainColors: {
-    white: "#FFFF",
+    white: "#FFFFFF",
     darkGray: "#2B2A2A",
     background: "#FFFAF4",
     green: "#5AB196",
     orange: "#E27143",
     darkBlue: "#435D74",
+    black: "#000000",
   },
   fonts: {
     h1: {
@@ -21,8 +22,8 @@ export default {
       size: "21px",
     },
     h6: {
-      family: 'Roboto_400Regular',
-      size: '12px',
+      family: "Roboto_400Regular",
+      size: "12px",
     },
     body: {
       family: "Roboto_400Regular",
@@ -55,8 +56,8 @@ export default {
       largeThin: "90%",
     },
   },
-  tagSize:{
-    width: '80px',
-    padding: '5px'
-  }
+  tagSize: {
+    width: "80px",
+    padding: "5px",
+  },
 };
