@@ -7,7 +7,7 @@ type iconsProps = {
   shareIcon?: string;
 };
 
-export const HeaderContainer = styled.Text`
+export const HeaderContainer = styled.View`
   display: flex;
   flexDirection: row;
   justifyContent: space-between;
