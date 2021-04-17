@@ -10,7 +10,7 @@ type PlantProps = {
 export const PlantContainer = styled.View<PlantProps>`
   justify-content: center;
   align-items: center;
-  background-color: ${theme.mainColors.bakground};
+  background-color: ${theme.mainColors.background};
   width: 150px
   height: 150px
   border-radius: 10px

@@ -8,7 +8,7 @@ type AddPlantProps = {
 export const AddPlantContainer = styled.View<AddPlantProps>`
   justify-content: center;
   align-items: center;
-  background-color: ${theme.mainColors.bakground};
+  background-color: ${theme.mainColors.background};
   width: 150px
   height: 150px
   border-radius: 10px
