@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ImageSourcePropType } from 'react-native';
 
 import { HeaderContainer, HeaderText, ArrowLeft, ShareIcon } from './style';
+import Icons from '../../assets/icons/index';
 
 export interface HeaderComponentProps {
   headerText?: string;
@@ -17,9 +18,9 @@ const HeaderComponent: React.ElementType<HeaderComponentProps> = ({
 }: HeaderComponentProps) => {
   return (
     <HeaderContainer>
-       <ArrowLeft arrowLeft={arrowLeft} source={arrowLeft as ImageSourcePropType} />
+       <ArrowLeft arrowLeft={arrowLeft} source={Icons.header.ArrowLeft as ImageSourcePropType} />
        <HeaderText>{headerText}</HeaderText>
-       <ShareIcon shareIcon={shareIcon} source={shareIcon as ImageSourcePropType} />
+       <ShareIcon shareIcon={shareIcon} source={Icons.header.ShareIcon as ImageSourcePropType} />
     </HeaderContainer>
   );
 };

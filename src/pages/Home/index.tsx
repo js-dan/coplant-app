@@ -11,7 +11,7 @@ const Home: React.FC = () => (
       size="small"
     />
     <TagComponent text="Cuidadoso"></TagComponent>
-    <HeaderComponent headerText="Perfil Cuidador" arrowLeft={Icons.header.ArrowLeft} shareIcon={Icons.header.ShareIcon}></HeaderComponent>
+    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true"></HeaderComponent>
   </Screen>
 );
 
