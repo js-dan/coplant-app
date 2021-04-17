@@ -1,9 +1,9 @@
 import React from 'react';
-import { ButtonComponent, Screen} from '../../components';
 import TagComponent from '../../components/TagComponent';
 import HeaderComponent from '../../components/HeaderComponent';
-import Icons from '../../assets/icons/index';
-        
+import { ButtonComponent, Screen, Divider } from "../../components";
+import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
+
 const Home: React.FC = () => (
   <Screen>
     <DescriptionComponent
@@ -18,7 +18,7 @@ const Home: React.FC = () => (
       textColor="white"
     />
     <TagComponent text="Cuidadoso"></TagComponent>
-    <HeaderComponent headerText="Perfil Cuidador" arrowLeft={Icons.header.ArrowLeft} shareIcon={Icons.header.ShareIcon}></HeaderComponent>
+    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true"></HeaderComponent>
   </Screen>
 );
 
