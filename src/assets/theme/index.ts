@@ -8,7 +8,8 @@ export default {
     darkBlue: "#435D74",
     lightGray: '#D9D9D9',
     black: "#000000",
-    lightGray:"#D9D9D9"
+    lightGray:"#D9D9D9",
+    cardBackground: '#FFF7EE',
   },
   fonts: {
     h1: {

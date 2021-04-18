@@ -15,6 +15,12 @@ const Home: React.FC = () => (
     plants={["coentro", "onze-horas"]}
     before={false}
     />
+    <CaregiverCardComponent
+      skills="Corre"
+      name="Pietro"
+      rating="4.3"
+      district="Sokovia"
+    />
   </Screen>
 );
 
