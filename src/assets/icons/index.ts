@@ -8,7 +8,7 @@ export default {
     fowardArrow: 'chevron-right',
     backArrow: 'chevron-left',
     search: 'search',
-    start: 'start',
+    star: 'star',
     user: 'user',
     creditCard: 'credit-card',
     list: 'list',

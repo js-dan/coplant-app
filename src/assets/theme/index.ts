@@ -6,6 +6,7 @@ export default {
     green: '#5AB196',
     orange: '#E27143',
     darkBlue: '#435D74',
+    cardBackground: '#FFF7EE',
   },
   fonts: {
     h1: {
