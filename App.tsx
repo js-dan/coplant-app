@@ -1,4 +1,7 @@
 import React from "react";
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
   useFonts,
   Roboto_400Regular,
@@ -14,7 +17,9 @@ import {
 import AppLoading from "expo-app-loading";
 import { StatusBar } from "react-native";
 
-import { Caregiver } from "./src/pages";
+import { Caregiver, Home } from "./src/pages";
+
+const Tab = createBottomTabNavigator();
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -31,10 +36,38 @@ const App: React.FC = () => {
   }
 
   return (
-    <>
+    <NavigationContainer>
       <StatusBar backgroundColor="white" />
-      <Caregiver />
-    </>
+      <Tab.Navigator
+              screenOptions={({ route }) => ({
+                tabBarIcon: ({ focused, color, size }) => {
+                  let iconName;
+                  color = focused ? 'tomato' : 'gray'
+
+                  if (route.name === 'Cuidadores') {
+                    iconName = 'md-people'
+                  } else if (route.name === 'Histórico') {
+                    iconName = 'ios-paper'
+                  } else if (route.name === 'Cupons') {
+                    iconName = 'ios-pricetags';
+                  } else if (route.name === 'Perfil') {
+                    iconName = 'md-person';
+                  }
+                  
+                  return <Ionicons name={iconName} size={size} color={color} />;
+                },
+              })}
+              tabBarOptions={{
+                activeTintColor: 'tomato',
+                inactiveTintColor: 'gray',
+              }}
+          >
+        <Tab.Screen name="Cuidadores" component={Caregiver} />
+        <Tab.Screen name="Histórico" component={Caregiver} />
+        <Tab.Screen name="Cupons" component={Caregiver} />
+        <Tab.Screen name="Perfil" component={Caregiver} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 };
 export default App;
