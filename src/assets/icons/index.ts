@@ -1,6 +1,7 @@
 import Google from "./google.png";
 import Facebook from "./facebook.png";
 import Star from "./Star.png";
+import Camera from './camera.png';
 
 
 
@@ -31,6 +32,7 @@ export default {
     google: Google,
     facebook: Facebook,
     star: Star,
+    camera: Camera,
   },
   
 };
