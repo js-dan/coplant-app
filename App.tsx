@@ -7,7 +7,7 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 
-import { Home } from './src/pages';
+import { CaregiverListage, Home } from './src/pages';
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -26,7 +26,7 @@ const App: React.FC = () => {
   return (
     <>
       <StatusBar backgroundColor="white" />
-      <Home />
+      <CaregiverListage />
     </>
   );
 };
