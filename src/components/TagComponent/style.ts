@@ -9,7 +9,7 @@ type SpecificColor = {
     color?: string;
 };  
 
-export const TagContainer = styled.Text<TagProps>`
+export const TagContainer = styled.View<TagProps>`
   width: ${theme.tagSize.width};
   padding-top: ${theme.tagSize.padding};
   padding-bottom: ${theme.tagSize.padding};

@@ -15,7 +15,7 @@ export const HeaderContainer = styled.Text`
    justifyContent: space-between;
    alignItems: center;
 `;
-export const HeaderText = styled.Text`
+export const HeaderText = styled.View`
   font-family: ${theme.fonts.body.family};
   font-size: ${theme.fonts.h1.size};
   color: ${theme.mainColors.black};
