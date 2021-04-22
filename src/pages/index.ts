@@ -11,6 +11,8 @@ import Chat from './Chat'
 import EvaluationCaregiver from "./EvaluationCaregiver"
 import Thanks from './Thanks'
 import Promotion from './Promotion'
+import RequestList from "./RequestList"
+
 export { Initial, 
          Home,
         Promotion,
@@ -23,5 +25,6 @@ export { Initial,
          EvaluationCaregiver,
          CaregiverProfile,
          Thanks,
-         Chat};
-
+         Chat,
+         RequestList
+         };
