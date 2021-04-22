@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import TagComponent from '../../components/TagComponent';
+import HeaderComponent from '../../components/HeaderComponent';
 import { ButtonComponent, Screen, Divider } from "../../components";
 import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
 
@@ -15,6 +17,8 @@ const Home: React.FC = () => (
       size="big"
       textColor="white"
     />
+    <TagComponent text="Cuidadoso"></TagComponent>
+    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true"></HeaderComponent>
   </Screen>
 );
 
