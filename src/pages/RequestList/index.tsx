@@ -2,30 +2,30 @@ import React from "react";
 import { ScrollView, View, Text } from "react-native";
 import { ButtonComponent, Screen, Divider } from "../../components";
 import theme from "../../assets/theme";
-import {RequestCardComponent} from "../../components"
+import {RequestCardComponent, RequestCardActiveComponent} from "../../components"
 import { Background, SectionTitle, ButtonContainer } from "./style";
 
 const RequestList: React.FC = () => (
   <Screen>
     <Background>
       <SectionTitle>Em aberto</SectionTitle>
-      <View style={{ height: 150, marginTop: 20 }}>
+      <View style={{ height: 230, marginTop: 20 }}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <RequestCardComponent
+          <RequestCardActiveComponent
             userName={"Liz Andrade"}
             stars={5}
             userLocation={"Casa Amarela"}
             startDate={new Date("2020-10-10")}
             endDate={new Date("2020-10-12")}
           />
-          <RequestCardComponent
+          <RequestCardActiveComponent
             userName={"Liz Andrade"}
             stars={5}
             userLocation={"Casa Amarela"}
             startDate={new Date("2020-10-10")}
             endDate={new Date("2020-10-12")}
           />
-          <RequestCardComponent
+          <RequestCardActiveComponent
             userName={"Liz Andrade"}
             stars={5}
             userLocation={"Casa Amarela"}

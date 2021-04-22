@@ -14,6 +14,7 @@ import InsertImageComponent from './InsertImageComponent';
 import HistoricCardComponent from './HistoricCardComponent'
 import HeaderComponent from './HeaderComponent'
 import RequestCardComponent from './RequestCardComponent'
+import RequestCardActiveComponent from './RequestCardActiveComponent'
 
 export {
   ButtonComponent,
@@ -31,5 +32,6 @@ export {
   InsertImageComponent,
   HistoricCardComponent,
   HeaderComponent,
-  RequestCardComponent
+  RequestCardComponent,
+  RequestCardActiveComponent
 };
