@@ -1,13 +1,14 @@
 import React from "react";
 import { ScrollView, View, Text } from "react-native";
-import { ButtonComponent, Screen, Divider } from "../../components";
+import { ButtonComponent, Screen, Divider} from "../../components";
 import theme from "../../assets/theme";
-import {RequestCardComponent, RequestCardActiveComponent} from "../../components"
+import {RequestCardComponent, RequestCardActiveComponent, HeaderComponent} from "../../components"
 import { Background, SectionTitle, ButtonContainer } from "./style";
 
 const RequestList: React.FC = () => (
   <Screen>
     <Background>
+      <HeaderComponent headerText="Solicitações" arrowLeft="true" shareIcon="true"></HeaderComponent>
       <SectionTitle>Em aberto</SectionTitle>
       <View style={{ height: 230, marginTop: 20 }}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
