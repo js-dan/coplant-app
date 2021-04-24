@@ -18,6 +18,7 @@ import DescriptionEditableComponent from './CaregiverEditableDescriptionComponen
 import AddMediaComponent from './AddMediaComponent'
 import RequestCardComponent from './RequestCardComponent'
 import RequestCardActiveComponent from './RequestCardActiveComponent'
+import ConfirmationRequestComponent from "./ConfirmationRequestComponent"
 
 import PromotionComponent from './PromotionComponent';
 export {
