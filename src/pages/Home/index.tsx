@@ -1,12 +1,23 @@
 import React from 'react';
-import { ButtonComponent, CaregiverCardComponent, Screen } from '../../components';
+import {
+  ButtonComponent, CaregiverCardComponent, Screen, Divider,
+} from '../../components';
+import TagComponent from '../../components/TagComponent';
+import HeaderComponent from '../../components/HeaderComponent';
+import DescriptionComponent from '../../components/CaregiverDescriptionComponent';
 
 const Home: React.FC = () => (
   <Screen>
+    <DescriptionComponent
+      description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
+      poder te ajudar a ter uma casa bem verde."
+    />
+    <Divider />
     <ButtonComponent
       buttonColor="orange"
-      buttonText="eitaPlantinha"
-      size="small"
+      buttonText="Contratar"
+      size="big"
+      textColor="white"
     />
     <CaregiverCardComponent
       skills="Corre"
@@ -14,6 +25,8 @@ const Home: React.FC = () => (
       rating="4.3"
       district="Sokovia"
     />
+    <TagComponent text="Cuidadoso" />
+    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true" />
   </Screen>
 );
 

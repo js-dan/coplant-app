@@ -1,5 +1,8 @@
 import Google from './google.png';
 import Facebook from './facebook.png';
+import ArrowLeft from './arrow-left.png';
+import ShareIcon from './share.png';
+import Star from './Star.png';
 
 export default {
   feather: {
@@ -27,5 +30,10 @@ export default {
   socialMedia: {
     google: Google,
     facebook: Facebook,
+    star: Star,
+  },
+  header: {
+    ArrowLeft,
+    ShareIcon,
   },
 };
