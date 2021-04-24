@@ -51,10 +51,10 @@ const App: React.FC = () => {
                 inactiveTintColor: 'gray',
               }}
           >
-        <Tab.Screen name="Cuidadores" component={Caregiver} />
+        <Tab.Screen name="Cuidadores" component={Home} />
         <Tab.Screen name="Histórico" component={Caregiver} />
         <Tab.Screen name="Cupons" component={Caregiver} />
-        <Tab.Screen name="Perfil" component={Caregiver} />
+        <Tab.Screen name="Perfil" component={User} />
       </Tab.Navigator>
     </NavigationContainer>
   );

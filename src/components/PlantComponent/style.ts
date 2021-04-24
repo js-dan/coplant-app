@@ -20,7 +20,7 @@ export const PlantContainer = styled.View<PlantProps>`
 `;
 
 export const PlantText = styled.Text<PlantProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   font-weight: bold

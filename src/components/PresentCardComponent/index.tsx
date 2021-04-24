@@ -32,8 +32,8 @@ const PresentCardComponent: React.ElementType<PresentCardComponentProps> = ({
       <PresentCardTitleContainer>
         <PresentCardTitle>{userName}</PresentCardTitle>
         <PresentCardRating>
-          {[...Array(stars)].map(() => (
-            <PresentCardStar source={icons.socialMedia.star} />
+          {[...Array(stars)].map((index) => (
+            <PresentCardStar key={index} source={icons.socialMedia.star} />
           ))}
           <PresentCardDivider/>
           <PresentCardText>{userLocation}</PresentCardText>

@@ -45,7 +45,7 @@ export const CommentStar = styled.Image<CommentProps>`
 `;
 
 export const CommentDivider = styled.View<CommentProps>`
-  border-radius: 100
+  border-radius: 100px
   width: 7px
   height: 7px
   background-color: #383838

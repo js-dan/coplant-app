@@ -29,8 +29,8 @@ const CommentComponent: React.ElementType<CommentComponentProps> = ({
       <CommentRating>
         <CommentTitle>{stars}</CommentTitle>
         <CommentDivider />
-        {[...Array(stars)].map(() => (
-          <CommentStar source={icons.socialMedia.star} />
+        {[...Array(stars)].map((index) => (
+          <CommentStar key={index} source={icons.socialMedia.star} />
         ))}
       </CommentRating>
       <CommentText>{usersComment}</CommentText>

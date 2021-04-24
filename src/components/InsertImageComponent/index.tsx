@@ -1,7 +1,6 @@
 import * as React from "react";
-import {ButtonComponent} from "../"
+import ButtonComponent from "../ButtonComponent"
 import { ImageSourcePropType, Button, Picker } from "react-native";
-import * as ImagePicker from 'react-native-image-picker';
 import icons from "../../assets/icons";
 
 import { InsertImageContainer, InputText, InsertImageField, Image, DescriptionText, InputQtd } from "./style";

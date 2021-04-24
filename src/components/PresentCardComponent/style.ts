@@ -18,13 +18,13 @@ export const PresentCardContainer = styled.View<PresentCardComponentProps>`
 `;
 
 export const PresentCardText = styled.Text<PresentCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
 `;
 
 export const PresentCardTitle = styled.Text<PresentCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};

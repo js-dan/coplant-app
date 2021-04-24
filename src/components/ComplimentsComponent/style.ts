@@ -17,7 +17,7 @@ export const ComplimentsContainer = styled.View<ComplimentsProps>`
 export const MessageText = styled.TextInput<ComplimentsProps>`
   width: 281.15px;
   height: 78.27px;
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   background-color: ${theme.mainColors.lightGray}
@@ -30,7 +30,7 @@ export const MessageText = styled.TextInput<ComplimentsProps>`
 `;
 
 export const ComplimentsText = styled.Text<ComplimentsProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   margin-bottom: 5px;

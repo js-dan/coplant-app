@@ -15,7 +15,7 @@ export const ConfirmationContainer = styled.View<ConfirmationProps>`
 export const DescriptionText = styled.TextInput<ConfirmationProps>`
   width: 281.15px;
   height: 78.27px;
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   background-color: ${theme.mainColors.lightGray}
@@ -26,7 +26,7 @@ export const DescriptionText = styled.TextInput<ConfirmationProps>`
 `;
 
 export const ConfirmationText = styled.Text<ConfirmationProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   margin-bottom: 5px;
