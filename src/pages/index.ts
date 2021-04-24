@@ -1,4 +1,5 @@
 import Home from "./Home";
 import Caregiver from "./Caregiver";
 import User from "./User"
-export { Home, Caregiver, User };
+import Evaluation from './Evaluation'
+export { Home, Caregiver, User, Evaluation };
