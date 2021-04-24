@@ -117,3 +117,11 @@ export const InfoContainer = styled.View`
   width: 100%;
   
 `;
+
+export const SectionTitle = styled.Text`
+  font-family: ${theme.fonts.h1.family}
+  font-size: 26px
+  font-weight: bold
+  margin-bottom: 7px
+  padding-left: 15px
+`;
