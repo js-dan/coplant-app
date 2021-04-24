@@ -8,17 +8,20 @@ import {
 } from './style';
 
 import icons from '../../assets/icons';
+import TagComponent from '../TagComponent';
 
 export interface CaregiverCardProps {
   name?: string;
   rating?: string;
   district?: string;
-  skills?: string;
+  skill1?: string;
+  skill2?: string;
+  skill3?: string;
 }
 
 const CaregiverCard: React.ElementType<CaregiverCardProps> = (
   {
-    name, rating, district, skills,
+    name, rating, district, skill1, skill2, skill3,
   }: CaregiverCardProps,
 ) => (
   <Item>
@@ -28,12 +31,19 @@ const CaregiverCard: React.ElementType<CaregiverCardProps> = (
         {name}
       </Name>
       <Infos>
-
         {rating}
         {district}
       </Infos>
       <Skills>
-        {skills}
+        <TagComponent
+          text={skill1}
+        />
+        <TagComponent
+          text={skill2}
+        />
+        <TagComponent
+          text={skill3}
+        />
       </Skills>
     </ProfileInfos>
   </Item>

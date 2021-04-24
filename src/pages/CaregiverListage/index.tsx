@@ -4,19 +4,25 @@ import { CaregiverCardComponent, Screen } from '../../components';
 const CaregiverListage: React.FC = () => (
   <Screen>
     <CaregiverCardComponent
-      skills="Corre"
+      skill1="Correr"
+      skill2="Contar piada"
+      skill3="Levar bala"
       name="Pietro"
       rating="4.3"
       district="Sokovia"
     />
     <CaregiverCardComponent
-      skills="Corre"
+      skill1="Correr"
+      skill2="Contar piada"
+      skill3="Levar bala"
       name="Pietro"
       rating="4.3"
       district="Sokovia"
     />
     <CaregiverCardComponent
-      skills="Corre"
+      skill1="Correr"
+      skill2="Contar piada"
+      skill3="Levar bala"
       name="Pietro"
       rating="4.3"
       district="Sokovia"
