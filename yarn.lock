@@ -8251,10 +8251,10 @@ react-native-ratings@^7.3.0:
     lodash "^4.17.15"
     prop-types "^15.7.2"
 
-react-native-ratings@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-8.0.1.tgz#b58dcf2fb8b17f7d09ec95a2d7a5d883d681a4ce"
-  integrity sha512-4U/qGjfsSvLzvLQuL7Uzebc37eJhG2ADVLg0PM+loW0MI2gwBbtBEQcqV3yoTtFtpPZh9FRqGX3OGmurPsoCWQ==
+react-native-ratings@^8.0.2:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-8.0.3.tgz#680146f5f1e136cdc9e2b40a484a4635a2e5ddff"
+  integrity sha512-4ZZYmgOCQ0LA9mp8u2rrH5wnh0woEcgsGYic5YPI9xqsmm/tcvY2Q9fvYzXstrCzaCRzvkHE20fJUHtnJfRuVA==
   dependencies:
     lodash "^4.17.15"
     prop-types "^15.7.2"
