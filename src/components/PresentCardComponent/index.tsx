@@ -28,7 +28,7 @@ const PresentCardComponent: React.ElementType<PresentCardComponentProps> = ({
 }: PresentCardComponentProps) => {
   return (
     <PresentCardContainer>
-      <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
+      {/* <UserImage source={require('../../assets/img/users/'+userName+'.png')}/> */}
       <PresentCardTitleContainer>
         <PresentCardTitle>{userName}</PresentCardTitle>
         <PresentCardRating>

@@ -22,7 +22,7 @@ const InsertImageComponent: React.ElementType<InsertImageComponentProps> = ({
     <InsertImageContainer>
       <InsertImageField>
         <DescriptionText>{"Espécie: "}</DescriptionText>
-        <InputText></InputText>
+        <InputText />
       </InsertImageField>
       <InsertImageField>
         <DescriptionText>{"Quantidade: "}</DescriptionText>

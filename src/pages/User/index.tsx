@@ -12,23 +12,23 @@ import { Background, SectionTitle, ButtonContainer } from "./style";
 const User: React.FC = () => (
   <Screen>
     <Background>
-      <PresentCardComponent
+      {/* <PresentCardComponent
        userName={"Liz Machado"}
        stars={3}
        userLocation={"Casa Amarela"}
-      />
+      /> */}
       <Divider/>
       <DescriptionComponent
         description="Sou apaixonada por plantas desde meus 14 anos, e por essa paixão que me especializei em botânica no meu curso de Biologia. Preciso de alguém que ame plantas, tanto quanto eu  😀"
       />
       <Divider />
-      <SectionTitle>Minhas Plantas</SectionTitle>
+      <SectionTitle> {"Minhas Plantas"} </SectionTitle>
       <View style={{ height: 150, marginTop: 0}}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <PlantComponent
+          {/* <PlantComponent
             name={"Orquidea"}
             qtd={3}
-          />
+          /> */}
           <AddPlantComponent/>
         </ScrollView>
       </View>

@@ -1,10 +1,10 @@
 import * as React from "react";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+//import "react-datepicker/dist/react-datepicker.css";
 import {ButtonComponent} from "../"
 import { ImageSourcePropType } from "react-native";
 
-import { ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea, Icon } from "./style";
+import { ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea } from "./style";
 
 export interface ConfirmationComponentProps {
   startDate?:Date;
