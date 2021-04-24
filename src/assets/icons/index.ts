@@ -1,5 +1,7 @@
-import Google from "./google.png";
-import Facebook from "./facebook.png";
+import Google from './google.png';
+import Facebook from './facebook.png';
+import ArrowLeft from './arrow-left.png';
+import ShareIcon from './share.png';
 import Star from "./Star.png";
 import Camera from './camera.png';
 
@@ -34,5 +36,8 @@ export default {
     star: Star,
     camera: Camera,
   },
-  
+  header:{
+    ArrowLeft: ArrowLeft,
+    ShareIcon: ShareIcon,
+  }
 };
