@@ -12,13 +12,14 @@ import {
   UserImage,
   ConfirmationRequestFieldText,
   ButtonContainer,
-  InfoContainer
+  InfoContainer,
+  SectionTitle
 } from "./style";
 
 import theme from "../../assets/theme";
 import icons from "../../assets/icons";
 import { Divider } from "../DividerComponent/style";
-import {ButtonComponent} from "../"
+import {ButtonComponent, HeaderComponent} from "../"
 
 export interface ConfirmationRequestComponentProps {
   stars?: number;
@@ -43,6 +44,7 @@ const ConfirmationRequestComponent: React.ElementType<ConfirmationRequestCompone
 }: ConfirmationRequestComponentProps) => {
   return (
     <ConfirmationRequestContainer>
+      <HeaderComponent headerText="Solicitações - Detalhes" arrowLeft="true" shareIcon="false"></HeaderComponent>
       <CardTitleContainer>
         <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
         <ConfirmationRequestTitleContainer>
