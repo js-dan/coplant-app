@@ -20,7 +20,9 @@ const Home: React.FC = () => (
       textColor="white"
     />
     <CaregiverCardComponent
-      skills="Corre"
+      skill1="Correr"
+      skill2="Faz piada"
+      skill3="Leva bala"
       name="Pietro"
       rating="4.3"
       district="Sokovia"
