@@ -2,23 +2,12 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {
-  useFonts,
-  Roboto_400Regular,
-  Roboto_500Medium,
-  Roboto_700Bold,
-} from "@expo-google-fonts/roboto";
-import {
-  Nunito_400Regular,
-  Nunito_600SemiBold,
-  Nunito_700Bold,
-} from "@expo-google-fonts/nunito";
-
+import {useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold} from '@expo-google-fonts/roboto';
+import {Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-google-fonts/nunito';
 import AppLoading from "expo-app-loading";
 import { StatusBar } from "react-native";
-
-import { Caregiver, Home } from "./src/pages";
-
+import { Caregiver, Home, User, Evaluation  } from "./src/pages";
+        
 const Tab = createBottomTabNavigator();
 
 const App: React.FC = () => {

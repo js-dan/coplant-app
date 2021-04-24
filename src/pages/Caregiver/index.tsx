@@ -3,6 +3,7 @@ import { ScrollView, View, Text } from "react-native";
 import { ButtonComponent, Screen, Divider } from "../../components";
 import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
 import CommentComponent from "../../components/CommentComponent";
+import PresentCardComponent from "../../components/PresentCardComponent"
 import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
 import YoutubePlayer from "react-native-youtube-iframe";
@@ -13,6 +14,13 @@ const Caregiver: React.FC = () => (
     <Background>
       <HeaderComponent headerText="Perfil Cuidador" arrowLeft={"true"}/>
       <YoutubePlayer height={300} play={true} videoId={"3iAPUKyLGyA"} />
+      
+      <PresentCardComponent
+       userName={"Caio Andrade"}
+       stars={3}
+       userLocation={"Casa Amarela"}
+      />
+      <Divider/>
       <DescriptionComponent
         description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
       poder te ajudar a ter uma casa bem verde."

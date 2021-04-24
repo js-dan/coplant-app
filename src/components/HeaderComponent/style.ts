@@ -13,8 +13,8 @@ export const HeaderContainer = styled.View`
   justifyContent: space-between;
   alignItems: center;
 `;
-export const HeaderText = styled.Text`
-  font-family: ${theme.fonts.h1.family};
+export const HeaderText = styled.View`
+  font-family: ${theme.fonts.body.family};
   font-size: ${theme.fonts.h1.size};
   color: ${theme.mainColors.black};
   font-weight: bold;
