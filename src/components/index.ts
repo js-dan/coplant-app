@@ -15,6 +15,7 @@ import HistoricCardComponent from './HistoricCardComponent'
 import HeaderComponent from './HeaderComponent'
 import RequestCardComponent from './RequestCardComponent'
 import RequestCardActiveComponent from './RequestCardActiveComponent'
+import ConfirmationRequestComponent from "./ConfirmationRequestComponent"
 
 export {
   ButtonComponent,
@@ -33,5 +34,6 @@ export {
   HistoricCardComponent,
   HeaderComponent,
   RequestCardComponent,
-  RequestCardActiveComponent
+  RequestCardActiveComponent,
+  ConfirmationRequestComponent
 };

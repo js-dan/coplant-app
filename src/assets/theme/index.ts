@@ -8,6 +8,7 @@ export default {
     darkBlue: "#435D74",
     lightGray: '#D9D9D9',
     black: "#000000",
+    lightGray:"#D9D9D9"
   },
   fonts: {
     h1: {
