@@ -11,6 +11,8 @@
   "dependencies": {
     "@expo-google-fonts/inter": "^0.1.0",
     "@expo-google-fonts/montserrat": "^0.1.0",
+    "@expo-google-fonts/nunito": "^0.1.0",
+    "@expo-google-fonts/roboto": "^0.1.0",
     "@expo/vector-icons": "^10.2.1",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
@@ -34,6 +36,7 @@
     "react-native": "~0.63.3",
     "react-native-elements": "^3.0.0-alpha.1",
     "react-native-gesture-handler": "~1.7.0",
+    "react-native-ratings": "^8.0.2",
     "react-native-screens": "~2.10.1",
     "react-native-svg": "^12.1.0",
     "react-native-unimodules": "~0.11.0",
