@@ -5,7 +5,7 @@ import theme from "../../assets/theme";
 type ConfirmationProps = {};
 
 export const ConfirmationContainer = styled.View<ConfirmationProps>`
-  background-color: ${theme.mainColors.bakground};
+  background-color: ${theme.mainColors.background};
   width: 329px
   height: 264px
   border-radius: 10px
@@ -15,7 +15,7 @@ export const ConfirmationContainer = styled.View<ConfirmationProps>`
 export const DescriptionText = styled.TextInput<ConfirmationProps>`
   width: 281.15px;
   height: 78.27px;
-  color: ${theme.mainColors.black};
+  color: #000000
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   background-color: ${theme.mainColors.lightGray}
@@ -26,7 +26,7 @@ export const DescriptionText = styled.TextInput<ConfirmationProps>`
 `;
 
 export const ConfirmationText = styled.Text<ConfirmationProps>`
-  color: ${theme.mainColors.black};
+  color: #000000;
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   margin-bottom: 5px;

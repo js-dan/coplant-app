@@ -38,6 +38,7 @@
     "react-datepicker": "^3.7.0",
     "react-dom": "16.13.1",
     "react-native": "~0.63.3",
+    "react-native-date-picker": "^3.2.10",
     "react-native-elements": "^3.0.0-alpha.1",
     "react-native-gesture-handler": "~1.7.0",
     "react-native-ratings": "^8.0.2",

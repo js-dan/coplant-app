@@ -10,12 +10,21 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation, Historic
+  Caregiver, Home, User, Evaluation, Historic, Confirmation
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();
+
+function CaregiverStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Caregiver" component={Caregiver} />
+      <Stack.Screen name="Confirmation" component={Confirmation} />
+    </Stack.Navigator>
+  );
+}
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -34,11 +43,12 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
-      <Stack.Navigator>
+      {/*<Stack.Navigator>
         <Stack.Screen name="User" component={User} />
         <Stack.Screen name="Caregiver" component={Caregiver} />
-      </Stack.Navigator>
-      {/*<Tab.Navigator
+        <Stack.Screen name="Confirmation" component={Confirmation} />
+      </Stack.Navigator>*/}
+      <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -64,9 +74,9 @@ const App: React.FC = () => {
       >
         <Tab.Screen name="Cuidadores" component={Caregiver} />
         <Tab.Screen name="Histórico" component={Historic} />
-        <Tab.Screen name="Cupons" component={Caregiver} />
+        <Tab.Screen name="Cupons" component={CaregiverStack} />
         <Tab.Screen name="Perfil" component={User} />
-      </Tab.Navigator>*/}
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };

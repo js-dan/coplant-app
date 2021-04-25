@@ -20,7 +20,7 @@ const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
   buttonColor, textColor, buttonText, size, icon, width
 }: ButtonComponentProps) => {
   const navigation = useNavigation()
-  const onPress = () => {navigation.navigate("User")}
+  const onPress = () => {navigation.navigate("Confirmation")}
   return(
     <ButtonContainer
       icon={icon}

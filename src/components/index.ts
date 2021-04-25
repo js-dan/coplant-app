@@ -1,6 +1,6 @@
 import ButtonComponent from './ButtonComponent';
 import Screen from './Screen';
-import ConfirmationComponent from './confirmationComponent';
+import ConfirmationComponent from './ConfirmationComponent';
 import CaregiverDescriptionComponent from './CaregiverDescriptionComponent';
 import Divider from './DividerComponent';
 import EvaluationComponent from './EvaluationComponent';
