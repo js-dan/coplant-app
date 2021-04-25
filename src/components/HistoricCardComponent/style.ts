@@ -19,27 +19,27 @@ export const HistoricCardContainer = styled.View<HistoricCardComponentProps>`
 `;
 
 export const HistoricCardTitle = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color: "black";
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
 `;
 
 export const HistoricCardText = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color: "black";
   font-size: ${theme.fonts.h6.size};
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const HistoricCardEndDate = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color: "black";
   font-style: italic;
   font-size: ${theme.fonts.h6.size};
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const HistoricCardFinishedText = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color: "black";
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
   justify-content: end;

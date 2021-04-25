@@ -12,19 +12,19 @@ const Historic: React.FC = () => (
       <View style={{marginTop: 20}}>
         <ScrollView>
           <HistoricCardComponent
-            userName={"Caio Andrade"}
+            userName={"Liz Machado"}
             endDate={new Date("2020-10-12")}
             finished={false}
             rated={false}
           />
           <HistoricCardComponent
-            userName={"Caio Andrade"}
+            userName={"Liz Machado"}
             endDate={new Date("2020-10-12")}
             finished={true}
             rated={false}
           />
           <HistoricCardComponent
-            userName={"Caio Andrade"}
+            userName={"Liz Machado"}
             endDate={new Date("2020-10-12")}
             finished={true}
             rated={true}

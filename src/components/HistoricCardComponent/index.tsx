@@ -11,7 +11,6 @@ import {
   UserImage,
   HistoricCardFinishedText
 } from "./style";
-import profilePic from '../../assets/img/users/CaioAndrade.png';
 
 import theme from "../../assets/theme";
 import icons from "../../assets/icons";
@@ -32,11 +31,11 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
 }: HistoricCardComponentProps) => {
   return (
     <HistoricCardContainer>
-      <UserImage source={profilePic as ImageSourcePropType}/>
+      <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
       <HistoricCardTitleContainer>
         <HistoricCardTitle>{userName}</HistoricCardTitle>
         <HistoricCardRating>
-          <HistoricCardText>{"Sua Nota:"} </HistoricCardText>
+          <HistoricCardText>Sua Nota: </HistoricCardText>
           <HistoricCardStar source={icons.socialMedia.star} />
           <HistoricCardStar source={icons.socialMedia.star} />
           <HistoricCardStar source={icons.socialMedia.star} />
