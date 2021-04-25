@@ -9,7 +9,7 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation,
+  Caregiver, Home, User, Evaluation, Historic
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
@@ -56,7 +56,7 @@ const App: React.FC = () => {
         }}
       >
         <Tab.Screen name="Cuidadores" component={Caregiver} />
-        <Tab.Screen name="Histórico" component={Caregiver} />
+        <Tab.Screen name="Histórico" component={Historic} />
         <Tab.Screen name="Cupons" component={Caregiver} />
         <Tab.Screen name="Perfil" component={User} />
       </Tab.Navigator>

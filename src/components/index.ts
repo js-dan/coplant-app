@@ -12,6 +12,7 @@ import AddPlantButtonComponent from './AddPlantButtonComponent';
 import PresentCardComponent from './PresentCardComponent';
 import InsertImageComponent from './InsertImageComponent';
 import HistoricCardComponent from './HistoricCardComponent'
+import HeaderComponent from './HeaderComponent'
 
 export {
   ButtonComponent,
@@ -27,5 +28,6 @@ export {
   AddPlantButtonComponent,
   PresentCardComponent,
   InsertImageComponent,
-  HistoricCardComponent
+  HistoricCardComponent,
+  HeaderComponent
 };
