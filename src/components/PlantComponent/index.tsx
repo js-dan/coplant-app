@@ -9,6 +9,8 @@ import {
 import theme from "../../assets/theme";
 import icons from "../../assets/icons";
 
+import orquideaPic from '../../assets/img/plants/Orquidea.png';
+
 
 export interface PlantComponentProps {
   qtd?: number;
@@ -21,7 +23,7 @@ const PlantComponent: React.ElementType<PlantComponentProps> = ({
 }: PlantComponentProps) => {
   return (
     <PlantContainer>
-      {/* {name && (<PlantImage source={require('../../assets/img/plants/'+name+'.png')}/>)} */}
+      {name && (<PlantImage source={orquideaPic as ImageSourcePropType}/>)}
       <PlantText>{qtd+'x '+name}</PlantText>
     </PlantContainer>
   );

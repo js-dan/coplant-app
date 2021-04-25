@@ -4,7 +4,7 @@ import {
   AddPlantContainer,
   AddPlantText,
 } from './style';
-import { AddPlantButtonComponent } from '../AddPlantButtonComponent';
+import AddPlantButtonComponent from '../AddPlantButtonComponent';
 import theme from '../../assets/theme';
 import icons from '../../assets/icons';
 
@@ -17,7 +17,7 @@ const AddPlantComponent: React.ElementType<AddPlantComponentProps> = ({
 }: AddPlantComponentProps) => (
   <AddPlantContainer>
     <AddPlantButtonComponent />
-    <AddPlantText>Adicionar Planta</AddPlantText>
+    <AddPlantText>{"Adicionar Planta"}</AddPlantText>
   </AddPlantContainer>
 );
 
