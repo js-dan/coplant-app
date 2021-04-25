@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View, Text } from "react-native";
+import { ScrollView, View, Text, Button } from "react-native";
 import { ButtonComponent, Screen, Divider } from "../../components";
 import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
 
@@ -10,7 +10,7 @@ import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
 import HeaderComponent from "../../components/HeaderComponent";
 
-const User: React.FC = () => (
+const User: React.FC = ({navigation}) => (
   <Screen>
     <Background>
       <HeaderComponent headerText="Meu Perfil" arrowLeft="true" />
@@ -32,6 +32,10 @@ const User: React.FC = () => (
             qtd={3}
           /> 
           <AddPlantComponent/>
+          <Button
+            title="Teste"
+            onPress={()=>navigation.navigate("Caregiver")}
+          />
         </ScrollView>
       </View>
     </Background>

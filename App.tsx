@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createStackNavigator } from '@react-navigation/stack'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
   useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold,
@@ -13,6 +14,8 @@ import {
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
+
+const Stack = createStackNavigator();
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -31,7 +34,11 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
-      <Tab.Navigator
+      <Stack.Navigator>
+        <Stack.Screen name="User" component={User} />
+        <Stack.Screen name="Caregiver" component={Caregiver} />
+      </Stack.Navigator>
+      {/*<Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -59,7 +66,7 @@ const App: React.FC = () => {
         <Tab.Screen name="Histórico" component={Historic} />
         <Tab.Screen name="Cupons" component={Caregiver} />
         <Tab.Screen name="Perfil" component={User} />
-      </Tab.Navigator>
+      </Tab.Navigator>*/}
     </NavigationContainer>
   );
 };
