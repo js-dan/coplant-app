@@ -16,6 +16,7 @@ import icons from "../../assets/icons";
 import { Divider } from "../DividerComponent/style";
 
 import profilePic from '../../assets/img/users/LizMachado.png';
+import profilePic2 from '../../assets/img/users/CaioAndrade.png'
 
 export interface PresentCardComponentProps {
   stars?: number;
@@ -30,7 +31,7 @@ const PresentCardComponent: React.ElementType<PresentCardComponentProps> = ({
 }: PresentCardComponentProps) => {
   return (
     <PresentCardContainer>
-      <UserImage source={profilePic as ImageSourcePropType}/>
+      <UserImage source={(userName=="Caio Andrade"?profilePic2:profilePic) as ImageSourcePropType}/>
       <PresentCardTitleContainer>
         <PresentCardTitle>{userName}</PresentCardTitle>
         <PresentCardRating>

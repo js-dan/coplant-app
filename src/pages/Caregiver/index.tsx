@@ -13,13 +13,13 @@ const Caregiver: React.FC = () => (
   <Screen>
     <Background>
       <HeaderComponent headerText="Perfil Cuidador" arrowLeft={"true"}/>
-      <YoutubePlayer height={300} play={true} videoId={"3iAPUKyLGyA"} />
-      
-      {/* <
+      <PresentCardComponent
        userName={"Caio Andrade"}
        stars={3}
        userLocation={"Casa Amarela"}
-      /> */}
+      /> 
+      <YoutubePlayer height={300} play={true} videoId={"3iAPUKyLGyA"} />
+      
       <Divider/>
       <DescriptionComponent
         description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
@@ -53,6 +53,7 @@ const Caregiver: React.FC = () => (
           buttonText="Contratar"
           size="large"
           textColor="white"
+          stage={0}
         />
       </ButtonContainer>
     </Background>

@@ -7,7 +7,6 @@ import {
   useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
 import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-google-fonts/nunito';
-  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
@@ -21,8 +20,9 @@ const Stack = createStackNavigator();
 function CaregiverStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Caregiver" component={Caregiver} />
+      <Stack.Screen name="Cuidadores" component={Caregiver} />
       <Stack.Screen name="Confirmation" component={Confirmation} />
+      <Stack.Screen name="Chat" component={Chat} />
     </Stack.Navigator>
   );
 }
@@ -73,7 +73,7 @@ const App: React.FC = () => {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Cuidadores" component={Caregiver} />
+        <Tab.Screen name="Cuidadores" component={CaregiverStack} />
         <Tab.Screen name="Histórico" component={Historic} />
         <Tab.Screen name="Cupons" component={CaregiverStack} />
         <Tab.Screen name="Perfil" component={User} />

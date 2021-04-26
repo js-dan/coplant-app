@@ -34,6 +34,7 @@ const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
           buttonText="Confirmar"
           size="small"
           width="40%"
+          stage={1}
         />
       </ConfirmationArea>
     </ConfirmationContainer>
