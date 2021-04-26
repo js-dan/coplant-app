@@ -7,7 +7,7 @@ type EvaluationProps = {};
 export const EvaluationContainer = styled.View<EvaluationProps>`
   width: 375px
   height: 150px
-  background-color: ${theme.mainColors.bakground};
+  background-color: ${theme.mainColors.background};
   border-radius: 10px
   padding-left: 11px
 `;

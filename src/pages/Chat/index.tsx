@@ -2,6 +2,7 @@ import React, {useState, useEffect, useCallback} from 'react';
 import {View, ScrollView, Text, Button, StyleSheet} from 'react-native';
 import {Bubble, GiftedChat, InputToolbar, Send} from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {ButtonComponent} from '../../components'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {PresentCardComponent} from '../../components';
 
@@ -85,6 +86,7 @@ const Chat = () => {
   }
 
   return (
+    <>
     <GiftedChat
       messages={messages}
       renderAvatar={() => null}
@@ -98,6 +100,13 @@ const Chat = () => {
       scrollToBottom
       scrollToBottomComponent={scrollToBottomComponent}
     />
+    <ButtonComponent
+      buttonColor="orange"
+      buttonText="Finalizar"
+      size="large"
+      stage={2}
+    />
+    </>
   );
 };
 

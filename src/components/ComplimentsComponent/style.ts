@@ -9,7 +9,7 @@ export const ComplimentsContainer = styled.View<ComplimentsProps>`
   align-items: center;
   width: 375px
   height: 180px
-  background-color: ${theme.mainColors.bakground};
+  background-color: ${theme.mainColors.background};
   border-radius: 10px
   padding-left: 11px
 `;
@@ -26,7 +26,6 @@ export const MessageText = styled.TextInput<ComplimentsProps>`
   padding-left: 15px;
   margin-bottom: 10px;
   margin-top: 10px
-  align:center
 `;
 
 export const ComplimentsText = styled.Text<ComplimentsProps>`

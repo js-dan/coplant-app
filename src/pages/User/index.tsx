@@ -32,10 +32,6 @@ const User: React.FC = ({navigation}) => (
             qtd={3}
           /> 
           <AddPlantComponent/>
-          <Button
-            title="Teste"
-            onPress={()=>navigation.navigate("Caregiver")}
-          />
         </ScrollView>
       </View>
     </Background>

@@ -20,9 +20,10 @@ const Stack = createStackNavigator();
 function CaregiverStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Cuidadores" component={Caregiver} />
+      <Stack.Screen name="Caregiver" component={Caregiver} />
       <Stack.Screen name="Confirmation" component={Confirmation} />
       <Stack.Screen name="Chat" component={Chat} />
+      <Stack.Screen name="Evaluation" component={Evaluation} />
     </Stack.Navigator>
   );
 }
