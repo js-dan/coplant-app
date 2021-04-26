@@ -3,29 +3,20 @@ import theme from '../../assets/theme';
 
 export const Item = styled.View`
   flex-direction: row;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   background-color: ${theme.mainColors.cardBackground};
+  align-content: center;
   align-self: center;
   align-items: center;
   width: 90%;
-  padding: 15px;
+  padding: 10px;
   border-radius: 15px;
-  margin-bottom: 20px;
-`;
-
-export const ProfilePicture = styled.View`
-  display: flex;
-  width: 85px;
-  height: 85px;
-  background-color: darkgray;
-  border-radius: 50%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-bottom: 20px;  
 `;
 
 export const ProfileInfos = styled.View`
   display: flex;
-  width: 70%;  
-  padding-left: 20px;
+  width: 75%;  
 `;
 
 export const Name = styled.Text`
@@ -51,9 +42,7 @@ export const Skills = styled.View`
 `;
 
 export const Icon = styled.Image`
-  width: 120px;
-  height: 120px;
-
+  width: 90px;
+  height: 90px;
   align-self: center;
-  margin-bottom: 25px;
 `;

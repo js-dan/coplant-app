@@ -4,7 +4,7 @@ import star from '../../assets/icons/Nota.png';
 import profilePic from '../../assets/icons/Perfil_cuidador.png';
 
 import {
-  Item, Infos, Name, ProfileInfos, ProfilePicture, Skills, Icon,
+  Item, Infos, Name, ProfileInfos, Skills, Icon,
 } from './style';
 
 import icons from '../../assets/icons';
