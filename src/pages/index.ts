@@ -1,3 +1,4 @@
+import Initial from "./Initial";
 import Home from "./Home"
 import Caregiver from "./Caregiver";
 import Login from "./Login";
@@ -9,8 +10,8 @@ import Confirmation from "./Confirmation"
 import Chat from './Chat'
 import EvaluationCaregiver from "./EvaluationCaregiver"
 import Thanks from './Thanks'
-export { Home, 
-        Thanks,
+export { Initial, 
+         Home,
          Caregiver, 
          Login,
          Historic, 
