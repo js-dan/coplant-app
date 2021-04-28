@@ -1,5 +1,7 @@
 import React from 'react';
-import {EvaluationButtonComponent, Screen, EvaluationComponent, ComplimentsComponent } from '../../components';
+import {
+  EvaluationButtonComponent, Screen, EvaluationComponent, ComplimentsComponent,
+} from '../../components';
 
 const Evaluation: React.FC = () => (
   <Screen>

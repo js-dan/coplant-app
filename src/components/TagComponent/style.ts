@@ -7,7 +7,7 @@ type TagProps = {
 }
 type SpecificColor = {
     color?: string;
-};  
+};
 
 export const TagContainer = styled.View<TagProps>`
   width: ${theme.tagSize.width};

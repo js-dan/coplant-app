@@ -1,5 +1,5 @@
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 export const Divider = styled.View`
   width: 90%;

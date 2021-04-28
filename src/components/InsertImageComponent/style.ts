@@ -1,7 +1,7 @@
-import { ImageSourcePropType } from "react-native";
+import { ImageSourcePropType } from 'react-native';
 
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 type InsertImageComponentProps = {};
 

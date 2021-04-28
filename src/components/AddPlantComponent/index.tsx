@@ -17,7 +17,7 @@ const AddPlantComponent: React.ElementType<AddPlantComponentProps> = ({
 }: AddPlantComponentProps) => (
   <AddPlantContainer>
     <AddPlantButtonComponent />
-    <AddPlantText>{"Adicionar Planta"}</AddPlantText>
+    <AddPlantText>Adicionar Planta</AddPlantText>
   </AddPlantContainer>
 );
 

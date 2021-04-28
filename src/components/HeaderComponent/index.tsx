@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { ImageSourcePropType } from 'react-native';
 
-import { HeaderContainer, HeaderText, ArrowLeft, ShareIcon } from './style';
+import {
+  HeaderContainer, HeaderText, ArrowLeft, ShareIcon,
+} from './style';
 import Icons from '../../assets/icons/index';
 
 export interface HeaderComponentProps {
@@ -14,15 +16,13 @@ export interface HeaderComponentProps {
 // If this view is in the screen size, you can use default width by only passing size props
 
 const HeaderComponent: React.ElementType<HeaderComponentProps> = ({
-  headerText, arrowLeft, shareIcon
-}: HeaderComponentProps) => {
-  return (
-    <HeaderContainer>
-       <ArrowLeft arrowLeft={arrowLeft} source={Icons.header.ArrowLeft as ImageSourcePropType} />
-       <HeaderText>{headerText}</HeaderText>
-       <ShareIcon shareIcon={shareIcon} source={Icons.header.ShareIcon as ImageSourcePropType} />
-    </HeaderContainer>
-  );
-};
+  headerText, arrowLeft, shareIcon,
+}: HeaderComponentProps) => (
+  <HeaderContainer>
+    <ArrowLeft arrowLeft={arrowLeft} source={Icons.header.ArrowLeft as ImageSourcePropType} />
+    <HeaderText>{headerText}</HeaderText>
+    <ShareIcon shareIcon={shareIcon} source={Icons.header.ShareIcon as ImageSourcePropType} />
+  </HeaderContainer>
+);
 
 export default HeaderComponent;

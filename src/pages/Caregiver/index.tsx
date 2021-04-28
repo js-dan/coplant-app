@@ -12,37 +12,41 @@ import YoutubePlayer from "react-native-youtube-iframe";
 const Caregiver: React.FC = () => (
   <Screen>
     <Background>
-      <HeaderComponent headerText="Perfil Cuidador" arrowLeft={"true"}/>
+      <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" />
       <PresentCardComponent
-       userName={"Caio Andrade"}
-       stars={3}
-       userLocation={"Casa Amarela"}
-      /> 
-      <YoutubePlayer height={300} play={true} videoId={"3iAPUKyLGyA"} />
-      
-      <Divider/>
+        userName="Caio Andrade"
+        stars={3}
+        userLocation="Casa Amarela"
+      />
+      <YoutubePlayer height={300} play videoId="3iAPUKyLGyA" />
+
+      <Divider />
       <DescriptionComponent
         description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
       poder te ajudar a ter uma casa bem verde."
       />
       <Divider />
-      <SectionTitle> {"Comentários"} </SectionTitle>
+      <SectionTitle>
+        {' '}
+        Comentários
+        {' '}
+      </SectionTitle>
       <View style={{ height: 150, marginTop: 20 }}>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <CommentComponent
-            usersName={"Daniela"}
+            usersName="Daniela"
             stars={5}
-            usersComment={"Wow, amazing guys!"}
+            usersComment="Wow, amazing guys!"
           />
           <CommentComponent
-            usersName={"Daniel"}
+            usersName="Daniel"
             stars={5}
-            usersComment={"Wow, amazing guys!"}
+            usersComment="Wow, amazing guys!"
           />
           <CommentComponent
-            usersName={"Daniel"}
+            usersName="Daniel"
             stars={5}
-            usersComment={"Wow, amazing guys!"}
+            usersComment="Wow, amazing guys!"
           />
         </ScrollView>
       </View>

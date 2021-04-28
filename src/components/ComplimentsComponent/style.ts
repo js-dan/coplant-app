@@ -1,6 +1,6 @@
-import { ImageSourcePropType } from "react-native";
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import { ImageSourcePropType } from 'react-native';
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 type ComplimentsProps = {};
 
@@ -38,4 +38,3 @@ export const ComplimentsText = styled.Text<ComplimentsProps>`
   text-align: center
   font-weight: bold
 `;
-

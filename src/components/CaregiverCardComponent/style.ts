@@ -11,7 +11,7 @@ export const Item = styled.View`
   width: 90%;
   padding: 10px;
   border-radius: 15px;
-  margin-bottom: 20px;  
+  margin-top: 20px;  
 `;
 
 export const ProfileInfos = styled.View`

@@ -1,6 +1,6 @@
-import { ImageSourcePropType } from "react-native";
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import { ImageSourcePropType } from 'react-native';
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 type EvaluationProps = {};
 
@@ -36,4 +36,3 @@ export const EvaluationText = styled.Text<EvaluationProps>`
   text-align: center
   font-weight: bold
 `;
-
