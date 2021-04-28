@@ -24,7 +24,7 @@ const App: React.FC = () => {
   return (
     <>
       <StatusBar backgroundColor="white" />
-      <Evaluation />
+      <Caregiver />
     </>
   );
 };
