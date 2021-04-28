@@ -29,18 +29,18 @@ function CaregiverStack() {
 }
 
 const App: React.FC = () => {
-  // const [fontsLoaded] = useFonts({
-  //   Roboto_400Regular,
-  //   Roboto_500Medium,
-  //   Roboto_700Bold,
-  //   Nunito_400Regular,
-  //   Nunito_600SemiBold,
-  //   Nunito_700Bold,
-  // });
+  const [fontsLoaded] = useFonts({
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold,
+    Nunito_400Regular,
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+  });
 
-  // if (!fontsLoaded) {
-  //   return <AppLoading />;
-  // }
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
 
   return (
     <NavigationContainer>
