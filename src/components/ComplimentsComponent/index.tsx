@@ -8,15 +8,16 @@ import { ComplimentsContainer, ComplimentsText, MessageText} from "./style";
 
 export interface ComplimentsProps {
   message?:string
+  isUser?:boolean
 }
 
 const ComplimentsComponent: React.ElementType<ComplimentsProps> = ({
-  message
+  message, isUser
 }: ComplimentsProps) => {
   return (
     <ComplimentsContainer>
      
-      <ComplimentsText>{"Quais os elogios ao cuidador?"}</ComplimentsText>
+      <ComplimentsText>{`Quais os elogios ao ${isUser ? "Cuidador" : "Solicitante"}?`}</ComplimentsText>
       <MessageText placeholder="Mensagem...">{message}</MessageText>
       
     </ComplimentsContainer>

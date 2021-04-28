@@ -4,10 +4,10 @@ import {EvaluationButtonComponent, Screen, EvaluationComponent, ComplimentsCompo
 const Evaluation: React.FC = () => (
   <Screen>
    <EvaluationComponent
-    isUser={true}
+    isUser={false}
    />
    <ComplimentsComponent
-   isUser={true}
+   isUser={false}
    />
    <EvaluationButtonComponent/>
    
