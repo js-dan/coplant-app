@@ -5,7 +5,9 @@ import User from "./User"
 import Evaluation from "./Evaluation"
 import Confirmation from "./Confirmation"
 import Chat from './Chat'
+import Thanks from './Thanks'
 export { Home, 
+        Thanks,
          Caregiver, 
          Historic, 
          User, 
