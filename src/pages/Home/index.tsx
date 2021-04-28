@@ -1,23 +1,21 @@
-import React from 'react';
-import TagComponent from '../../components/TagComponent';
-import HeaderComponent from '../../components/HeaderComponent';
-import { ButtonComponent, Screen, Divider } from "../../components";
-import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
+import React from "react";
+import {View, Text,Dimensions } from "react-native";
+import theme from "../../assets/theme";
+import {ButtonComponent} from "../../components"
+import { Background, SectionTitle,Logo} from "./style";
+import {Screen} from "../../components";
+import Icons from '../../assets/icons/index';
+import { ImageSourcePropType } from 'react-native';
 
 const Home: React.FC = () => (
   <Screen>
-    <DescriptionComponent
-      description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
-      poder te ajudar a ter uma casa bem verde."/>
-    <Divider />
-    <ButtonComponent
-      buttonColor="orange"
-      buttonText="Contratar"
-      size="big"
-      textColor="white"
-    />
-    <TagComponent text="Cuidadoso" />
-    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true" />
+    <Background>
+      <View style={{marginTop: 120,alignItems: "center"}}>
+           <Logo source={Icons.init.Logo as ImageSourcePropType}/>
+          <SectionTitle>CoPlant</SectionTitle>
+          <ButtonComponent buttonColor="lightGray" buttonText="Login com Google" textColor="black" icon={Icons.init.GoogleMin} size="small" width="300px"></ButtonComponent>
+      </View>
+    </Background>
   </Screen>
 );
 

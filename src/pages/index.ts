@@ -8,7 +8,9 @@ import Evaluation from "./Evaluation"
 import Confirmation from "./Confirmation"
 import Chat from './Chat'
 import EvaluationCaregiver from "./EvaluationCaregiver"
+import Thanks from './Thanks'
 export { Home, 
+        Thanks,
          Caregiver, 
          Login,
          Historic, 
@@ -17,5 +19,6 @@ export { Home,
          Confirmation,
          EvaluationCaregiver,
          CaregiverProfile,
+         Thanks,
          Chat};
 

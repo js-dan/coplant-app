@@ -45,7 +45,7 @@ export default {
   },
   buttonSize: {
     padding: {
-      small: "12px",
+      small: "8px",
       medium: "11px",
       large: "11px",
       largeThin: "11px",
