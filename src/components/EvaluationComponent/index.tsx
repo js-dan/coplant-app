@@ -7,15 +7,16 @@ import { EvaluationContainer, EvaluationText, MessageText} from "./style";
 
 
 export interface EvaluationProps {
-  value?:number
+  value?:number;
+  isUser?:boolean;
 }
 
 const EvaluationComponent: React.ElementType<EvaluationProps> = ({
-  value
+  value, isUser
 }: EvaluationProps) => {
   return (
     <EvaluationContainer>
-      <EvaluationText>{"Avaliação do cuidador: "}</EvaluationText>
+      <EvaluationText>{`Avaliação do ${isUser ? "Cuidador" : "Solicitante"}`}</EvaluationText>
       <Rating>{value}</Rating>
     </EvaluationContainer>
     
