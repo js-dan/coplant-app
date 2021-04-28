@@ -7,7 +7,7 @@ import {Screen} from "../../components";
 import Icons from '../../assets/icons/index';
 import { ImageSourcePropType } from 'react-native';
 
-const Home: React.FC = () => (
+const Initial: React.FC = () => (
   <Screen>
     <Background>
       <View style={{marginTop: 120,alignItems: "center"}}>
@@ -19,4 +19,4 @@ const Home: React.FC = () => (
   </Screen>
 );
 
-export default Home;
+export default Initial;
