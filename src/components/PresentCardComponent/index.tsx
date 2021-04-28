@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ImageSourcePropType } from "react-native";
+import * as React from 'react';
+import { ImageSourcePropType } from 'react-native';
 import {
   PresentCardContainer,
   PresentCardText,
@@ -8,15 +8,15 @@ import {
   PresentCardDivider,
   PresentCardStar,
   PresentCardTitleContainer,
-  UserImage
-} from "./style";
+  UserImage,
+} from './style';
 
-import theme from "../../assets/theme";
-import icons from "../../assets/icons";
-import { Divider } from "../DividerComponent/style";
+import theme from '../../assets/theme';
+import icons from '../../assets/icons';
+import { Divider } from '../DividerComponent/style';
 
 import profilePic from '../../assets/img/users/LizMachado.png';
-import profilePic2 from '../../assets/img/users/CaioAndrade.png'
+import profilePic2 from '../../assets/img/users/CaioAndrade.png';
 
 export interface PresentCardComponentProps {
   stars?: number;
@@ -28,23 +28,21 @@ const PresentCardComponent: React.ElementType<PresentCardComponentProps> = ({
   stars,
   userName,
   userLocation,
-}: PresentCardComponentProps) => {
-  return (
-    <PresentCardContainer>
-      <UserImage source={(userName=="Caio Andrade"?profilePic2:profilePic) as ImageSourcePropType}/>
-      <PresentCardTitleContainer>
-        <PresentCardTitle>{userName}</PresentCardTitle>
-        <PresentCardRating>
-          {[...Array(stars)].map((index) => (
-            <PresentCardStar key={index} source={icons.socialMedia.star} />
-          ))}
-          <PresentCardDivider/>
-          <PresentCardText>{userLocation}</PresentCardText>
-        </PresentCardRating>
-      </PresentCardTitleContainer>
-      
-    </PresentCardContainer>
-  );
-};
+}: PresentCardComponentProps) => (
+  <PresentCardContainer>
+    <UserImage source={(userName == 'Caio Andrade' ? profilePic2 : profilePic) as ImageSourcePropType} />
+    <PresentCardTitleContainer>
+      <PresentCardTitle>{userName}</PresentCardTitle>
+      <PresentCardRating>
+        {[...Array(stars)].map((index) => (
+          <PresentCardStar key={index} source={icons.socialMedia.star} />
+        ))}
+        <PresentCardDivider />
+        <PresentCardText>{userLocation}</PresentCardText>
+      </PresentCardRating>
+    </PresentCardTitleContainer>
+
+  </PresentCardContainer>
+);
 
 export default PresentCardComponent;

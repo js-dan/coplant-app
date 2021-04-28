@@ -1,6 +1,6 @@
-import { ImageSourcePropType } from "react-native";
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import { ImageSourcePropType } from 'react-native';
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 type iconsProps = {
   arrowLeft?: string;
@@ -21,11 +21,11 @@ export const HeaderText = styled.Text`
 `;
 export const ArrowLeft = styled.Image<iconsProps>`
   width: 20px;
-  opacity: ${({ arrowLeft }) => (arrowLeft ? `100` : `0`)};
-  height: ${({ arrowLeft }) => (arrowLeft ? `20px` : `0`)};
+  opacity: ${({ arrowLeft }) => (arrowLeft ? '100' : '0')};
+  height: ${({ arrowLeft }) => (arrowLeft ? '20px' : '0')};
 `;
 export const ShareIcon = styled.Image<iconsProps>`
   width: 20px;
-  opacity: ${({ shareIcon }) => (shareIcon ? `100` : `0`)};
-  height: ${({ shareIcon }) => (shareIcon ? `20px` : `0`)};
+  opacity: ${({ shareIcon }) => (shareIcon ? '100' : '0')};
+  height: ${({ shareIcon }) => (shareIcon ? '20px' : '0')};
 `;

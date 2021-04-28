@@ -4,7 +4,7 @@ import { ImageSourcePropType } from 'react-native';
 import { AddPlantButtonContainer, AddPlantButtonText, Icon } from './style';
 
 export interface AddPlantButtonComponentProps {
-  
+
 }
 
 // Propriety width works to personalize your AddPlantButton based on the view that's wrapping it.
@@ -15,7 +15,7 @@ const AddPlantButtonComponent: React.ElementType<AddPlantButtonComponentProps> =
   const onPress = () => console.log('função aqui');
   return (
     <AddPlantButtonContainer>
-      <AddPlantButtonText>{"+"}</AddPlantButtonText>
+      <AddPlantButtonText>+</AddPlantButtonText>
     </AddPlantButtonContainer>
   );
 };

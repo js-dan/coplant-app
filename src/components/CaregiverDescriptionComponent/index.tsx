@@ -1,9 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   DescriptionContainer,
   DescriptionTitle,
   DescriptionText,
-} from "./style";
+} from './style';
 
 export interface DescriptionComponentProps {
   description: String;
@@ -11,13 +11,14 @@ export interface DescriptionComponentProps {
 
 const DescriptionComponent: React.ElementType<DescriptionComponentProps> = ({
   description,
-}: DescriptionComponentProps) => {
-  return (
-    <DescriptionContainer>
-      <DescriptionTitle> Descrição </DescriptionTitle>
-      <DescriptionText> {description}</DescriptionText>
-    </DescriptionContainer>
-  );
-};
+}: DescriptionComponentProps) => (
+  <DescriptionContainer>
+    <DescriptionTitle> Descrição </DescriptionTitle>
+    <DescriptionText>
+      {' '}
+      {description}
+    </DescriptionText>
+  </DescriptionContainer>
+);
 
 export default DescriptionComponent;

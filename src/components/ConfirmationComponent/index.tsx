@@ -14,21 +14,21 @@ export interface ConfirmationComponentProps {
 }
 
 const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
-   value, description,
+  value, description,
 }: ConfirmationComponentProps) => {
   const [startDate, setStartDate] = React.useState(new Date());
   const [endDate, setEndDate] = React.useState(new Date());
   return (
     <ConfirmationContainer>
-      <ConfirmationText>{"Data Inicio"}</ConfirmationText>
-      
-      {/*<DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />*/}
-      <ConfirmationText>{"Data Fim"}</ConfirmationText>
-      {/*<DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />*/}
-      <DescriptionText placeholder="Descrição..."></DescriptionText>
-      
+      <ConfirmationText>Data Inicio</ConfirmationText>
+
+      {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
+      <ConfirmationText>Data Fim</ConfirmationText>
+      {/* <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} /> */}
+      <DescriptionText placeholder="Descrição..." />
+
       <ConfirmationArea>
-        <ConfirmationText>{"Valor: R$ "+value}</ConfirmationText>
+        <ConfirmationText>{`Valor: R$ ${value}`}</ConfirmationText>
         <ButtonComponent
           buttonColor="orange"
           buttonText="Confirmar"

@@ -7,6 +7,7 @@ export default {
     orange: '#E27143',
     darkBlue: '#435D74',
     lightGray: '#D9D9D9',
+    cardBackground: '#FFF7EE',
     black: '#000000',
   },
 

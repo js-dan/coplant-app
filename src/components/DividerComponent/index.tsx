@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Divider } from "./style";
+import * as React from 'react';
+import { Divider } from './style';
 
 export interface DescriptionComponentProps {
   description?: String;
@@ -7,8 +7,6 @@ export interface DescriptionComponentProps {
 
 const DividerComponent: React.ElementType<DescriptionComponentProps> = ({
   description,
-}: DescriptionComponentProps) => {
-  return <Divider />;
-};
+}: DescriptionComponentProps) => <Divider />;
 
 export default DividerComponent;
