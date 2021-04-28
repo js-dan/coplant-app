@@ -6,32 +6,33 @@ export default {
     green: "#5AB196",
     orange: "#E27143",
     darkBlue: "#435D74",
+    lightGray: '#D9D9D9',
     black: "#000000",
   },
   fonts: {
     h1: {
-      family: 'Nunito_700Bold',
-      size: '29px',
+      family: "Nunito_700Bold",
+      size: "29px",
     },
     h2: {
-      family: 'Nunito_600SemiBold',
-      size: '26px',
+      family: "Nunito_600SemiBold",
+      size: "26px",
     },
     h3: {
-      family: 'Roboto_500Medium',
-      size: '21px',
+      family: "Roboto_500Medium",
+      size: "21px",
     },
     h6: {
-      family: 'Roboto_400Regular',
-      size: '12px',
+      family: "Roboto_400Regular",
+      size: "12px",
     },
     body: {
       family: "Roboto_400Regular",
       size: "19px",
     },
     secondary: {
-      family: 'Roboto_400Regular',
-      size: '17px',
+      family: "Roboto_400Regular",
+      size: "17px",
     },
   },
   margins: {
@@ -56,8 +57,8 @@ export default {
       largeThin: "90%",
     },
   },
-  tagSize:{
-    width: '80px',
-    padding: '5px'
-  }
+  tagSize: {
+    width: "80px",
+    padding: "5px",
+  },
 };
