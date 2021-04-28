@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Rating, AirbnbRating } from 'react-native-ratings';
-import {ButtonComponent} from ".."
+import ButtonComponent from "../ButtonComponent"
 import { ImageSourcePropType } from "react-native";
 
 import { ComplimentsContainer, ComplimentsText, MessageText} from "./style";

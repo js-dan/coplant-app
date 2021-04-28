@@ -10,7 +10,6 @@ const Evaluation: React.FC = () => (
    isUser={true}
    />
    <EvaluationButtonComponent/>
-   
   </Screen>
 );
 

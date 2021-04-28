@@ -18,7 +18,7 @@ export const AddPlantContainer = styled.View<AddPlantProps>`
 `;
 
 export const AddPlantText = styled.Text<AddPlantProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: 15px;
   font-family: ${theme.fonts.secondary.family};
   font-weight: bold

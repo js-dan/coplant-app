@@ -8,8 +8,7 @@ const Home: React.FC = () => (
   <Screen>
     <DescriptionComponent
       description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
-      poder te ajudar a ter uma casa bem verde."
-    />
+      poder te ajudar a ter uma casa bem verde."/>
     <Divider />
     <ButtonComponent
       buttonColor="orange"
@@ -17,8 +16,8 @@ const Home: React.FC = () => (
       size="big"
       textColor="white"
     />
-    <TagComponent text="Cuidadoso"></TagComponent>
-    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true"></HeaderComponent>
+    <TagComponent text="Cuidadoso" />
+    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true" />
   </Screen>
 );
 
