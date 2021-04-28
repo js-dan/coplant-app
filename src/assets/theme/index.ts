@@ -1,14 +1,15 @@
 export default {
   mainColors: {
-    white: '#FFFF',
+    white: '#FFFFFF',
     darkGray: '#2B2A2A',
-    bakground: '#FFFAF4',
+    background: '#FFFAF4',
     green: '#5AB196',
     orange: '#E27143',
     darkBlue: '#435D74',
-    cardBackground: '#FFF7EE',
+    lightGray: '#D9D9D9',
     black: '#000000',
   },
+
   fonts: {
     h1: {
       family: 'Nunito_700Bold',

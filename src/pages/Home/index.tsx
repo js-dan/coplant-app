@@ -19,14 +19,6 @@ const Home: React.FC = () => (
       size="big"
       textColor="white"
     />
-    <CaregiverCardComponent
-      skill1="Correr"
-      skill2="Faz piada"
-      skill3="Leva bala"
-      name="Pietro"
-      rating="4.3"
-      district="Sokovia"
-    />
     <TagComponent text="Cuidadoso" />
     <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true" />
   </Screen>

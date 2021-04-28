@@ -3,6 +3,7 @@ import Facebook from './facebook.png';
 import ArrowLeft from './arrow-left.png';
 import ShareIcon from './share.png';
 import Star from './Star.png';
+import Camera from './camera.png';
 
 export default {
   feather: {
@@ -31,6 +32,7 @@ export default {
     google: Google,
     facebook: Facebook,
     star: Star,
+    camera: Camera,
   },
   header: {
     ArrowLeft,
