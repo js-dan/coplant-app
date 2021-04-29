@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ImageSourcePropType } from "react-native";
+import profilePic from '../../assets/img/users/LizMachado.png';
 import {
   ConfirmationRequestContainer,
   ConfirmationRequestText,
@@ -46,7 +47,7 @@ const ConfirmationRequestComponent: React.ElementType<ConfirmationRequestCompone
     <ConfirmationRequestContainer>
       <HeaderComponent headerText="Solicitações - Detalhes" arrowLeft="true" shareIcon="false"></HeaderComponent>
       <CardTitleContainer>
-        <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
+        <UserImage source={profilePic as ImageSourcePropType}/>
         <ConfirmationRequestTitleContainer>
           <ConfirmationRequestTitle>{userName}</ConfirmationRequestTitle>
           <ConfirmationRequestRating>

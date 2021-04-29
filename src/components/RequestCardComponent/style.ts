@@ -19,21 +19,20 @@ export const RequestCardContainer = styled.View<RequestCardComponentProps>`
 `;
 
 export const RequestCardText = styled.Text<RequestCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black}
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
 `;
 
 export const RequestCardFinishedText = styled.Text<RequestCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  justify-content: end;
   font-style: italic;
 `;
 
 export const RequestCardTitle = styled.Text<RequestCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};

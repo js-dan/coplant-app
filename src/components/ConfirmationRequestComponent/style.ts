@@ -34,7 +34,7 @@ export const CardTitleContainer = styled.View<ConfirmationRequestComponentProps>
 `;
 
 export const ConfirmationRequestText = styled.Text<ConfirmationRequestComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black}
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
   textAlignVertical: start;
@@ -42,7 +42,7 @@ export const ConfirmationRequestText = styled.Text<ConfirmationRequestComponentP
 `;
 
 export const ConfirmationRequestFieldText = styled.Text<ConfirmationRequestComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black}
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
   justify-content: left
@@ -54,7 +54,7 @@ export const ConfirmationRequestFieldText = styled.Text<ConfirmationRequestCompo
 `;
 
 export const ConfirmationRequestTitle = styled.Text<ConfirmationRequestComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black}
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};

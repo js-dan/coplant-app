@@ -61,7 +61,7 @@ export const HistoricCardFinishedText = styled.Text<HistoricCardComponentProps>`
   color: "black";
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  justify-content: end;
+  justify-content: flex-end;
   font-style: italic;
 `;
 

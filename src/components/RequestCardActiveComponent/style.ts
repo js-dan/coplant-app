@@ -20,21 +20,20 @@ export const RequestCardActiveContainer = styled.View<RequestCardActiveComponent
 `;
 
 export const RequestCardActiveText = styled.Text<RequestCardActiveComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
 `;
 
 export const RequestCardActiveFinishedText = styled.Text<RequestCardActiveComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  justify-content: end;
   font-style: italic;
 `;
 
 export const RequestCardActiveTitle = styled.Text<RequestCardActiveComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};

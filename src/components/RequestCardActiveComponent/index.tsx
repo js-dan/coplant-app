@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ImageSourcePropType } from "react-native";
+import profilePic from '../../assets/img/users/LizMachado.png';
 import {
   RequestCardActiveContainer,
   RequestCardActiveText,
@@ -35,7 +36,7 @@ const RequestCardActiveComponent: React.ElementType<RequestCardActiveComponentPr
 }: RequestCardActiveComponentProps) => {
   return (
     <RequestCardActiveContainer>
-      <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
+      <UserImage source={profilePic as ImageSourcePropType}/>
       <RequestCardActiveTitleContainer>
         <RequestCardActiveTitle>{userName}</RequestCardActiveTitle>
         <RequestCardActiveRating>
