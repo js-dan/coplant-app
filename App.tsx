@@ -10,7 +10,7 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, RequestList
+  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, RequestList, RequestConfirmation, RequestConfirmationFinalizar
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
@@ -24,6 +24,16 @@ function CaregiverStack() {
       <Stack.Screen name="Confirmation" component={Confirmation} />
       <Stack.Screen name="Chat" component={Chat} />
       <Stack.Screen name="Evaluation" component={Evaluation} />
+    </Stack.Navigator>
+  );
+}
+
+function RequestStack(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="RequestList" component={RequestList} />
+      <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
+      <Stack.Screen name="RequestConfirmationFinalizar" component={RequestConfirmationFinalizar} />
     </Stack.Navigator>
   );
 }
@@ -76,7 +86,7 @@ const App: React.FC = () => {
       >
         <Tab.Screen name="Cuidadores" component={CaregiverStack} />
         <Tab.Screen name="Histórico" component={Historic} />
-        <Tab.Screen name="Cupons" component={RequestList} />
+        <Tab.Screen name="Cupons" component={RequestStack} />
         <Tab.Screen name="Perfil" component={User} />
       </Tab.Navigator>
     </NavigationContainer>

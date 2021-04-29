@@ -6,12 +6,12 @@ type ConfirmationRequestComponentProps = {};
 
 export const ConfirmationRequestContainer = styled.View<ConfirmationRequestComponentProps>`
   background-color: ${theme.mainColors.background};
-  align-items: start
-  justify-content: space-between
+  align-items: center
+  justify-content: center
   textAlignVertical: center;
   width: 356px
   margin-right: 20px
-  height: 660px
+  height: 500px
   border-radius: 10px
   padding-left: ${theme.margins.leftRight}
   padding-right: ${theme.margins.leftRight}
@@ -26,7 +26,7 @@ export const CardTitleContainer = styled.View<ConfirmationRequestComponentProps>
   textAlignVertical: center;
   width: 340px
   margin-right: 20px
-  height: 130px
+  height: 100px
   border-radius: 10px
   padding-left: ${theme.margins.leftRight}
   padding-right: ${theme.margins.leftRight}
@@ -37,7 +37,7 @@ export const ConfirmationRequestText = styled.Text<ConfirmationRequestComponentP
   color: ${theme.mainColors.black}
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  textAlignVertical: start;
+  textAlignVertical: top;
   margin-bottom: 15px
 `;
 
@@ -45,7 +45,7 @@ export const ConfirmationRequestFieldText = styled.Text<ConfirmationRequestCompo
   color: ${theme.mainColors.black}
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  justify-content: left
+  justify-content: flex-start;
   background-color: ${theme.mainColors.lightGray}
   width: 325px
   font-style: italic;
@@ -58,7 +58,7 @@ export const ConfirmationRequestTitle = styled.Text<ConfirmationRequestComponent
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
 
 `;
@@ -75,7 +75,7 @@ export const ConfirmationRequestTitleContainer = styled.View<ConfirmationRequest
   align-items: center;
   textAlignVertical: center;
   width: 200px
-  justify-content: start
+  justify-content: flex-start
   margin-bottom: 10px;
   margin-top: 10px
 `;
@@ -106,14 +106,14 @@ export const UserImage = styled.Image<ConfirmationRequestComponentProps>`
 
 export const ButtonContainer = styled.View`
   justify-content: space-between;
-  align-items: end
+  align-items: flex-end
   width: 100%;
   flex-direction: row
 `;
 
 export const InfoContainer = styled.View`
-  justify-content: start;
-  align-items: start
+  justify-content: flex-start;
+  align-items: flex-start
   width: 100%;
   
 `;

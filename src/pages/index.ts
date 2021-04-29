@@ -6,6 +6,8 @@ import Evaluation from "./Evaluation"
 import Confirmation from "./Confirmation"
 import Chat from './Chat'
 import RequestList from "./RequestList"
+import RequestConfirmation from "./RequestConfirmation"
+import RequestConfirmationFinalizar from "./RequestConfirmationFinalizar"
 
 export { Home, 
          Caregiver, 
@@ -14,6 +16,8 @@ export { Home,
          Evaluation,
          Confirmation,
          Chat,
-         RequestList
+         RequestList,
+         RequestConfirmation,
+         RequestConfirmationFinalizar
 };
 
