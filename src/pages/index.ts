@@ -14,6 +14,6 @@ export { Home,
          Evaluation,
          Confirmation,
          Chat,
-         Request
+         RequestList
 };
 

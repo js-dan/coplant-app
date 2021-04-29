@@ -42,7 +42,7 @@ export const HistoricCardFinishedText = styled.Text<HistoricCardComponentProps>`
   color: #000000
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  justify-content: end;
+  justify-content: flex-end;
   font-style: italic;
 `;
 
