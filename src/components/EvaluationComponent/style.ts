@@ -9,7 +9,7 @@ export const EvaluationContainer = styled.View<EvaluationProps>`
   height: 150px
   background-color: ${theme.mainColors.background};
   border-radius: 10px
-  padding-left: 11px
+  padding-left: 11pxz
 `;
 
 export const MessageText = styled.TextInput<EvaluationProps>`

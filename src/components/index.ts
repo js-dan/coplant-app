@@ -13,6 +13,8 @@ import PresentCardComponent from './PresentCardComponent';
 import InsertImageComponent from './InsertImageComponent';
 import HistoricCardComponent from './HistoricCardComponent'
 import HeaderComponent from './HeaderComponent'
+import EditButtonComponent from './EditButtonComponent'
+import DescriptionEditableComponent from './CaregiverEditableDescriptionComponent'
 
 export {
   ButtonComponent,
@@ -29,5 +31,7 @@ export {
   PresentCardComponent,
   InsertImageComponent,
   HistoricCardComponent,
-  HeaderComponent
+  HeaderComponent,
+  DescriptionEditableComponent,
+  EditButtonComponent
 };
