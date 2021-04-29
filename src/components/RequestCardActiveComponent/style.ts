@@ -4,7 +4,7 @@ import theme from "../../assets/theme";
 
 type RequestCardActiveComponentProps = {};
 
-export const RequestCardActiveContainer = styled.View<RequestCardActiveComponentProps>`
+export const RequestCardActiveContainer = styled.TouchableOpacity<RequestCardActiveComponentProps>`
   background-color: ${theme.mainColors.background};
   align-items: center
   justify-content: center

@@ -28,6 +28,16 @@ function CaregiverStack() {
   );
 }
 
+function RequestStack(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="RequestList" component={RequestList} />
+      <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
+      <Stack.Screen name="RequestConfirmationFinalizar" component={RequestConfirmationFinalizar} />
+    </Stack.Navigator>
+  );
+}
+
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
     Roboto_400Regular,

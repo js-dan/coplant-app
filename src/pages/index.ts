@@ -12,6 +12,8 @@ import EvaluationCaregiver from "./EvaluationCaregiver"
 import Thanks from './Thanks'
 import Promotion from './Promotion'
 import RequestList from "./RequestList"
+import RequestConfirmation from "./RequestConfirmation"
+import RequestConfirmationFinalizar from "./RequestConfirmationFinalizar"
 
 export { Initial, 
          Home,
@@ -26,5 +28,6 @@ export { Initial,
          CaregiverProfile,
          Thanks,
          Chat,
-         RequestList
+         RequestList,
+         RequestConfirmationFinalizar
          };

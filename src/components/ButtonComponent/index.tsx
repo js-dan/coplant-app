@@ -21,7 +21,12 @@ const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
   buttonColor, textColor, buttonText, size, icon, width, stage
 }: ButtonComponentProps) => {
   const navigation = useNavigation()
-  const onPress = () => {stage==1?navigation.navigate("Chat"):(stage==2?navigation.navigate("Evaluation"):(stage==4?navigation.navigate("Caregiver"):navigation.navigate("Confirmation")))}
+  const onPress = () => {stage==1?navigation.navigate("Chat"):
+                        (stage==2?navigation.navigate("Evaluation"):
+                        (stage==4?navigation.navigate("Caregiver"):
+                        (stage==5?navigation.navigate("RequestConfirmationFinalizar"):
+                        (stage==6?navigation.navigate("RequestList"):
+                        navigation.navigate("Confirmation")))))}
   return(
     <ButtonContainer
       icon={icon}
