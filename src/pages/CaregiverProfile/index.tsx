@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, View, Text } from "react-native";
-import { ButtonComponent, Screen, Divider, DescriptionEditableComponent } from "../../components";
+import { ButtonComponent, Screen, Divider, DescriptionEditableComponent, AddMediaComponent } from "../../components";
 import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
 import CommentComponent from "../../components/CommentComponent";
 import PresentCardComponent from "../../components/PresentCardComponent"
@@ -17,6 +17,8 @@ const CaregiverProfile: React.FC = () => (
        stars={3}
        userLocation={"Casa Amarela"}
       />
+      <Divider />
+      <AddMediaComponent/>
       <Divider/>
       <DescriptionEditableComponent
         description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria

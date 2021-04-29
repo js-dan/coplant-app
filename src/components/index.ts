@@ -15,6 +15,7 @@ import HistoricCardComponent from './HistoricCardComponent'
 import HeaderComponent from './HeaderComponent'
 import EditButtonComponent from './EditButtonComponent'
 import DescriptionEditableComponent from './CaregiverEditableDescriptionComponent'
+import AddMediaComponent from './AddMediaComponent'
 
 export {
   ButtonComponent,
@@ -33,5 +34,6 @@ export {
   HistoricCardComponent,
   HeaderComponent,
   DescriptionEditableComponent,
-  EditButtonComponent
+  EditButtonComponent,
+  AddMediaComponent
 };
