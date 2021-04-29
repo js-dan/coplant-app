@@ -11,6 +11,8 @@ import AddPlantComponent from './AddPlantComponent'
 import AddPlantButtonComponent from './AddPlantButtonComponent'
 import PresentCardComponent from './PresentCardComponent'
 import InsertImageComponent from './InsertImageComponent'
+import DescriptionEditableComponent from './CaregiverEditableDescriptionComponent'
+import EditButtonComponent from './EditButtonComponent'
 
 
-export { ButtonComponent, EvaluationComponent, ConfirmationComponent, ComplimentsComponent, EvaluationButtonComponent, Screen, CaregiverDescriptionComponent, Divider, PlantComponent, AddPlantComponent, AddPlantButtonComponent, PresentCardComponent, InsertImageComponent };
+export { ButtonComponent, EditButtonComponent, EvaluationComponent, DescriptionEditableComponent, ConfirmationComponent, ComplimentsComponent, EvaluationButtonComponent, Screen, CaregiverDescriptionComponent, Divider, PlantComponent, AddPlantComponent, AddPlantButtonComponent, PresentCardComponent, InsertImageComponent };

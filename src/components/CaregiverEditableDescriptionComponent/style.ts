@@ -6,15 +6,21 @@ type SpecificColor = {
   color?: string;
 };
 
-type DescriptionProps = {};
+type DescriptionEditableProps = {};
 
-export const DescriptionContainer = styled.View<DescriptionProps>`
+export const DescriptionContainer = styled.View<DescriptionEditableProps>`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
   padding-left: ${theme.margins.leftRight}
   padding-right: ${theme.margins.leftRight}
+`;
+
+export const DescriptionTitleContainer = styled.View<DescriptionEditableProps>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const DescriptionTitle = styled.Text<SpecificColor>`
