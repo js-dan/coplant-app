@@ -7,6 +7,8 @@ import PresentCardComponent from "../../components/PresentCardComponent"
 import HeaderComponent from "../../components/HeaderComponent";
 import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
+import YoutubePlayer from "react-native-youtube-iframe";
+import HeaderComponent from "../../components/HeaderComponent";
 
 const Caregiver: React.FC = () => (
   <Screen>
@@ -16,7 +18,9 @@ const Caregiver: React.FC = () => (
        userName={"Caio Andrade"}
        stars={3}
        userLocation={"Casa Amarela"}
-      />
+      /> 
+      <YoutubePlayer height={300} play={true} videoId={"3iAPUKyLGyA"} />
+      
       <Divider/>
       <DescriptionComponent
         description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
@@ -27,7 +31,7 @@ const Caregiver: React.FC = () => (
       <View style={{ height: 150, marginTop: 20 }}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <CommentComponent
-            usersName={"Daniel"}
+            usersName={"Daniela"}
             stars={5}
             usersComment={"Wow, amazing guys!"}
           />
@@ -43,7 +47,6 @@ const Caregiver: React.FC = () => (
           />
         </ScrollView>
       </View>
-
       <Divider />
       <ButtonContainer>
         <ButtonComponent
@@ -51,6 +54,7 @@ const Caregiver: React.FC = () => (
           buttonText="Contratar"
           size="large"
           textColor="white"
+          stage={0}
         />
       </ButtonContainer>
     </Background>

@@ -10,7 +10,7 @@ export const EvaluationButtonContainer = styled.View<EvaluationButtonProps>`
   flex-direction: row;
   width: 375px
   height: 180px
-  background-color: ${theme.mainColors.bakground};
+  background-color: ${theme.mainColors.background};
   border-radius: 10px
   padding-left: 11px
 `;

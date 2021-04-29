@@ -17,6 +17,8 @@ target 'coplant' do
   use_flipper!
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
   post_install do |installer|
     flipper_post_install(installer)
   end
