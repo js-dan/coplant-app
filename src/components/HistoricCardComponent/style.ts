@@ -19,46 +19,46 @@ export const HistoricCardContainer = styled.View<HistoricCardComponentProps>`
 `;
 
 export const HistoricCardTitle = styled.Text<HistoricCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black} ;
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
 `;
 
 export const HistoricCardText = styled.Text<HistoricCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.h6.size};
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const HistoricCardMessage = styled.Text<HistoricCardComponentProps>`
-  color: "black";
+  color:  ${theme.mainColors.black};
   font-size: ${theme.fonts.h6.size};
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const HistoricCardEndDate = styled.Text<HistoricCardComponentProps>`
-  color: "black";
+  color:  ${theme.mainColors.black};
   font-style: italic;
   font-size: ${theme.fonts.h6.size};
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const DaysRemainingText = styled.Text<HistoricCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: 14px;
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const DaysRemainingNumber = styled.Text<HistoricCardComponentProps>`
-  color: "black";
+  color:  ${theme.mainColors.black};
   font-weight: bold
   font-size: 16px;
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const HistoricCardFinishedText = styled.Text<HistoricCardComponentProps>`
-  color: "black";
+  color:  ${theme.mainColors.black};
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
   justify-content: flex-end;
