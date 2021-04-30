@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ImageSourcePropType } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { ButtonContainer, ButtonText, Icon } from './style';
 
@@ -10,16 +11,18 @@ export interface ButtonComponentProps {
   size?: string;
   icon?: string;
   width?: string;
+  stage?: number
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
 // If this view is in the screen size, you can use default width by only passing size props
 
 const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
-  buttonColor, textColor, buttonText, size, icon, width,
+  buttonColor, textColor, buttonText, size, icon, width, stage
 }: ButtonComponentProps) => {
-  const onPress = () => console.log('função aqui');
-  return (
+  const navigation = useNavigation()
+  const onPress = () => {stage==1?navigation.navigate("Chat"):(stage==2?navigation.navigate("Evaluation"):(stage==4?navigation.navigate("Caregiver"):navigation.navigate("Confirmation")))}
+  return(
     <ButtonContainer
       icon={icon}
       activeOpacity={0.8}

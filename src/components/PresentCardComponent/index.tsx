@@ -15,6 +15,9 @@ import theme from "../../assets/theme";
 import icons from "../../assets/icons";
 import { Divider } from "../DividerComponent/style";
 
+import profilePic from '../../assets/img/users/LizMachado.png';
+import profilePic2 from '../../assets/img/users/CaioAndrade.png'
+
 export interface PresentCardComponentProps {
   stars?: number;
   userName?: string;
@@ -28,12 +31,12 @@ const PresentCardComponent: React.ElementType<PresentCardComponentProps> = ({
 }: PresentCardComponentProps) => {
   return (
     <PresentCardContainer>
-      <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
+      <UserImage source={(userName=="Caio Andrade"?profilePic2:profilePic) as ImageSourcePropType}/>
       <PresentCardTitleContainer>
         <PresentCardTitle>{userName}</PresentCardTitle>
         <PresentCardRating>
-          {[...Array(stars)].map(() => (
-            <PresentCardStar source={icons.socialMedia.star} />
+          {[...Array(stars)].map((index) => (
+            <PresentCardStar key={index} source={icons.socialMedia.star} />
           ))}
           <PresentCardDivider/>
           <PresentCardText>{userLocation}</PresentCardText>

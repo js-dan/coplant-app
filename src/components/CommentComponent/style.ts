@@ -1,6 +1,6 @@
-import { ImageSourcePropType } from "react-native";
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import { ImageSourcePropType } from 'react-native';
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 type CommentProps = {};
 
@@ -45,7 +45,7 @@ export const CommentStar = styled.Image<CommentProps>`
 `;
 
 export const CommentDivider = styled.View<CommentProps>`
-  border-radius: 100
+  border-radius: 10px
   width: 7px
   height: 7px
   background-color: #383838

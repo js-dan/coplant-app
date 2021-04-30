@@ -18,7 +18,7 @@ export const InsertImageContainer = styled.View<InsertImageComponentProps>`
 export const InputText = styled.TextInput<InsertImageComponentProps>`
   width: 130px;
   height: 25px;
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   background-color: ${theme.mainColors.lightGray}
@@ -28,7 +28,7 @@ export const InputText = styled.TextInput<InsertImageComponentProps>`
 export const InputQtd = styled.Picker<InsertImageComponentProps>`
   width: 130px;
   height: 25px;
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
   background-color: ${theme.mainColors.lightGray}

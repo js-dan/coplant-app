@@ -6,7 +6,6 @@ const Evaluation: React.FC = () => (
    <EvaluationComponent/>
    <ComplimentsComponent/>
    <EvaluationButtonComponent/>
-   
   </Screen>
 );
 

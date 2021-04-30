@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ImageSourcePropType } from "react-native";
+import * as React from 'react';
+import { ImageSourcePropType } from 'react-native';
 import {
   CommentContainer,
   CommentText,
@@ -7,10 +7,10 @@ import {
   CommentRating,
   CommentDivider,
   CommentStar,
-} from "./style";
+} from './style';
 
-import theme from "../../assets/theme";
-import icons from "../../assets/icons";
+import theme from '../../assets/theme';
+import icons from '../../assets/icons';
 
 export interface CommentComponentProps {
   stars?: number;
@@ -22,20 +22,18 @@ const CommentComponent: React.ElementType<CommentComponentProps> = ({
   stars,
   usersName,
   usersComment,
-}: CommentComponentProps) => {
-  return (
-    <CommentContainer>
-      <CommentTitle>{usersName}</CommentTitle>
-      <CommentRating>
-        <CommentTitle>{stars}</CommentTitle>
-        <CommentDivider />
-        {[...Array(stars)].map(() => (
-          <CommentStar source={icons.socialMedia.star} />
-        ))}
-      </CommentRating>
-      <CommentText>{usersComment}</CommentText>
-    </CommentContainer>
-  );
-};
+}: CommentComponentProps) => (
+  <CommentContainer>
+    <CommentTitle>{usersName}</CommentTitle>
+    <CommentRating>
+      <CommentTitle>{stars}</CommentTitle>
+      <CommentDivider />
+      {[...Array(stars)].map((prop, index) => (
+        <CommentStar key={index} source={icons.socialMedia.star} />
+      ))}
+    </CommentRating>
+    <CommentText>{usersComment}</CommentText>
+  </CommentContainer>
+);
 
 export default CommentComponent;

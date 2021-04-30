@@ -1,6 +1,6 @@
-import { ImageSourcePropType } from "react-native";
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import { ImageSourcePropType } from 'react-native';
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 type PresentCardComponentProps = {};
 
@@ -18,13 +18,13 @@ export const PresentCardContainer = styled.View<PresentCardComponentProps>`
 `;
 
 export const PresentCardText = styled.Text<PresentCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
 `;
 
 export const PresentCardTitle = styled.Text<PresentCardComponentProps>`
-  color: "black";
+  color: ${theme.mainColors.black};
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
@@ -53,7 +53,7 @@ export const PresentCardStar = styled.Image<PresentCardComponentProps>`
 `;
 
 export const PresentCardDivider = styled.View<PresentCardComponentProps>`
-  border-radius: 100
+  border-radius: 10px
   width: 7px
   height: 7px
   background-color: #383838
@@ -69,4 +69,3 @@ export const UserImage = styled.Image<PresentCardComponentProps>`
   margin-right: 5px
   border-radius: 46px
 `;
-
