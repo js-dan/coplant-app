@@ -17,6 +17,7 @@ import EditButtonComponent from './EditButtonComponent'
 import DescriptionEditableComponent from './CaregiverEditableDescriptionComponent'
 import AddMediaComponent from './AddMediaComponent'
 
+import PromotionComponent from './PromotionComponent';
 export {
   ButtonComponent,
   EvaluationComponent,
@@ -35,5 +36,6 @@ export {
   HeaderComponent,
   DescriptionEditableComponent,
   EditButtonComponent,
-  AddMediaComponent
+  AddMediaComponent,
+  PromotionComponent
 };
