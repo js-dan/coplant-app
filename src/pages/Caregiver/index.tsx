@@ -8,7 +8,6 @@ import HeaderComponent from "../../components/HeaderComponent";
 import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
 import YoutubePlayer from "react-native-youtube-iframe";
-import HeaderComponent from "../../components/HeaderComponent";
 
 const Caregiver: React.FC = () => (
   <Screen>
