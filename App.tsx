@@ -10,7 +10,7 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat
+  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
