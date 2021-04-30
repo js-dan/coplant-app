@@ -12,16 +12,17 @@ export interface ButtonComponentProps {
   icon?: string;
   width?: string;
   stage?: string;
+  changeUser?:boolean;
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
 // If this view is in the screen size, you can use default width by only passing size props
 
 const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
-  buttonColor, textColor, buttonText, size, icon, width, stage
+  buttonColor, textColor, buttonText, size, icon, width, stage, changeUser
 }: ButtonComponentProps) => {
   const navigation = useNavigation()
-  const onPress = () => {navigation.navigate(stage)}
+  const onPress = () => {changeUser?navigation.navigate(stage, {isUser: false}):navigation.navigate(stage)}
   return(
     <ButtonContainer
       icon={icon}

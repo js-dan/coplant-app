@@ -29,5 +29,6 @@ export { Initial,
          Thanks,
          Chat,
          RequestList,
+         RequestConfirmation,
          RequestConfirmationFinalizar
          };

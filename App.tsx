@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {createStackNavigator } from '@react-navigation/stack'
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -10,7 +10,8 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, Promotion
+  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, 
+  Promotion, RequestList, RequestConfirmationFinalizar, RequestConfirmation, CaregiverProfile
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
@@ -38,6 +39,7 @@ function RequestStack(){
   );
 }
 
+
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
     Roboto_400Regular,
@@ -47,11 +49,10 @@ const App: React.FC = () => {
     Nunito_600SemiBold,
     Nunito_700Bold,
   });
-
   if (!fontsLoaded) {
     return <AppLoading />;
   }
-
+  const isUser ={true};
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
@@ -84,10 +85,11 @@ const App: React.FC = () => {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Cuidadores" component={CaregiverStack} />
+        
+        <Tab.Screen name="Cuidadores" component={isUser?CaregiverStack:RequestStack} />
         <Tab.Screen name="Histórico" component={Historic} />
         <Tab.Screen name="Cupons" component={Promotion} />
-        <Tab.Screen name="Perfil" component={User} />
+        <Tab.Screen name="Perfil" component={isUser?User:CaregiverProfile} />
       </Tab.Navigator>
     </NavigationContainer>
   );
