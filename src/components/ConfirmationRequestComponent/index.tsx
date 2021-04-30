@@ -73,7 +73,7 @@ const ConfirmationRequestComponent: React.ElementType<ConfirmationRequestCompone
           buttonText={before?"Aceitar":"Chat"}
           size="small"
           textColor="white"
-          stage={before?5:1}
+          stage={before?"RequestConfirmationFinalizar":"Chat"}
 
         />
 
@@ -82,7 +82,7 @@ const ConfirmationRequestComponent: React.ElementType<ConfirmationRequestCompone
           buttonText={before?"Negar":"Finalizar"}
           size="medium"
           textColor="white"
-          stage={before?6:6}
+          stage={before?"RequestList":"RequestList"}
         />
       </ButtonContainer>
       

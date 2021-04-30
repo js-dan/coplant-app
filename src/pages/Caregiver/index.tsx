@@ -53,7 +53,7 @@ const Caregiver: React.FC = () => (
           buttonText="Contratar"
           size="large"
           textColor="white"
-          stage={0}
+          stage="Confirmation"
         />
       </ButtonContainer>
     </Background>

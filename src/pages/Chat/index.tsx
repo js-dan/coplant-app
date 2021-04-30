@@ -104,7 +104,7 @@ const Chat = () => {
       buttonColor="orange"
       buttonText="Finalizar"
       size="large"
-      stage={2}
+      stage="Evaluation"
     />
     </>
   );
