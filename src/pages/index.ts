@@ -10,8 +10,10 @@ import Confirmation from "./Confirmation"
 import Chat from './Chat'
 import EvaluationCaregiver from "./EvaluationCaregiver"
 import Thanks from './Thanks'
+import Promotion from './Promotion'
 export { Initial, 
          Home,
+        Promotion,
          Caregiver, 
          Login,
          Historic, 
