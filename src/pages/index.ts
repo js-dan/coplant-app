@@ -1,4 +1,4 @@
-import Home from "./Home";
+import Home from "./Home"
 import Caregiver from "./Caregiver";
 import Historic from "./Historic";
 import User from "./User"
