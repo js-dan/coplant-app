@@ -7,7 +7,7 @@ import Camera from './camera.png';
 import Like from './like.png';
 import GoogleMin from './googlemin.png';
 import Logo from './logo.png';
-
+import Promotion from './promotion.png';
 
 export default {
   feather: {
@@ -48,5 +48,8 @@ export default {
   },
   thanks:{
     Like: Like,
+  },
+  promotion:{
+    Promotion: Promotion,
   }
 };

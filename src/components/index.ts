@@ -11,9 +11,9 @@ import AddPlantComponent from './AddPlantComponent';
 import AddPlantButtonComponent from './AddPlantButtonComponent';
 import PresentCardComponent from './PresentCardComponent';
 import InsertImageComponent from './InsertImageComponent';
-import HistoricCardComponent from './HistoricCardComponent'
-import HeaderComponent from './HeaderComponent'
-
+import HistoricCardComponent from './HistoricCardComponent';
+import HeaderComponent from './HeaderComponent';
+import PromotionComponent from './PromotionComponent';
 export {
   ButtonComponent,
   EvaluationComponent,
@@ -29,5 +29,6 @@ export {
   PresentCardComponent,
   InsertImageComponent,
   HistoricCardComponent,
-  HeaderComponent
+  HeaderComponent,
+  PromotionComponent
 };
