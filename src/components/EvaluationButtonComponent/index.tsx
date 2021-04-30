@@ -17,7 +17,7 @@ const EvaluationButtonComponent: React.ElementType<EvaluationButtonProps> = ({
       size="small"
       width="100%"
       textColor="white"
-      stage={4}
+      stage="Caregiver"
     />
   </EvaluationButtonContainer>
 
