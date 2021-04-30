@@ -9,6 +9,7 @@ export const PromotionContainer = styled.View`
   background: ${theme.mainColors.green};
   borderRadius: 10px;
   padding: 12px 15px;
+  margin-bottom: 15px;
 `;
 export const HeaderText = styled.Text`
   font-family: ${theme.fonts.body.family};
