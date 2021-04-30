@@ -76,7 +76,7 @@ const App: React.FC = () => {
       >
         <Tab.Screen name="Cuidadores" component={CaregiverStack} />
         <Tab.Screen name="Histórico" component={Historic} />
-        <Tab.Screen name="Cupons" component={CaregiverStack} />
+        <Tab.Screen name="Cupons" component={Promotion} />
         <Tab.Screen name="Perfil" component={User} />
       </Tab.Navigator>
     </NavigationContainer>
