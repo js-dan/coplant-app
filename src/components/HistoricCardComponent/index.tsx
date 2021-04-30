@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ImageSourcePropType } from "react-native";
+import profilePic2 from '../../assets/img/users/CaioAndrade.png'
 import {
   HistoricCardContainer,
   HistoricCardText,
@@ -39,7 +40,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   if (finished && rated) {
     return (
       <HistoricCardContainer>
-        <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
+        <UserImage source={profilePic2 as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitle>{userName}</HistoricCardTitle>
           <HistoricCardRating>
@@ -58,7 +59,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   if (finished && !rated) {
     return (
       <HistoricCardContainer>
-        <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
+        <UserImage source={profilePic2 as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitle>{userName}</HistoricCardTitle>
           <HistoricCardRating>
@@ -73,7 +74,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   if (!finished) {
     return (
       <HistoricCardContainer>
-        <UserImage source={require('../../assets/img/users/'+userName+'.png')}/>
+        <UserImage source={profilePic2 as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitleContainer>
             <HistoricCardTitle>{userName}</HistoricCardTitle>
