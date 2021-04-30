@@ -7,11 +7,6 @@ import {
   useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
 import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-google-fonts/nunito';
-<<<<<<< HEAD
-import AppLoading from "expo-app-loading";
-import { StatusBar } from "react-native";
-import { Caregiver, Home, User, Evaluation, CaregiverProfile  } from "./src/pages";
-=======
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
@@ -32,7 +27,6 @@ function CaregiverStack() {
     </Stack.Navigator>
   );
 }
->>>>>>> develop
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -51,10 +45,6 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
-<<<<<<< HEAD
-      <CaregiverProfile />
-    </>
-=======
       {/*<Stack.Navigator>
         <Stack.Screen name="User" component={User} />
         <Stack.Screen name="Caregiver" component={Caregiver} />
@@ -90,7 +80,6 @@ const App: React.FC = () => {
         <Tab.Screen name="Perfil" component={User} />
       </Tab.Navigator>
     </NavigationContainer>
->>>>>>> develop
   );
 };
 export default App;
