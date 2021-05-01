@@ -18,9 +18,9 @@ import {
   HistoricCardMessage
 } from "./style";
 
-import theme from '../../assets/theme';
-import icons from '../../assets/icons';
-import { Divider } from '../DividerComponent/style';
+import theme from "../../assets/theme";
+import icons from "../../assets/icons";
+import { Divider } from "../DividerComponent/style";
 
 export interface HistoricCardComponentProps {
   userName?: string;
@@ -89,8 +89,5 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
     );
   };
 };
-
-  </HistoricCardContainer>
-);
 
 export default HistoricCardComponent;
