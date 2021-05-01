@@ -4,10 +4,10 @@ import { ButtonComponent, Screen, Divider } from "../../components";
 import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
 import CommentComponent from "../../components/CommentComponent";
 import PresentCardComponent from "../../components/PresentCardComponent"
+import HeaderComponent from "../../components/HeaderComponent";
 import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
 import YoutubePlayer from "react-native-youtube-iframe";
-import HeaderComponent from "../../components/HeaderComponent";
 
 const Caregiver: React.FC = () => (
   <Screen>
@@ -53,7 +53,7 @@ const Caregiver: React.FC = () => (
           buttonText="Contratar"
           size="large"
           textColor="white"
-          stage={0}
+          stage="Confirmation"
         />
       </ButtonContainer>
     </Background>

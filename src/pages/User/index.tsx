@@ -10,7 +10,9 @@ import theme from "../../assets/theme";
 import { Background, SectionTitle, ButtonContainer } from "./style";
 import HeaderComponent from "../../components/HeaderComponent";
 
-const User: React.FC = ({navigation}) => (
+const User: React.FC = () => 
+(
+  
   <Screen>
     <Background>
       <HeaderComponent headerText="Meu Perfil" arrowLeft="true" />
@@ -34,6 +36,13 @@ const User: React.FC = ({navigation}) => (
           <AddPlantComponent/>
         </ScrollView>
       </View>
+      {/*<ButtonComponent
+        buttonColor="orange"
+        buttonText="Trocar Usuario"
+        size="large"
+        stage="Perfil"
+        changeUser={true}
+      />*/}
     </Background>
   </Screen>
 );

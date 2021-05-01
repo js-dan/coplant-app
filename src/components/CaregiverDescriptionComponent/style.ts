@@ -8,7 +8,7 @@ type SpecificColor = {
 
 type DescriptionProps = {};
 
-export const DescriptionContainer = styled.TouchableOpacity<DescriptionProps>`
+export const DescriptionContainer = styled.View<DescriptionProps>`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;

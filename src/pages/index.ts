@@ -1,15 +1,34 @@
-import Home from "./Home";
+import Initial from "./Initial";
+import Home from "./Home"
 import Caregiver from "./Caregiver";
+import Login from "./Login";
 import Historic from "./Historic";
+import CaregiverProfile from "./CaregiverProfile";
 import User from "./User"
 import Evaluation from "./Evaluation"
 import Confirmation from "./Confirmation"
 import Chat from './Chat'
-export { Home, 
+import EvaluationCaregiver from "./EvaluationCaregiver"
+import Thanks from './Thanks'
+import Promotion from './Promotion'
+import RequestList from "./RequestList"
+import RequestConfirmation from "./RequestConfirmation"
+import RequestConfirmationFinalizar from "./RequestConfirmationFinalizar"
+
+export { Initial, 
+         Home,
+        Promotion,
          Caregiver, 
+         Login,
          Historic, 
          User, 
          Evaluation,
          Confirmation,
-         Chat};
-
+         EvaluationCaregiver,
+         CaregiverProfile,
+         Thanks,
+         Chat,
+         RequestList,
+         RequestConfirmation,
+         RequestConfirmationFinalizar
+         };

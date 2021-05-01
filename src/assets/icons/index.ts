@@ -4,8 +4,10 @@ import ArrowLeft from './arrow-left.png';
 import ShareIcon from './share.png';
 import Star from "./Star.png";
 import Camera from './camera.png';
-
-
+import Like from './like.png';
+import GoogleMin from './googlemin.png';
+import Logo from './logo.png';
+import Promotion from './promotion.png';
 
 export default {
   feather: {
@@ -39,5 +41,15 @@ export default {
   header:{
     ArrowLeft: ArrowLeft,
     ShareIcon: ShareIcon,
+  },
+  init:{
+    Logo: Logo,
+    GoogleMin: GoogleMin,
+  },
+  thanks:{
+    Like: Like,
+  },
+  promotion:{
+    Promotion: Promotion,
   }
 };

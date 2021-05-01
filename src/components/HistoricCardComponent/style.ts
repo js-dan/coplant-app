@@ -19,30 +19,49 @@ export const HistoricCardContainer = styled.View<HistoricCardComponentProps>`
 `;
 
 export const HistoricCardTitle = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color: ${theme.mainColors.black} ;
   font-weight: bold
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
 `;
 
 export const HistoricCardText = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color: ${theme.mainColors.black};
+  font-size: ${theme.fonts.h6.size};
+  font-family: ${theme.fonts.secondary.family};
+`;
+
+export const HistoricCardMessage = styled.Text<HistoricCardComponentProps>`
+  color:  ${theme.mainColors.black};
   font-size: ${theme.fonts.h6.size};
   font-family: ${theme.fonts.secondary.family};
 `;
 
 export const HistoricCardEndDate = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color:  ${theme.mainColors.black};
   font-style: italic;
   font-size: ${theme.fonts.h6.size};
   font-family: ${theme.fonts.secondary.family};
 `;
 
+export const DaysRemainingText = styled.Text<HistoricCardComponentProps>`
+  color: ${theme.mainColors.black};
+  font-size: 14px;
+  font-family: ${theme.fonts.secondary.family};
+`;
+
+export const DaysRemainingNumber = styled.Text<HistoricCardComponentProps>`
+  color:  ${theme.mainColors.black};
+  font-weight: bold
+  font-size: 16px;
+  font-family: ${theme.fonts.secondary.family};
+`;
+
 export const HistoricCardFinishedText = styled.Text<HistoricCardComponentProps>`
-  color: #000000
+  color:  ${theme.mainColors.black};
   font-size: ${theme.fonts.body.size};
   font-family: ${theme.fonts.body.family};
-  justify-content: end;
+  justify-content: flex-end;
   font-style: italic;
 `;
 
@@ -55,13 +74,35 @@ export const HistoricCardRating = styled.View<HistoricCardComponentProps>`
   margin-top: 10px;
 `;
 
-export const HistoricCardTitleContainer = styled.View<HistoricCardComponentProps>`
+export const HistoricCardInfoContainer = styled.View<HistoricCardComponentProps>`
   align-items: flex-start
   textAlignVertical: center;
   margin-bottom: 10px;
   margin-top: 10px;
   width: 60%
 `;
+
+export const HistoricCardStatus = styled.TouchableOpacity<HistoricCardComponentProps>`
+  width: 10px;
+  height: 10px;
+  background-color: ${theme.mainColors.green};
+  border-radius: 5px;
+  margin-left: 5px;
+`;
+
+export const DaysRemainingContainer = styled.View<HistoricCardComponentProps>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6px;
+`;
+
+export const HistoricCardTitleContainer = styled.View<HistoricCardComponentProps>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
 
 export const HistoricCardStar = styled.Image<HistoricCardComponentProps>`
   width: 17px

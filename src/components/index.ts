@@ -13,7 +13,14 @@ import PresentCardComponent from './PresentCardComponent';
 import InsertImageComponent from './InsertImageComponent';
 import HistoricCardComponent from './HistoricCardComponent'
 import HeaderComponent from './HeaderComponent'
+import EditButtonComponent from './EditButtonComponent'
+import DescriptionEditableComponent from './CaregiverEditableDescriptionComponent'
+import AddMediaComponent from './AddMediaComponent'
+import RequestCardComponent from './RequestCardComponent'
+import RequestCardActiveComponent from './RequestCardActiveComponent'
+import ConfirmationRequestComponent from "./ConfirmationRequestComponent"
 
+import PromotionComponent from './PromotionComponent';
 export {
   ButtonComponent,
   EvaluationComponent,
@@ -29,5 +36,11 @@ export {
   PresentCardComponent,
   InsertImageComponent,
   HistoricCardComponent,
-  HeaderComponent
+  HeaderComponent,
+  RequestCardActiveComponent,
+  DescriptionEditableComponent,
+  EditButtonComponent,
+  AddMediaComponent,
+  PromotionComponent,
+  RequestCardComponent
 };
