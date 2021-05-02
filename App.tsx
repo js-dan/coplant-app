@@ -10,7 +10,7 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, CaregiverListage,
+  Caregiver, Home, Initial, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, CaregiverListage,
   Promotion, RequestList, RequestConfirmationFinalizar, RequestConfirmation, CaregiverProfile, InsertPlant
 } from './src/pages';
 
@@ -96,8 +96,8 @@ const App: React.FC = () => {
         }}
       >
         
-        <Tab.Screen name="Cuidadores" component={isUser?CaregiverStack:RequestStack} />
-        <Tab.Screen name="Histórico" component={Historic} />
+        <Tab.Screen name="Cuidadores" component={CaregiverStack} />
+        <Tab.Screen name="Histórico" component={Initial} />
         <Tab.Screen name="Cupons" component={Promotion} />
         <Tab.Screen name="Perfil" component={isUser?UserStack:CaregiverProfile} />
       </Tab.Navigator>

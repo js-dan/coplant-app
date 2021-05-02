@@ -1,7 +1,6 @@
 import Initial from "./Initial";
 import Home from "./Home"
 import Caregiver from "./Caregiver";
-import Login from "./Login";
 import Historic from "./Historic";
 import CaregiverProfile from "./CaregiverProfile";
 import User from "./User"
@@ -21,7 +20,6 @@ export { Initial,
          Home,
         Promotion,
          Caregiver, 
-         Login,
          Historic, 
          User, 
          Evaluation,
