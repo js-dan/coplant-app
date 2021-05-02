@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useReducer} from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {createStackNavigator } from '@react-navigation/stack'
@@ -13,6 +13,8 @@ import {
   Caregiver, Home, Initial, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, CaregiverListage,
   Promotion, RequestList, RequestConfirmationFinalizar, RequestConfirmation, CaregiverProfile, InsertPlant
 } from './src/pages';
+import { UserContext, userInitialValue, userReducer } from './src/helpers/userReducer';
+import { LoginContext, loginInitialValue, loginReducer } from './src/helpers/loginContext';
 
 const Tab = createBottomTabNavigator();
 
@@ -51,6 +53,9 @@ function UserStack(){
 
 
 const App: React.FC = () => {
+  const [authorization, authorizationDispatch] = useReducer(loginReducer, loginInitialValue);
+  const [user, userDispatch] = useReducer(userReducer, userInitialValue);
+  const isUser = true
   const [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,
@@ -59,19 +64,14 @@ const App: React.FC = () => {
     Nunito_600SemiBold,
     Nunito_700Bold,
   });
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
-  const isUser ={true};
+
+  if (!fontsLoaded) return <AppLoading />
+  
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor="white" />
-      {/*<Stack.Navigator>
-        <Stack.Screen name="User" component={User} />
-        <Stack.Screen name="Caregiver" component={Caregiver} />
-        <Stack.Screen name="Confirmation" component={Confirmation} />
-      </Stack.Navigator>*/}
-      <Tab.Navigator
+      <UserContext.Provider value={{ user, userDispatch }}>
+        <StatusBar backgroundColor="white" />
+        <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -101,6 +101,7 @@ const App: React.FC = () => {
         <Tab.Screen name="Cupons" component={Promotion} />
         <Tab.Screen name="Perfil" component={isUser?UserStack:CaregiverProfile} />
       </Tab.Navigator>
+    </UserContext.Provider>
     </NavigationContainer>
   );
 };
