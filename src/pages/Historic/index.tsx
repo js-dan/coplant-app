@@ -10,7 +10,6 @@ import { Background, SectionTitle, ButtonContainer } from './style';
 const Historic: React.FC = () => (
   <Screen>
     <Background>
-      <HeaderComponent headerText="Histórico dos Cuidadores" />
       <View style={{ marginTop: 20 }}>
         <ScrollView>
           <HistoricCardComponent

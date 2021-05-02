@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import theme from '../../assets/theme';
 
-export const Item = styled.View`
+export const Item = styled.TouchableOpacity`
   flex-direction: row;
   justify-content: space-between;
   background-color: ${theme.mainColors.cardBackground};

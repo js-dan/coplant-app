@@ -50,7 +50,6 @@ const User: React.FC = () =>
 return (
   <Screen>
     <Background>
-      <HeaderComponent headerText="Meu Perfil" arrowLeft="true" />
       <PresentCardComponent
         userName={user.name}
         stars={user.score}

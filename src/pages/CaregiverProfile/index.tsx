@@ -11,7 +11,6 @@ import { Background, SectionTitle, ButtonContainer } from "./style";
 const CaregiverProfile: React.FC = () => (
   <Screen>
     <Background>
-      <HeaderComponent headerText="Perfil Cuidador" arrowLeft={"true"}/>
       <PresentCardComponent
        userName={"Caio Andrade"}
        stars={3}

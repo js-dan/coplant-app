@@ -17,20 +17,8 @@ import { UserContext, userInitialValue, userReducer } from './src/helpers/userRe
 import { LoginContext, loginInitialValue, loginReducer } from './src/helpers/loginContext';
 
 const Tab = createBottomTabNavigator();
-
 const Stack = createStackNavigator();
 
-function CaregiverStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Caregiver" component={Caregiver} />
-      <Stack.Screen name="Confirmation" component={Confirmation} />
-      <Stack.Screen name="CaregiverListage" component={CaregiverListage} />
-      <Stack.Screen name="Chat" component={Chat} />
-      <Stack.Screen name="Evaluation" component={Evaluation} />
-    </Stack.Navigator>
-  );
-}
 
 function RequestStack(){
   return(
@@ -42,15 +30,62 @@ function RequestStack(){
   );
 }
 
+function CaregiverStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Cuidadores" component={CaregiverListage} options={{headerShown: false}} />
+      <Stack.Screen name="Cuidador" component={Caregiver}  />
+      <Stack.Screen name="Confirmation" component={Confirmation} />
+      <Stack.Screen name="Chat" component={Chat} />
+      <Stack.Screen name="Evaluation" component={Evaluation} />
+    </Stack.Navigator>
+  )
+
+}
+
 function UserStack(){
   return(
     <Stack.Navigator>
-      <Stack.Screen name="User" component={User} />
+      <Stack.Screen name="User" component={User} options={{headerShown: false}}/>
       <Stack.Screen name="InsertPlant" component={InsertPlant} />
     </Stack.Navigator>
   );
 }
 
+function tabBar() {
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+          color = focused ? 'tomato' : 'gray';
+
+          if (route.name === 'Cuidadores') {
+            iconName = 'md-people';
+          } else if (route.name === 'Histórico') {
+            iconName = 'ios-paper';
+          } else if (route.name === 'Cupons') {
+            iconName = 'ios-pricetags';
+          } else if (route.name === 'Perfil') {
+            iconName = 'md-person';
+          }
+
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+      })}
+      tabBarOptions={{
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
+      }}
+    >
+      <Tab.Screen name="Cuidadores" component={CaregiverStack} />
+      <Tab.Screen name="Histórico" component={Historic} />
+      <Tab.Screen name="Cupons" component={Promotion} />
+      <Tab.Screen name="Perfil" component={true ? UserStack : CaregiverProfile} />
+    </Tab.Navigator>
+  )
+
+  }
 
 const App: React.FC = () => {
   const [authorization, authorizationDispatch] = useReducer(loginReducer, loginInitialValue);
@@ -70,37 +105,13 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <UserContext.Provider value={{ user, userDispatch }}>
-        <StatusBar backgroundColor="white" />
-        <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            color = focused ? 'tomato' : 'gray';
-
-            if (route.name === 'Cuidadores') {
-              iconName = 'md-people';
-            } else if (route.name === 'Histórico') {
-              iconName = 'ios-paper';
-            } else if (route.name === 'Cupons') {
-              iconName = 'ios-pricetags';
-            } else if (route.name === 'Perfil') {
-              iconName = 'md-person';
-            }
-
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-        })}
-        tabBarOptions={{
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray',
-        }}
-      >
-        
-        <Tab.Screen name="Cuidadores" component={CaregiverStack} />
-        <Tab.Screen name="Histórico" component={Initial} />
-        <Tab.Screen name="Cupons" component={Promotion} />
-        <Tab.Screen name="Perfil" component={isUser?UserStack:CaregiverProfile} />
-      </Tab.Navigator>
+        <StatusBar translucent backgroundColor="transparent" />
+        <Stack.Navigator>
+          <Stack.Screen name="LoginScreen" options={{headerShown: false}} component={Initial} />
+          <Stack.Screen name="RegisterScreen" options={{headerShown: false}} component={Initial} /> 
+          <Stack.Screen name="TabBarScreen" options={{headerShown: false}} component={tabBar} />
+          <Stack.Screen name="Chat" component={Chat} />
+        </Stack.Navigator>
     </UserContext.Provider>
     </NavigationContainer>
   );

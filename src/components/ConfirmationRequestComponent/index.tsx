@@ -45,7 +45,6 @@ const ConfirmationRequestComponent: React.ElementType<ConfirmationRequestCompone
 }: ConfirmationRequestComponentProps) => {
   return (
     <ConfirmationRequestContainer>
-      <HeaderComponent headerText="Solicitações - Detalhes" arrowLeft="true" shareIcon="false"></HeaderComponent>
       <CardTitleContainer>
         <UserImage source={profilePic as ImageSourcePropType}/>
         <ConfirmationRequestTitleContainer>

@@ -9,6 +9,7 @@ import {
 
 import icons from '../../assets/icons';
 import TagComponent from '../TagComponent';
+import { useNavigation } from '@react-navigation/core';
 
 export interface CaregiverCardProps {
   name?: string;
@@ -20,33 +21,34 @@ export interface CaregiverCardProps {
 }
 
 const CaregiverCard: React.ElementType<CaregiverCardProps> = (
-  {
-    name, rating, district, skill1, skill2, skill3,
-  }: CaregiverCardProps,
-) => (
-  <Item>
-    <Icon source={profilePic as ImageSourcePropType} />
-    <ProfileInfos>
-      <Name>
-        {name}
-      </Name>
-      <Infos>
-        {rating}
-        {district}
-      </Infos>
-      <Skills>
-        <TagComponent
-          text={skill1}
-        />
-        <TagComponent
-          text={skill2}
-        />
-        <TagComponent
-          text={skill3}
-        />
-      </Skills>
-    </ProfileInfos>
-  </Item>
-);
+  {name, rating, district, skill1, skill2, skill3,}: CaregiverCardProps,) => {
+    const navigation = useNavigation()
+
+    return (
+      <Item onPress={() => {navigation.navigate("Cuidador", {name: name, rating: rating})}}>
+        <Icon source={profilePic as ImageSourcePropType} />
+        <ProfileInfos>
+          <Name>
+            {name}
+          </Name>
+          <Infos>
+            {rating}
+            {district}
+          </Infos>
+          <Skills>
+            <TagComponent
+              text={skill1}
+            />
+            <TagComponent
+              text={skill2}
+            />
+            <TagComponent
+              text={skill3}
+            />
+          </Skills>
+        </ProfileInfos>
+      </Item>
+    )
+};
 
 export default CaregiverCard;

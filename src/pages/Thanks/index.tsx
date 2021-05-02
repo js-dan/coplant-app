@@ -10,7 +10,6 @@ import { ImageSourcePropType } from 'react-native';
 const Thanks: React.FC = () => (
   <Screen>
     <Background>
-      <HeaderComponent arrowLeft="true"/>
       <View style={{marginTop: 100,alignItems: "center"}}>
           <View style={{padding: 25,borderStyle: "solid",borderColor:"#435D74",borderWidth: 2,borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2}}>
             <ImgLike source={Icons.thanks.Like as ImageSourcePropType}/>

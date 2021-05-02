@@ -8,7 +8,6 @@ import { Background, SectionTitle, ButtonContainer } from "./style";
 const RequestList: React.FC = () => (
   <Screen>
     <Background>
-      <HeaderComponent headerText="Solicitações" arrowLeft="true" shareIcon="true"></HeaderComponent>
       <SectionTitle>Em aberto</SectionTitle>
       <View style={{ height: 230, marginTop: 20 }}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>

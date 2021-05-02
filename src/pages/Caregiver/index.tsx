@@ -12,7 +12,6 @@ import YoutubePlayer from "react-native-youtube-iframe";
 const Caregiver: React.FC = () => (
   <Screen>
     <Background>
-      <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" />
       <PresentCardComponent
         userName="Caio Andrade"
         stars={3}

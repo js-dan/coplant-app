@@ -9,7 +9,6 @@ import { ImageSourcePropType } from 'react-native';
 const Thanks: React.FC = () => (
   <Screen>
     <Background>
-      <HeaderComponent arrowLeft="true" headerText="Promoções"/>
       <View style={{marginTop: 30}}>
           <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
             <PromotionComponent headerText="Mimo para Você" bodyText="Ganhe desconto de R$ 10 "></PromotionComponent>

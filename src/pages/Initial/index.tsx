@@ -9,11 +9,12 @@ import axios from 'axios'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { LoginContext, loginInitialValue, loginReducer } from "../../helpers/loginContext";
 import { userReducer, userInitialValue, UserContext } from "../../helpers/userReducer";
+import { useNavigation } from "@react-navigation/core";
 
 const Initial: React.FC = () => {
   const [authorization, authorizationDispatch] = useReducer(loginReducer, loginInitialValue);
   const { userDispatch } = useContext(UserContext);
-
+  const navigation = useNavigation()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
 
@@ -28,15 +29,23 @@ const Initial: React.FC = () => {
 
       authorizationDispatch({ type: 'CAREGIVER' });
       userDispatch({ 
-      type: 'save',
-      name: databaseUser.name,
-      email: databaseUser.email,
-      address: databaseUser.address,
-      id: databaseUser.id,
-      isCaregiver: databaseUser.isCaregiver,
-      description: databaseUser.description,
-      token: token,
-      score: databaseUser.note});
+        type: 'save',
+        name: databaseUser.name,
+        email: databaseUser.email,
+        address: databaseUser.address,
+        id: databaseUser.id,
+        isCaregiver: databaseUser.isCaregiver,
+        description: databaseUser.description,
+        token: token,
+        score: databaseUser.note
+      });
+
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'TabBarScreen' }],
+      });
+
+      console.log("Loguei")
     })
     .catch(function (error) {
       Alert.alert(
