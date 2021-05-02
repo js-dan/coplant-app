@@ -24,7 +24,7 @@ const InsertImageComponent: React.ElementType<InsertImageComponentProps> = ({
     </InsertImageField>
     <InsertImageField>
       <DescriptionText>{'Quantidade: '}</DescriptionText>
-      <InputQtd onValueChange={setQtdPlant}>
+      <InputQtd onValueChange={setQtdPlant} selectedValue={qtdPlant}>
         <Picker.Item label="1" value={1}></Picker.Item>
         <Picker.Item label="2" value={2}></Picker.Item>
         <Picker.Item label="3" value={3}></Picker.Item>
