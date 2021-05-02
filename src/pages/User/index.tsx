@@ -15,34 +15,30 @@ import axios from 'axios'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 var plantname:string;
 var plantqtd:number;
+var persons;
 const User: React.FC = () => 
 {
-  const [name, setName] = React.useState('');
-  const [qtd, setQtd] = React.useState('');
+  const [name, setName] = React.useState([]);
+  const [qtd, setQtd] = React.useState([]);
+  const [numberPlants, setNumberPlants] = React.useState(0);
   const onPress =()=>{
+    
     axios.get('http://192.168.5.207:3001/plant/')
         .then(res => {
-           let persons = res.data;
-           const len = persons.lenght
+           persons = res.data;
+           setNumberPlants(persons.length)
+           setName([])
+           setQtd([])
+           for(let i=0;i<numberPlants;i++){
+            plantname = persons[i].name
+            plantqtd = persons[i].qtd
+            setName(name=>[...name, plantname]);;
+            setQtd(qtd=>[...qtd, plantqtd]);
+            console.log(name);
+           }
            
-           console.log(persons[(persons.length - 1)])
-           plantname = persons[(persons.length - 1)].name
-           plantqtd = persons[(persons.length - 1)].qtd
-           setName(plantname);
-           setQtd(String(plantqtd));
          })
   }
-  axios.get('http://192.168.5.207:3001/plant/')
-   .then(res => {
-      let persons = res.data;
-      const len = persons.lenght
-      
-      console.log(persons[(persons.length - 1)])
-      plantname = persons[(persons.length - 1)].name
-      plantqtd = persons[(persons.length - 1)].qtd
-      setName(plantname);
-      setQtd(String(plantqtd));
-    })
   
 
 return (
@@ -67,11 +63,11 @@ return (
       <TouchableOpacity style={{ height: 150, marginTop: 0 }} onPress={
         onPress
       }>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <PlantComponent
-            name={String(name)}
-            qtd={Number(qtd)}
-          />
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}> 
+          {[...Array(numberPlants)].map((prop, index) => 
+          (
+            <PlantComponent key={index} name={String(name[index])} qtd={Number(qtd[index])} />
+          ))}
           <AddPlantComponent />
         </ScrollView>
       </TouchableOpacity>
