@@ -5,12 +5,8 @@ import {
 
 const Evaluation: React.FC = () => (
   <Screen>
-   <EvaluationComponent
-    isUser={true}
-   />
-   <ComplimentsComponent
-   isUser={true}
-   />
+   <EvaluationComponent isUser={true} />
+   <ComplimentsComponent isUser={true} />
    <EvaluationButtonComponent/>
   </Screen>
 );

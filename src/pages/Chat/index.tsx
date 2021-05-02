@@ -16,7 +16,7 @@ const Chat = () => {
     setMessages([
       {
         _id: 1,
-        text: 'Hello developer',
+        text: 'Estão muito bem senhor(a)!',
         createdAt: new Date(),
         user: {
           _id: 2,
@@ -26,7 +26,7 @@ const Chat = () => {
       },
       {
         _id: 2,
-        text: 'Hello world',
+        text: 'Boa noite, Caio. Como estão minhas plantinhas?',
         createdAt: new Date(),
         user: {
           _id: 1,
@@ -84,22 +84,17 @@ const Chat = () => {
     <>
     <GiftedChat
       messages={messages}
-      renderAvatar={() => null}
       onSend={(messages) => onSend(messages)}
       user={{
         _id: 1,
       }}
+      placeholder="Digite sua mensagem"
+
       renderBubble={renderBubble}
       alwaysShowSend
       renderSend={renderSend}
       scrollToBottom
       scrollToBottomComponent={scrollToBottomComponent}
-    />
-    <ButtonComponent
-      buttonColor="orange"
-      buttonText="Finalizar"
-      size="large"
-      stage="Evaluation"
     />
     </>
   );

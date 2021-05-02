@@ -14,28 +14,17 @@ export interface ButtonComponentProps {
   width?: string;
   stage?: string;
   postPlant?:boolean;
+  onButtonPress: () => void;
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
 // If this view is in the screen size, you can use default width by only passing size props
 
 const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
-  buttonColor, textColor, buttonText, size, icon, width, stage, postPlant
+  buttonColor, textColor, buttonText, size, icon, width, stage, postPlant, onButtonPress
 }: ButtonComponentProps) => {
   const navigation = useNavigation()
-  const onPress = () => {postPlant? 
-    axios.post('http://192.168.5.207:3001/plant/create', {
-      name: 'Orquidea',
-      imageURL: 'Flintstone',
-      qtd: 3
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
-  :navigation.navigate(stage)}
+  const onPress = onButtonPress
   return(
     <ButtonContainer
       icon={icon}

@@ -21,6 +21,7 @@ import {
 import theme from "../../assets/theme";
 import icons from "../../assets/icons";
 import { Divider } from "../DividerComponent/style";
+import { useNavigation } from "@react-navigation/core";
 
 export interface HistoricCardComponentProps {
   userName?: string;
@@ -37,6 +38,8 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   rated,
   remainingDays
 }: HistoricCardComponentProps) => {
+  const navigation = useNavigation()
+
   if (finished && rated) {
     return (
       <HistoricCardContainer>
@@ -58,7 +61,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   };
   if (finished && !rated) {
     return (
-      <HistoricCardContainer>
+      <HistoricCardContainer onPress={() => {navigation.navigate("Avaliação")}}>
         <UserImage source={profilePic2 as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitle>{userName}</HistoricCardTitle>
@@ -73,7 +76,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   };
   if (!finished) {
     return (
-      <HistoricCardContainer>
+      <HistoricCardContainer onPress={() => {navigation.navigate("Chat")}}>
         <UserImage source={profilePic2 as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitleContainer>

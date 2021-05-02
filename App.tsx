@@ -30,14 +30,19 @@ function RequestStack(){
   );
 }
 
-function CaregiverStack() {
+const HistoricStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="Histórico" component={Historic} options={{headerShown: false}} />
+  </Stack.Navigator>
+);
+
+const CaregiverStack: React.FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Cuidadores" component={CaregiverListage} options={{headerShown: false}} />
       <Stack.Screen name="Cuidador" component={Caregiver}  />
       <Stack.Screen name="Confirmation" component={Confirmation} />
-      <Stack.Screen name="Chat" component={Chat} />
-      <Stack.Screen name="Evaluation" component={Evaluation} />
+      
     </Stack.Navigator>
   )
 
@@ -79,12 +84,11 @@ function tabBar() {
       }}
     >
       <Tab.Screen name="Cuidadores" component={CaregiverStack} />
-      <Tab.Screen name="Histórico" component={Historic} />
+      <Tab.Screen name="Histórico" component={HistoricStack} />
       <Tab.Screen name="Cupons" component={Promotion} />
       <Tab.Screen name="Perfil" component={true ? UserStack : CaregiverProfile} />
     </Tab.Navigator>
   )
-
   }
 
 const App: React.FC = () => {
@@ -110,7 +114,8 @@ const App: React.FC = () => {
           <Stack.Screen name="LoginScreen" options={{headerShown: false}} component={Initial} />
           <Stack.Screen name="RegisterScreen" options={{headerShown: false}} component={Initial} /> 
           <Stack.Screen name="TabBarScreen" options={{headerShown: false}} component={tabBar} />
-          <Stack.Screen name="Chat" component={Chat} />
+          <Stack.Screen name="Chat" component={Chat} options={{headerBackTitle: 'Histórico'}} />
+          <Stack.Screen name="Avaliação" component={Evaluation} options={{headerBackTitle: 'Histórico'}} />
         </Stack.Navigator>
     </UserContext.Provider>
     </NavigationContainer>

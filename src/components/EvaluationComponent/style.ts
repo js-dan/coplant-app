@@ -5,7 +5,7 @@ import theme from '../../assets/theme';
 type EvaluationProps = {};
 
 export const EvaluationContainer = styled.View<EvaluationProps>`
-  width: 375px
+  width: 100%
   height: 150px
   background-color: ${theme.mainColors.background};
   border-radius: 10px

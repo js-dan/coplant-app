@@ -4,7 +4,7 @@ import theme from '../../assets/theme';
 
 type HistoricCardComponentProps = {};
 
-export const HistoricCardContainer = styled.View<HistoricCardComponentProps>`
+export const HistoricCardContainer = styled.TouchableOpacity<HistoricCardComponentProps>`
   background-color: ${theme.mainColors.background};
   align-items: center
   flex-direction: row

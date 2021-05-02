@@ -10,6 +10,8 @@ export const ConfirmationContainer = styled.View<ConfirmationProps>`
   height: 264px
   border-radius: 10px
   padding-left: 11px
+  justify-content: center;
+  align-items: center;
 `;
 
 export const DescriptionText = styled.TextInput<ConfirmationProps>`
