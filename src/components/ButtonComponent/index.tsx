@@ -14,7 +14,7 @@ export interface ButtonComponentProps {
   width?: string;
   stage?: string;
   postPlant?:boolean;
-  onButtonPress: () => void;
+  onButtonPress?: () => void;
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
@@ -29,7 +29,7 @@ const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
     <ButtonContainer
       icon={icon}
       activeOpacity={0.8}
-      onPress={onPress}
+      onPress={onPress ? onButtonPress : ()=>{navigation.navigate(stage)}}
       size={size}
       buttonColor={buttonColor}
       width={width}
