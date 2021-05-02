@@ -12,12 +12,26 @@ import theme from '../../assets/theme';
 import { Background, SectionTitle, ButtonContainer } from './style';
 import HeaderComponent from '../../components/HeaderComponent';
 import axios from 'axios'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 var plantname:string;
 var plantqtd:number;
 const User: React.FC = () => 
 {
   const [name, setName] = React.useState('');
   const [qtd, setQtd] = React.useState('');
+  const onPress =()=>{
+    axios.get('http://192.168.5.207:3001/plant/')
+        .then(res => {
+           let persons = res.data;
+           const len = persons.lenght
+           
+           console.log(persons[(persons.length - 1)])
+           plantname = persons[(persons.length - 1)].name
+           plantqtd = persons[(persons.length - 1)].qtd
+           setName(plantname);
+           setQtd(String(plantqtd));
+         })
+  }
   axios.get('http://192.168.5.207:3001/plant/')
    .then(res => {
       let persons = res.data;
@@ -50,7 +64,9 @@ return (
         Minhas Plantas
         {' '}
       </SectionTitle>
-      <View style={{ height: 150, marginTop: 0 }}>
+      <TouchableOpacity style={{ height: 150, marginTop: 0 }} onPress={
+        onPress
+      }>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <PlantComponent
             name={String(name)}
@@ -58,7 +74,7 @@ return (
           />
           <AddPlantComponent />
         </ScrollView>
-      </View>
+      </TouchableOpacity>
       {/*<ButtonComponent
         buttonColor="orange"
         buttonText="Trocar Usuario"
