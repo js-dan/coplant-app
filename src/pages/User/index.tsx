@@ -11,10 +11,27 @@ import AddPlantComponent from '../../components/AddPlantComponent';
 import theme from '../../assets/theme';
 import { Background, SectionTitle, ButtonContainer } from './style';
 import HeaderComponent from '../../components/HeaderComponent';
-
+import axios from 'axios'
+var plantname:string;
+var plantqtd:number;
 const User: React.FC = () => 
-(
+{
+  const [name, setName] = React.useState('');
+  const [qtd, setQtd] = React.useState('');
+  axios.get('http://192.168.5.207:3001/plant/')
+   .then(res => {
+      let persons = res.data;
+      const len = persons.lenght
+      
+      console.log(persons[(persons.length - 1)])
+      plantname = persons[(persons.length - 1)].name
+      plantqtd = persons[(persons.length - 1)].qtd
+      setName(plantname);
+      setQtd(String(plantqtd));
+    })
   
+
+return (
   <Screen>
     <Background>
       <HeaderComponent headerText="Meu Perfil" arrowLeft="true" />
@@ -36,8 +53,8 @@ const User: React.FC = () =>
       <View style={{ height: 150, marginTop: 0 }}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <PlantComponent
-            name="Orquidea"
-            qtd={3}
+            name={String(name)}
+            qtd={Number(qtd)}
           />
           <AddPlantComponent />
         </ScrollView>
@@ -52,5 +69,6 @@ const User: React.FC = () =>
     </Background>
   </Screen>
 );
+};
 
 export default User;
