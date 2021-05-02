@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { ButtonContainer, ButtonText, Icon } from './style';
 import axios from 'axios'
 
-export interface ButtonComponentProps {
+export interface ButtonPostPlantComponentProps {
   buttonColor?: string;
   textColor?: string;
   buttonText?: string;
@@ -14,20 +14,22 @@ export interface ButtonComponentProps {
   width?: string;
   stage?: string;
   postPlant?:boolean;
+  name?:string;
+  qtd?:number;
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
 // If this view is in the screen size, you can use default width by only passing size props
 
-const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
-  buttonColor, textColor, buttonText, size, icon, width, stage, postPlant
-}: ButtonComponentProps) => {
+const ButtonPostPlantComponent: React.ElementType<ButtonPostPlantComponentProps> = ({
+  buttonColor, textColor, buttonText, size, icon, width, stage, postPlant, name, qtd
+}: ButtonPostPlantComponentProps) => {
   const navigation = useNavigation()
   const onPress = () => {postPlant? 
     axios.post('http://192.168.5.207:3001/plant/create', {
-      name: 'Orquidea',
+      name: name,
       imageURL: 'Flintstone',
-      qtd: 3
+      qtd: qtd
     })
     .then(function (response) {
       console.log(response);
@@ -51,4 +53,4 @@ const ButtonComponent: React.ElementType<ButtonComponentProps> = ({
   );
 };
 
-export default ButtonComponent;
+export default ButtonPostPlantComponent;

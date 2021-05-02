@@ -15,6 +15,7 @@ import RequestList from "./RequestList"
 import RequestConfirmation from "./RequestConfirmation"
 import RequestConfirmationFinalizar from "./RequestConfirmationFinalizar"
 import CaregiverListage from './CaregiverListage';
+import InsertPlant from './InsertPlant'
 
 export { Initial, 
          Home,
@@ -32,5 +33,6 @@ export { Initial,
          RequestList,
          RequestConfirmation,
          RequestConfirmationFinalizar,
-         CaregiverListage
+         CaregiverListage,
+         InsertPlant
          };

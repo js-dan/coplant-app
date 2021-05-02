@@ -20,6 +20,7 @@ import RequestCardComponent from './RequestCardComponent'
 import RequestCardActiveComponent from './RequestCardActiveComponent'
 import ConfirmationRequestComponent from "./ConfirmationRequestComponent"
 import CaregiverCardComponent from './CaregiverCardComponent';
+import ButtonPostPlantComponent from './ButtonPostPlantComponent'
 
 import PromotionComponent from './PromotionComponent';
 export {
@@ -44,5 +45,6 @@ export {
   AddMediaComponent,
   PromotionComponent,
   RequestCardComponent,
-  CaregiverCardComponent
+  CaregiverCardComponent,
+  ButtonPostPlantComponent
 };

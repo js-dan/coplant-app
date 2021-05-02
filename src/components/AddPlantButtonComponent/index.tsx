@@ -3,6 +3,7 @@ import { ImageSourcePropType } from 'react-native';
 import axios from 'axios'
 
 import { AddPlantButtonContainer, AddPlantButtonText, Icon } from './style';
+import { useNavigation } from '@react-navigation/native';
 
 export interface AddPlantButtonComponentProps {
 
@@ -13,18 +14,9 @@ export interface AddPlantButtonComponentProps {
 
 const AddPlantButtonComponent: React.ElementType<AddPlantButtonComponentProps> = ({
 }: AddPlantButtonComponentProps) => {
+  const navigation = useNavigation()
   const onPress = () => {
-    axios.post('http://192.168.5.207:3001/plant/create', {
-      name: 'Orquidea',
-      imageURL: 'Flintstone',
-      qtd: 3
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    navigation.navigate("InsertPlant")
   };
   return (
     <AddPlantButtonContainer onPress={onPress}>

@@ -11,7 +11,7 @@ import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
   Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, CaregiverListage,
-  Promotion, RequestList, RequestConfirmationFinalizar, RequestConfirmation, CaregiverProfile
+  Promotion, RequestList, RequestConfirmationFinalizar, RequestConfirmation, CaregiverProfile, InsertPlant
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
@@ -35,6 +35,15 @@ function RequestStack(){
       <Stack.Screen name="RequestList" component={RequestList} />
       <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
       <Stack.Screen name="RequestConfirmationFinalizar" component={RequestConfirmationFinalizar} />
+    </Stack.Navigator>
+  );
+}
+
+function UserStack(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="User" component={User} />
+      <Stack.Screen name="InsertPlant" component={InsertPlant} />
     </Stack.Navigator>
   );
 }
@@ -89,7 +98,7 @@ const App: React.FC = () => {
         <Tab.Screen name="Cuidadores" component={isUser?CaregiverStack:RequestStack} />
         <Tab.Screen name="Histórico" component={Historic} />
         <Tab.Screen name="Cupons" component={Promotion} />
-        <Tab.Screen name="Perfil" component={isUser?User:CaregiverProfile} />
+        <Tab.Screen name="Perfil" component={isUser?UserStack:CaregiverProfile} />
       </Tab.Navigator>
     </NavigationContainer>
   );
