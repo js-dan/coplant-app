@@ -22,6 +22,7 @@ function CaregiverStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Caregiver" component={Caregiver} />
+      <Stack.Screen name="Confirmation" component={Confirmation} />
       <Stack.Screen name="CaregiverListage" component={CaregiverListage} />
       <Stack.Screen name="Chat" component={Chat} />
       <Stack.Screen name="Evaluation" component={Evaluation} />
