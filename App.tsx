@@ -1,36 +1,40 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-param-reassign */
 import React from 'react';
-import { NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack'
+import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { StatusBar } from 'react-native';
+import AppLoading from 'expo-app-loading';
+
 import {
-  useFonts, 
-  Roboto_400Regular, 
-  Roboto_500Medium, 
+  useFonts,
+  Roboto_400Regular,
+  Roboto_500Medium,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
-import { 
-  Nunito_400Regular, 
-  Nunito_600SemiBold, 
-  Nunito_700Bold 
-} from '@expo-google-fonts/nunito';
-import AppLoading from 'expo-app-loading';
-import { StatusBar } from 'react-native';
 import {
-  Caregiver, 
-  Home, 
-  User, 
-  Evaluation, 
-  Historic, 
-  Confirmation, 
-  Chat, 
-  EvaluationCaregiver, 
-  Promotion, 
-  RequestList, 
-  RequestConfirmationFinalizar, 
-  RequestConfirmation, 
+  Nunito_400Regular,
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+} from '@expo-google-fonts/nunito';
+
+import {
+  Caregiver,
+  Home,
+  User,
+  Evaluation,
+  Historic,
+  Confirmation,
+  Chat,
+  EvaluationCaregiver,
+  Promotion,
+  RequestList,
+  RequestConfirmationFinalizar,
+  RequestConfirmation,
   CaregiverProfile,
-  CaregiverListage
+  CaregiverListage,
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
@@ -40,16 +44,16 @@ const Stack = createStackNavigator();
 function CaregiverStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Caregiver" component={Caregiver} />
       <Stack.Screen name="CaregiverListage" component={CaregiverListage} />
+      <Stack.Screen name="Caregiver" component={Caregiver} />
       <Stack.Screen name="Chat" component={Chat} />
       <Stack.Screen name="Evaluation" component={Evaluation} />
     </Stack.Navigator>
   );
 }
 
-function RequestStack(){
-  return(
+function RequestStack() {
+  return (
     <Stack.Navigator>
       <Stack.Screen name="RequestList" component={RequestList} />
       <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
@@ -57,7 +61,6 @@ function RequestStack(){
     </Stack.Navigator>
   );
 }
-
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -71,15 +74,10 @@ const App: React.FC = () => {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
-  const isUser ={true};
+  const isUser = true;
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
-      {/*<Stack.Navigator>
-        <Stack.Screen name="User" component={User} />
-        <Stack.Screen name="Caregiver" component={Caregiver} />
-        <Stack.Screen name="Confirmation" component={Confirmation} />
-      </Stack.Navigator>*/}
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -94,6 +92,10 @@ const App: React.FC = () => {
               iconName = 'ios-pricetags';
             } else if (route.name === 'Perfil') {
               iconName = 'md-person';
+            } else if (route.name === 'Carteira') {
+              iconName = 'ios-pricetags';
+            } else if (route.name === 'Solicitações') {
+              iconName = 'md-people';
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;
@@ -104,11 +106,11 @@ const App: React.FC = () => {
           inactiveTintColor: 'gray',
         }}
       >
-        
-        <Tab.Screen name="Cuidadores" component={isUser?CaregiverStack:RequestStack} />
-        <Tab.Screen name="Histórico" component={Historic} />
-        <Tab.Screen name="Cupons" component={Promotion} />
-        <Tab.Screen name="Perfil" component={isUser?User:CaregiverProfile} />
+
+        <Tab.Screen name={isUser ? 'Cuidadores' : 'Solicitações'} component={isUser ? CaregiverListage : RequestList} />
+        <Tab.Screen name={isUser ? 'Histórico' : 'Carteira'} component={isUser ? Historic : Historic} />
+        <Tab.Screen name={isUser ? 'Cupons' : 'Perfil'} component={isUser ? Promotion : CaregiverProfile} />
+        {isUser ? <Tab.Screen name="Perfil" component={User} /> : <></> }
       </Tab.Navigator>
     </NavigationContainer>
   );
