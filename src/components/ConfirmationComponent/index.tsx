@@ -2,7 +2,7 @@ import * as React from 'react';
 import DatePicker from 'react-datepicker';
 // import "react-datepicker/dist/react-datepicker.css";
 import { ImageSourcePropType } from 'react-native';
-import ButtonComponent from '../ButtonComponent';
+import ButtonPostOrderComponent from '../ButtonPostOrderComponent';
 
 import {
   ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea,
@@ -14,27 +14,28 @@ export interface ConfirmationComponentProps {
 }
 
 const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
-   value, description,
+  value, description,
 }: ConfirmationComponentProps) => {
   const [startDate, setStartDate] = React.useState(new Date());
   const [endDate, setEndDate] = React.useState(new Date());
   return (
     <ConfirmationContainer>
-      <ConfirmationText>{"Data Inicio"}</ConfirmationText>
-      
-      {/*<DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />*/}
-      <ConfirmationText>{"Data Fim"}</ConfirmationText>
-      {/*<DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />*/}
-      <DescriptionText placeholder="Descrição..."></DescriptionText>
-      
+      <ConfirmationText>Data Inicio</ConfirmationText>
+
+      {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
+      <ConfirmationText>Data Fim</ConfirmationText>
+      {/* <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} /> */}
+      <DescriptionText placeholder="Descrição..." />
+
       <ConfirmationArea>
-        <ConfirmationText>{"Valor: R$ "+value}</ConfirmationText>
-        <ButtonComponent
+        <ConfirmationText>{`Valor: R$ ${value}`}</ConfirmationText>
+        <ButtonPostOrderComponent
           buttonColor="orange"
           buttonText="Confirmar"
           size="small"
           width="40%"
-          stage={1}
+          stage="Chat"
+          postOrder={true}
         />
       </ConfirmationArea>
     </ConfirmationContainer>

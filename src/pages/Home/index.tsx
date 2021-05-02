@@ -1,23 +1,28 @@
 import React from 'react';
 import TagComponent from '../../components/TagComponent';
 import HeaderComponent from '../../components/HeaderComponent';
-import { ButtonComponent, Screen, Divider } from "../../components";
+import { ButtonComponent, Screen, Divider, RequestCardComponent, ConfirmationRequestComponent } from "../../components";
 import DescriptionComponent from "../../components/CaregiverDescriptionComponent";
 
 const Home: React.FC = () => (
   <Screen>
-    <DescriptionComponent
-      description="Eu sou Caio e adoro cuidar de plantas. Faço isso há 10 anos e adoraria
-      poder te ajudar a ter uma casa bem verde."/>
-    <Divider />
-    <ButtonComponent
-      buttonColor="orange"
-      buttonText="Contratar"
-      size="big"
-      textColor="white"
+   <ConfirmationRequestComponent
+    userName={"Liz Andrade"}
+    stars={5}
+    userLocation={"Casa Amarela"}
+    startDate={new Date("2020-10-10")}
+    endDate={new Date("2020-10-12")}
+    plants={["coentro", "onze-horas"]}
+    before={false}
     />
-    <TagComponent text="Cuidadoso" />
-    <HeaderComponent headerText="Perfil Cuidador" arrowLeft="true" shareIcon="true" />
+    <CaregiverCardComponent
+      skill1="Correr"
+      skill2="Faz piada"
+      skill3="Leva bala"
+      name="Pietro"
+      rating="4.3"
+      district="Sokovia"
+    />
   </Screen>
 );
 

@@ -1,6 +1,6 @@
-import { ImageSourcePropType } from "react-native";
-import styled from "styled-components/native";
-import theme from "../../assets/theme";
+import { ImageSourcePropType } from 'react-native';
+import styled from 'styled-components/native';
+import theme from '../../assets/theme';
 
 type PlantProps = {
   name?:string,
@@ -32,4 +32,3 @@ export const PlantImage = styled.Image<PlantProps>`
   margin-right: 5px
   border-radius: 46px
 `;
-

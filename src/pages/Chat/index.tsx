@@ -1,12 +1,15 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {View, ScrollView, Text, Button, StyleSheet} from 'react-native';
-import {Bubble, GiftedChat, InputToolbar, Send} from 'react-native-gifted-chat';
+import React, { useState, useEffect, useCallback } from 'react';
+import {
+  View, ScrollView, Text, Button, StyleSheet,
+} from 'react-native';
+import {
+  Bubble, GiftedChat, InputToolbar, Send,
+} from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {ButtonComponent} from '../../components'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {PresentCardComponent} from '../../components';
+import { ButtonComponent, PresentCardComponent } from '../../components';
 
-const Chat = () => { 
+const Chat = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
@@ -35,55 +38,47 @@ const Chat = () => {
   }, []);
 
   const onSend = useCallback((messages = []) => {
-    setMessages((previousMessages) =>
-      GiftedChat.append(previousMessages, messages),
-    );
+    setMessages((previousMessages) => GiftedChat.append(previousMessages, messages));
   }, []);
 
-  const renderSend = (props) => {
-    return (
-      <Send {...props}>
-        <View>
-          <MaterialCommunityIcons
-            name="send-circle"
-            style={{marginBottom: 5, marginRight: 5}}
-            size={32}
-            color="#c8c8c8"
-          />
-        </View>
-      </Send>
-    );
-  };
+  const renderSend = (props) => (
+    <Send {...props}>
+      <View>
+        <MaterialCommunityIcons
+          name="send-circle"
+          style={{ marginBottom: 5, marginRight: 5 }}
+          size={32}
+          color="#c8c8c8"
+        />
+      </View>
+    </Send>
+  );
 
-  const renderBubble = (props) => {
-    return (
-      <Bubble
-        {...props}
-        wrapperStyle={{
-          right: {
-            backgroundColor: '#5ab196',
-          },
-          left: {
-            backgroundColor: '#c4c4c4',  
-          }
-        }}
-        textStyle={{
-          right: {
-            color: '#000000',
-          },
-          left: {
-              color: '#000000'
-          }
-        }}
-      />
-    );
-  };
+  const renderBubble = (props) => (
+    <Bubble
+      {...props}
+      wrapperStyle={{
+        right: {
+          backgroundColor: '#5ab196',
+        },
+        left: {
+          backgroundColor: '#c4c4c4',
+        },
+      }}
+      textStyle={{
+        right: {
+          color: '#000000',
+        },
+        left: {
+          color: '#000000',
+        },
+      }}
+    />
+  );
 
-  const scrollToBottomComponent = () => {
-    return(
-      <FontAwesome name='angle-double-down' size={22} color='#333' />
-    );
-  }
+  const scrollToBottomComponent = () => (
+    <FontAwesome name="angle-double-down" size={22} color="#333" />
+  );
 
   return (
     <>
@@ -104,7 +99,7 @@ const Chat = () => {
       buttonColor="orange"
       buttonText="Finalizar"
       size="large"
-      stage={2}
+      stage="Evaluation"
     />
     </>
   );

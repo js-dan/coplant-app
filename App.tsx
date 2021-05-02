@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {createStackNavigator } from '@react-navigation/stack'
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -10,7 +10,8 @@ import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-goo
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat
+  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, CaregiverListage,
+  Promotion, RequestList, RequestConfirmationFinalizar, RequestConfirmation, CaregiverProfile, InsertPlant
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
@@ -21,12 +22,32 @@ function CaregiverStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Caregiver" component={Caregiver} />
-      <Stack.Screen name="Confirmation" component={Confirmation} />
+      <Stack.Screen name="CaregiverListage" component={CaregiverListage} />
       <Stack.Screen name="Chat" component={Chat} />
       <Stack.Screen name="Evaluation" component={Evaluation} />
     </Stack.Navigator>
   );
 }
+
+function RequestStack(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="RequestList" component={RequestList} />
+      <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
+      <Stack.Screen name="RequestConfirmationFinalizar" component={RequestConfirmationFinalizar} />
+    </Stack.Navigator>
+  );
+}
+
+function UserStack(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="User" component={User} />
+      <Stack.Screen name="InsertPlant" component={InsertPlant} />
+    </Stack.Navigator>
+  );
+}
+
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -37,11 +58,10 @@ const App: React.FC = () => {
     Nunito_600SemiBold,
     Nunito_700Bold,
   });
-
   if (!fontsLoaded) {
     return <AppLoading />;
   }
-
+  const isUser ={true};
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
@@ -74,10 +94,11 @@ const App: React.FC = () => {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Cuidadores" component={CaregiverStack} />
+        
+        <Tab.Screen name="Cuidadores" component={isUser?CaregiverStack:RequestStack} />
         <Tab.Screen name="Histórico" component={Historic} />
-        <Tab.Screen name="Cupons" component={CaregiverStack} />
-        <Tab.Screen name="Perfil" component={User} />
+        <Tab.Screen name="Cupons" component={Promotion} />
+        <Tab.Screen name="Perfil" component={isUser?UserStack:CaregiverProfile} />
       </Tab.Navigator>
     </NavigationContainer>
   );

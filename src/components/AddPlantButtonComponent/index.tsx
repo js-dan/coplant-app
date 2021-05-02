@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { ImageSourcePropType } from 'react-native';
+import axios from 'axios'
 
 import { AddPlantButtonContainer, AddPlantButtonText, Icon } from './style';
+import { useNavigation } from '@react-navigation/native';
 
 export interface AddPlantButtonComponentProps {
-  
+
 }
 
 // Propriety width works to personalize your AddPlantButton based on the view that's wrapping it.
@@ -12,10 +14,13 @@ export interface AddPlantButtonComponentProps {
 
 const AddPlantButtonComponent: React.ElementType<AddPlantButtonComponentProps> = ({
 }: AddPlantButtonComponentProps) => {
-  const onPress = () => console.log('função aqui');
+  const navigation = useNavigation()
+  const onPress = () => {
+    navigation.navigate("InsertPlant")
+  };
   return (
-    <AddPlantButtonContainer>
-      <AddPlantButtonText>{"+"}</AddPlantButtonText>
+    <AddPlantButtonContainer onPress={onPress}>
+      <AddPlantButtonText>+</AddPlantButtonText>
     </AddPlantButtonContainer>
   );
 };
