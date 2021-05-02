@@ -22,7 +22,6 @@ import {
 
 import {
   Caregiver,
-  Home,
   User,
   Evaluation,
   Historic,
@@ -41,26 +40,53 @@ const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
-function CaregiverStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="CaregiverListage" component={CaregiverListage} />
-      <Stack.Screen name="Caregiver" component={Caregiver} />
-      <Stack.Screen name="Chat" component={Chat} />
-      <Stack.Screen name="Evaluation" component={Evaluation} />
-    </Stack.Navigator>
-  );
-}
+const CaregiverStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="CaregiverListage" component={CaregiverListage} />
+    <Stack.Screen name="Caregiver" component={Caregiver} />
+    <Stack.Screen name="Chat" component={Chat} />
+    <Stack.Screen name="Evaluation" component={Evaluation} />
+  </Stack.Navigator>
+);
 
-function RequestStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="RequestList" component={RequestList} />
-      <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
-      <Stack.Screen name="RequestConfirmationFinalizar" component={RequestConfirmationFinalizar} />
-    </Stack.Navigator>
-  );
-}
+const RequestStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="RequestList" component={RequestList} />
+    <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
+    <Stack.Screen name="RequestConfirmationFinalizar" component={RequestConfirmationFinalizar} />
+    <Stack.Screen name="CaregiverProfile" component={CaregiverProfile} />
+  </Stack.Navigator>
+);
+
+const HistoricStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="RequestList" component={RequestList} />
+  </Stack.Navigator>
+);
+
+const WalletStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="RequestList" component={RequestList} />
+  </Stack.Navigator>
+);
+
+const PromotionStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="RequestList" component={RequestList} />
+  </Stack.Navigator>
+);
+
+const CaregiverProfileStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="RequestList" component={RequestList} />
+  </Stack.Navigator>
+);
+
+const UserProfileStack: React.FC = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="RequestList" component={RequestList} />
+  </Stack.Navigator>
+);
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -74,7 +100,7 @@ const App: React.FC = () => {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
-  const isUser = true;
+  const isUser = false;
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
@@ -107,7 +133,7 @@ const App: React.FC = () => {
         }}
       >
 
-        <Tab.Screen name={isUser ? 'Cuidadores' : 'Solicitações'} component={isUser ? CaregiverListage : RequestList} />
+        <Tab.Screen name={isUser ? 'Cuidadores' : 'Solicitações'} component={isUser ? CaregiverStack : RequestStack} />
         <Tab.Screen name={isUser ? 'Histórico' : 'Carteira'} component={isUser ? Historic : Historic} />
         <Tab.Screen name={isUser ? 'Cupons' : 'Perfil'} component={isUser ? Promotion : CaregiverProfile} />
         {isUser ? <Tab.Screen name="Perfil" component={User} /> : <></> }
