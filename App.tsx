@@ -60,7 +60,7 @@ const RequestStack: React.FC = () => (
 
 const HistoricStack: React.FC = () => (
   <Stack.Navigator>
-    <Stack.Screen name="RequestList" component={RequestList} />
+    <Stack.Screen name="Historic" component={Historic} />
   </Stack.Navigator>
 );
 
@@ -72,19 +72,19 @@ const WalletStack: React.FC = () => (
 
 const PromotionStack: React.FC = () => (
   <Stack.Navigator>
-    <Stack.Screen name="RequestList" component={RequestList} />
+    <Stack.Screen name="Promotion" component={Promotion} />
   </Stack.Navigator>
 );
 
 const CaregiverProfileStack: React.FC = () => (
   <Stack.Navigator>
-    <Stack.Screen name="RequestList" component={RequestList} />
+    <Stack.Screen name="CaregiverProfile" component={CaregiverProfile} />
   </Stack.Navigator>
 );
 
 const UserProfileStack: React.FC = () => (
   <Stack.Navigator>
-    <Stack.Screen name="RequestList" component={RequestList} />
+    <Stack.Screen name="User" component={User} />
   </Stack.Navigator>
 );
 
@@ -100,7 +100,7 @@ const App: React.FC = () => {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
-  const isUser = false;
+  const isUser = true;
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" />
@@ -134,9 +134,9 @@ const App: React.FC = () => {
       >
 
         <Tab.Screen name={isUser ? 'Cuidadores' : 'Solicitações'} component={isUser ? CaregiverStack : RequestStack} />
-        <Tab.Screen name={isUser ? 'Histórico' : 'Carteira'} component={isUser ? Historic : Historic} />
-        <Tab.Screen name={isUser ? 'Cupons' : 'Perfil'} component={isUser ? Promotion : CaregiverProfile} />
-        {isUser ? <Tab.Screen name="Perfil" component={User} /> : <></> }
+        <Tab.Screen name={isUser ? 'Histórico' : 'Carteira'} component={isUser ? HistoricStack : WalletStack} />
+        <Tab.Screen name={isUser ? 'Cupons' : 'Perfil'} component={isUser ? PromotionStack : CaregiverProfileStack} />
+        {isUser ? <Tab.Screen name="Perfil" component={UserProfileStack} /> : <></> }
       </Tab.Navigator>
     </NavigationContainer>
   );
