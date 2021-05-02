@@ -1,8 +1,8 @@
 import * as React from 'react';
 import DatePicker from 'react-datepicker';
 // import "react-datepicker/dist/react-datepicker.css";
-import { ImageSourcePropType, Modal, Alert } from 'react-native';
-import ButtonComponent from '../ButtonComponent';
+import { ImageSourcePropType } from 'react-native';
+import ButtonPostOrderComponent from '../ButtonPostOrderComponent';
 
 import {
   ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea,
@@ -38,16 +38,17 @@ const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
         {/* <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} /> */}
         <DescriptionText placeholder="Descrição..." />
 
-        <ConfirmationArea>
-          <ConfirmationText>{`Valor: R$ ${value}`}</ConfirmationText>
-          <ButtonComponent
-            buttonColor="orange"
-            buttonText="Confirmar"
-            size="small"
-            width="40%"
-            stage="Chat"
-          />
-        </ConfirmationArea>
+      <ConfirmationArea>
+        <ConfirmationText>{`Valor: R$ ${value}`}</ConfirmationText>
+        <ButtonPostOrderComponent
+          buttonColor="orange"
+          buttonText="Confirmar"
+          size="small"
+          width="40%"
+          stage="Chat"
+          postOrder={true}
+        />
+      </ConfirmationArea>
     </ConfirmationContainer>
     </Modal>
 
