@@ -1,17 +1,36 @@
 import React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {createStackNavigator } from '@react-navigation/stack'
+import { createStackNavigator } from '@react-navigation/stack'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
-  useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold,
+  useFonts, 
+  Roboto_400Regular, 
+  Roboto_500Medium, 
+  Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
-import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold } from '@expo-google-fonts/nunito';
+import { 
+  Nunito_400Regular, 
+  Nunito_600SemiBold, 
+  Nunito_700Bold 
+} from '@expo-google-fonts/nunito';
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'react-native';
 import {
-  Caregiver, Home, User, Evaluation, Historic, Confirmation, Chat, EvaluationCaregiver, 
-  Promotion, RequestList, RequestConfirmationFinalizar, RequestConfirmation, CaregiverProfile
+  Caregiver, 
+  Home, 
+  User, 
+  Evaluation, 
+  Historic, 
+  Confirmation, 
+  Chat, 
+  EvaluationCaregiver, 
+  Promotion, 
+  RequestList, 
+  RequestConfirmationFinalizar, 
+  RequestConfirmation, 
+  CaregiverProfile,
+  CaregiverListage
 } from './src/pages';
 
 const Tab = createBottomTabNavigator();
