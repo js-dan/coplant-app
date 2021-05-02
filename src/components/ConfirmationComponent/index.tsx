@@ -2,7 +2,7 @@ import * as React from 'react';
 import DatePicker from 'react-datepicker';
 // import "react-datepicker/dist/react-datepicker.css";
 import { ImageSourcePropType } from 'react-native';
-import ButtonComponent from '../ButtonComponent';
+import ButtonPostOrderComponent from '../ButtonPostOrderComponent';
 
 import {
   ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea,
@@ -29,12 +29,13 @@ const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
 
       <ConfirmationArea>
         <ConfirmationText>{`Valor: R$ ${value}`}</ConfirmationText>
-        <ButtonComponent
+        <ButtonPostOrderComponent
           buttonColor="orange"
           buttonText="Confirmar"
           size="small"
           width="40%"
           stage="Chat"
+          postOrder={true}
         />
       </ConfirmationArea>
     </ConfirmationContainer>
