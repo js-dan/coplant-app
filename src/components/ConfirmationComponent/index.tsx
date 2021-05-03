@@ -32,11 +32,6 @@ const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
       () => {modalVisible = !modalVisible}
     }}>
       <ConfirmationContainer>
-        <ConfirmationText>Data Inicio</ConfirmationText>
-
-        {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
-        <ConfirmationText>Data Fim</ConfirmationText>
-        {/* <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} /> */}
         <DescriptionText placeholder="Descrição..." />
 
       <ConfirmationArea>
