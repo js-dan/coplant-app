@@ -46,14 +46,7 @@ const CaregiverProfile: React.FC = () => (
       </View>
 
       <Divider />
-      <ButtonContainer>
-        <ButtonComponent
-          buttonColor="orange"
-          buttonText="Contratar"
-          size="large"
-          textColor="white"
-        />
-      </ButtonContainer>
+      
     </Background>
   </Screen>
 );
