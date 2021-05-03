@@ -14,13 +14,14 @@ export interface ButtonPostOrderComponentPropsProps {
   width?: string;
   stage?: string;
   postOrder?:boolean;
+  onButtonPress: () => void;
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
 // If this view is in the screen size, you can use default width by only passing size props
 
 const ButtonPostOrderComponentProps: React.ElementType<ButtonPostOrderComponentPropsProps> = ({
-  buttonColor, textColor, buttonText, size, icon, width, stage, postOrder
+  buttonColor, textColor, buttonText, size, icon, width, stage, postOrder, onButtonPress
 }: ButtonPostOrderComponentPropsProps) => {
   const navigation = useNavigation()
   const onPress = () => {postOrder? 
@@ -37,6 +38,7 @@ const ButtonPostOrderComponentProps: React.ElementType<ButtonPostOrderComponentP
       order_status:"opened"
     })
     .then(function (response) {
+      onButtonPress()
       navigation.navigate(stage);
       console.log(response);
     })

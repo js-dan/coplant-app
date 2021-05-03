@@ -17,7 +17,7 @@ const Caregiver: React.FC = () => {
     <Screen>
       <Darkforeground isModalOpen={modalVisible} />
       <Background>
-        <ConfirmationComponent value={20} visibility={modalVisible}/>
+        <ConfirmationComponent value={20} visibility={modalVisible} setModalVisible={setModalVisible}/>
         <PresentCardComponent
           userName="Caio Andrade"
           stars={3}

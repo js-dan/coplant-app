@@ -1,7 +1,7 @@
 import * as React from 'react';
 import DatePicker from 'react-datepicker';
 // import "react-datepicker/dist/react-datepicker.css";
-import { ImageSourcePropType } from 'react-native';
+import { Alert, ImageSourcePropType, Modal } from 'react-native';
 import ButtonPostOrderComponent from '../ButtonPostOrderComponent';
 
 import {
@@ -12,10 +12,11 @@ export interface ConfirmationComponentProps {
   value:number;
   visibility: boolean;
   description?:string;
+  setModalVisible: (any: boolean) => void;
 }
 
 const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
-  value, description, visibility
+  value, description, visibility, setModalVisible
 }: ConfirmationComponentProps) => {
   const [startDate, setStartDate] = React.useState(new Date());
   const [endDate, setEndDate] = React.useState(new Date());
@@ -47,6 +48,7 @@ const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
           width="40%"
           stage="Chat"
           postOrder={true}
+          onButtonPress={() => setModalVisible(false)}
         />
       </ConfirmationArea>
     </ConfirmationContainer>
