@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import {
   ScrollView, View, Text, Button, Modal,
 } from 'react-native';
@@ -22,31 +22,46 @@ var persons;
 const User: React.FC = () => 
 {
   const { user } = useContext(UserContext);
-  const [name, setName] = React.useState('');
-  const [qtd, setQtd] = React.useState('');
+  const [name, setName] = React.useState([]);
+  const [qtd, setQtd] = React.useState([]);
   const [numberPlants, setNumberPlants] = React.useState(0);
   const [modalVisible, setModalVisible] = React.useState(false);
+  const [isUpdated, setUpdated] = React.useState(false);
 
-  const onPress =()=>{
+
+  useEffect(() => {
+    if(modalVisible) {
+      getData()
+    }
+  })
+
+  const getData =()=>{
     
-    setModalVisible(true)
     console.log("Pressionei")
 
-    axios.get('http://192.168.0.3:3001/plant/')
-        .then(res => {
-           persons = res.data;
-           setNumberPlants(persons.length)
-           setName([])
-           setQtd([])
-           for(let i=0;i<numberPlants;i++){
-            plantname = persons[i].name
-            plantqtd = persons[i].qtd
-            setName(name=>[...name, plantname]);;
-            setQtd(qtd=>[...qtd, plantqtd]);
-            console.log(name);
-           }
-           
-         })
+    if (!isUpdated) {
+      axios.get('http://192.168.0.3:3001/plant/')
+      .then(res => {
+         persons = res.data;
+        console.log(persons)
+         if (persons.length > 0) {
+           setUpdated(true)
+         }
+
+         setNumberPlants(persons.length)
+         setName([])
+         setQtd([])
+         for(let i=0;i<numberPlants;i++){
+          plantname = persons[i].name
+          plantqtd = persons[i].qtd
+          setName(name=>[...name, plantname]);
+          setQtd(qtd=>[...qtd, plantqtd]);
+          console.log(plantname);
+         }
+         
+       })
+    }
+
   }
   
 
@@ -68,7 +83,7 @@ return (
       <SectionTitle>
         Minhas Plantas
       </SectionTitle>
-      <TouchableOpacity style={{ height: 150, marginTop: 0 }} onPress={() => onPress()}>
+      <TouchableOpacity style={{ height: 150, marginTop: 0 }}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}> 
           {[...Array(numberPlants)].map((prop, index) => 
           (
