@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ImageSourcePropType } from 'react-native';
+import { Alert, ImageSourcePropType } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { ButtonContainer, ButtonText, Icon } from './style';
@@ -43,7 +43,15 @@ const ButtonPostOrderComponentProps: React.ElementType<ButtonPostOrderComponentP
       console.log(response);
     })
     .catch(function (error) {
-      console.log(error);   
+      console.log(error);
+      Alert.alert(
+        "Erro de conexão",
+        "Não conseguimos fazer seu pedido",
+        [
+          { text: "Ok", onPress: () => onButtonPress() }
+        ]
+      );
+       
     })
   :navigation.navigate(stage);}
   return(
