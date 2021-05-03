@@ -29,17 +29,17 @@ const ButtonPostPlantComponent: React.ElementType<ButtonPostPlantComponentProps>
   const onPress = () => {
     onButtonPress()
     
-    // axios.post('http://192.168.5.207:3001/plant/create', {
-    //   name: name,
-    //   imageURL: 'Flintstone',
-    //   qtd: qtd
-    // })
-    // .then(function (response) {
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // })
+    axios.post('http://192.168.0.3:3001/plant/create', {
+      name: name,
+      imageURL: 'Flintstone',
+      qtd: qtd
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
   }
   return(
     <ButtonContainer

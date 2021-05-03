@@ -25,7 +25,7 @@ const ButtonPostOrderComponentProps: React.ElementType<ButtonPostOrderComponentP
 }: ButtonPostOrderComponentPropsProps) => {
   const navigation = useNavigation()
   const onPress = () => {postOrder? 
-    axios.post('http://192.168.1.12:3001/order/create', {
+    axios.post('http://192.168.0.3:3001/order/create', {
       start_date: "99/99/99",
       end_date: "10/10/10",
 	  id_client: "1",

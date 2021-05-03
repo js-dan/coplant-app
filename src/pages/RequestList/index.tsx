@@ -15,7 +15,7 @@ const RequestList: React.FC = () =>
   const [start_date, setStartDate] = React.useState([]);
   const [end_date, setEndDate] = React.useState([]);
   const [numberOrders, setNumberOrders] = React.useState(0);
-  axios.get('http://192.168.1.12:3001/order/list')
+  axios.get('http://192.168.0.3:3001/order/list')
    .then(res => {
       orders = res.data;
       setOrderStatus([]);
