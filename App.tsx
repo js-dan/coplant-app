@@ -57,7 +57,7 @@ function UserStack(){
   );
 }
 
-function tabBar() {
+const tabBar: React.FC = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -94,7 +94,6 @@ function tabBar() {
 const App: React.FC = () => {
   const [authorization, authorizationDispatch] = useReducer(loginReducer, loginInitialValue);
   const [user, userDispatch] = useReducer(userReducer, userInitialValue);
-  const isUser = true
   const [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,

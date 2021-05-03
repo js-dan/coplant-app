@@ -10,10 +10,11 @@ import {
 import icons from '../../assets/icons';
 import TagComponent from '../TagComponent';
 import { useNavigation } from '@react-navigation/core';
+import { PresentCardDivider, PresentCardRating, PresentCardStar, PresentCardText } from '../PresentCardComponent/style';
 
 export interface CaregiverCardProps {
   name?: string;
-  rating?: string;
+  rating?: number;
   district?: string;
   skill1?: string;
   skill2?: string;
@@ -31,10 +32,13 @@ const CaregiverCard: React.ElementType<CaregiverCardProps> = (
           <Name>
             {name}
           </Name>
-          <Infos>
-            {rating}
-            {district}
-          </Infos>
+          <PresentCardRating>
+            {[...Array(rating)].map((index) => (
+              <PresentCardStar key={index} source={icons.socialMedia.star} />
+            ))}
+            <PresentCardDivider />
+            <PresentCardText>{"Jaboatão"}</PresentCardText>
+          </PresentCardRating>
           <Skills>
             <TagComponent
               text={skill1}

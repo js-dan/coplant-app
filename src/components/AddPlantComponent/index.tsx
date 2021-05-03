@@ -9,14 +9,14 @@ import theme from '../../assets/theme';
 import icons from '../../assets/icons';
 
 export interface AddPlantComponentProps {
-
+  setModalVisible: (any:boolean) => void
 }
 
-const AddPlantComponent: React.ElementType<AddPlantComponentProps> = ({
+const AddPlantComponent: React.ElementType<AddPlantComponentProps> = ({ setModalVisible
 
 }: AddPlantComponentProps) => (
   <AddPlantContainer>
-    <AddPlantButtonComponent />
+    <AddPlantButtonComponent setModalVisible={setModalVisible}/>
     <AddPlantText>Adicionar Planta</AddPlantText>
   </AddPlantContainer>
 );

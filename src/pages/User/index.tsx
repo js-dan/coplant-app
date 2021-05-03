@@ -1,6 +1,6 @@
 import React, { useContext, useReducer } from 'react';
 import {
-  ScrollView, View, Text, Button,
+  ScrollView, View, Text, Button, Modal,
 } from 'react-native';
 import { ButtonComponent, Screen, Divider } from '../../components';
 import DescriptionComponent from '../../components/CaregiverDescriptionComponent';
@@ -14,6 +14,8 @@ import HeaderComponent from '../../components/HeaderComponent';
 import axios from 'axios'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { UserContext, userInitialValue, userReducer } from '../../helpers/userReducer';
+import InsertPlant from '../InsertPlant';
+import { Darkforeground } from '../Caregiver/style';
 var plantname:string;
 var plantqtd:number;
 var persons;
@@ -23,29 +25,35 @@ const User: React.FC = () =>
   const [name, setName] = React.useState('');
   const [qtd, setQtd] = React.useState('');
   const [numberPlants, setNumberPlants] = React.useState(0);
+  const [modalVisible, setModalVisible] = React.useState(false);
+
   const onPress =()=>{
     
-    axios.get('http://192.168.5.207:3001/plant/')
-        .then(res => {
-           persons = res.data;
-           setNumberPlants(persons.length)
-           setName([])
-           setQtd([])
-           for(let i=0;i<numberPlants;i++){
-            plantname = persons[i].name
-            plantqtd = persons[i].qtd
-            setName(name=>[...name, plantname]);;
-            setQtd(qtd=>[...qtd, plantqtd]);
-            console.log(name);
-           }
+    setModalVisible(true)
+    
+    // axios.get('http://192.168.5.207:3001/plant/')
+    //     .then(res => {
+    //        persons = res.data;
+    //        setNumberPlants(persons.length)
+    //        setName([])
+    //        setQtd([])
+    //        for(let i=0;i<numberPlants;i++){
+    //         plantname = persons[i].name
+    //         plantqtd = persons[i].qtd
+    //         setName(name=>[...name, plantname]);;
+    //         setQtd(qtd=>[...qtd, plantqtd]);
+    //         console.log(name);
+    //        }
            
-         })
+    //      })
   }
   
 
 return (
   <Screen>
+    <Darkforeground isModalOpen={modalVisible} />
     <Background>
+      <InsertPlant visibility={modalVisible} setModalVisible={setModalVisible} />
       <PresentCardComponent
         userName={user.name}
         stars={user.score}
@@ -57,9 +65,7 @@ return (
       />
       <Divider />
       <SectionTitle>
-        {' '}
         Minhas Plantas
-        {' '}
       </SectionTitle>
       <TouchableOpacity style={{ height: 150, marginTop: 0 }} onPress={
         onPress
@@ -69,16 +75,9 @@ return (
           (
             <PlantComponent key={index} name={String(name[index])} qtd={Number(qtd[index])} />
           ))}
-          <AddPlantComponent />
+          <AddPlantComponent setModalVisible={setModalVisible} />
         </ScrollView>
       </TouchableOpacity>
-      {/*<ButtonComponent
-        buttonColor="orange"
-        buttonText="Trocar Usuario"
-        size="large"
-        stage="Perfil"
-        changeUser={true}
-      />*/}
     </Background>
   </Screen>
 );

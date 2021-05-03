@@ -11,13 +11,19 @@ export const InsertImageContainer = styled.View<InsertImageComponentProps>`
   height: 264px
   border-radius: 10px
   padding-left: 11px
+  padding-top: 20px
+  position: absolute
+  top: 40%
+  left: 10%
   justify-content: center;
   align-items: center;
 `;
 
 export const InputText = styled.TextInput<InsertImageComponentProps>`
   width: 130px;
-  height: 25px;
+  height: 40px;
+  margin-bottom: 20px
+  padding-left: 10px;
   color: ${theme.mainColors.black};
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
@@ -48,6 +54,7 @@ export const InsertImageField = styled.View<InsertImageComponentProps>`
 export const DescriptionText = styled.Text`
   font-family: ${theme.fonts.body.family};
   font-size: ${theme.fonts.body.size};
+  margin-bottom: 15px;
 `;
 export const Image = styled.Image<InsertImageComponentProps>`
   width: 109px
