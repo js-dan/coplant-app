@@ -10,8 +10,7 @@ import { Background, SectionTitle, ButtonContainer } from './style';
 const Historic: React.FC = () => (
   <Screen>
     <Background>
-      <View style={{ marginTop: 20 }}>
-        <ScrollView>
+        <ScrollView style={{padding: "5%"}}>
           <HistoricCardComponent
             userName="Caio Andrade"
             endDate={new Date('2020-10-12')}
@@ -32,8 +31,6 @@ const Historic: React.FC = () => (
             rated
           />
         </ScrollView>
-      </View>
-
     </Background>
   </Screen>
 );

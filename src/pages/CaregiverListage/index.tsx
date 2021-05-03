@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
+import { ScrollView } from 'react-native-gesture-handler';
 import { CaregiverCardComponent, Screen } from '../../components';
 
 const CaregiverListage: React.FC = () => {
@@ -10,6 +11,7 @@ const CaregiverListage: React.FC = () => {
 
   return (
     <Screen>
+      <ScrollView>
       <CaregiverCardComponent
         skill1="Correr"
         skill2="Contar piada"
@@ -24,7 +26,7 @@ const CaregiverListage: React.FC = () => {
         skill3="Levar bala"
         name="Pietro"
         rating={4}
-        district="Jabotão"
+        district="Recife"
       />
       <CaregiverCardComponent
         skill1="Orquídeas"
@@ -34,6 +36,43 @@ const CaregiverListage: React.FC = () => {
         rating={5}
         district="Olinda"
       />
+
+      <CaregiverCardComponent
+        skill1="Orquídeas"
+        skill2="Rosas"
+        skill3="Tulipas"
+        name="João Pereira"
+        rating={5}
+        district="Olinda"
+      />
+
+      <CaregiverCardComponent
+        skill1="Orquídeas"
+        skill2="Rosas"
+        skill3="Tulipas"
+        name="João Pereira"
+        rating={5}
+        district="Olinda"
+      />
+
+      <CaregiverCardComponent
+        skill1="Orquídeas"
+        skill2="Rosas"
+        skill3="Tulipas"
+        name="João Pereira"
+        rating={5}
+        district="Olinda"
+      />
+
+      <CaregiverCardComponent
+        skill1="Orquídeas"
+        skill2="Rosas"
+        skill3="Tulipas"
+        name="João Pereira"
+        rating={5}
+        district="Olinda"
+      />
+      </ScrollView>
     </Screen>
   )
 };

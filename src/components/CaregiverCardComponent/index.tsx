@@ -37,7 +37,7 @@ const CaregiverCard: React.ElementType<CaregiverCardProps> = (
               <PresentCardStar key={index} source={icons.socialMedia.star} />
             ))}
             <PresentCardDivider />
-            <PresentCardText>{"Jaboatão"}</PresentCardText>
+            <PresentCardText>{district}</PresentCardText>
           </PresentCardRating>
           <Skills>
             <TagComponent
