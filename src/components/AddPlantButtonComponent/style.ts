@@ -15,6 +15,7 @@ export const AddPlantButtonContainer = styled.TouchableOpacity<AddPlantButtonPro
 
   justify-content: center;
   align-items: center;
+  align-self: center
 
   background-color: ${theme.mainColors.orange};
   border-radius: 46px;
@@ -23,6 +24,7 @@ export const AddPlantButtonContainer = styled.TouchableOpacity<AddPlantButtonPro
 export const AddPlantButtonText = styled.Text<SpecificColor>`
   font-family: ${theme.fonts.h1.family};
   font-size: 80px;
+  margin-top: -10%
   font-weight: bold;
   color:${theme.mainColors.white};
 `;

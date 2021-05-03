@@ -22,6 +22,7 @@ export const AddPlantText = styled.Text<AddPlantProps>`
   font-size: 15px;
   font-family: ${theme.fonts.secondary.family};
   font-weight: bold
+  margin-top: 10px
 
 `;
 
