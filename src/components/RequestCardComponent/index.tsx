@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ImageSourcePropType } from "react-native";
 import profilePic from '../../assets/img/users/LizMachado.png';
+import { useNavigation } from '@react-navigation/native'; 
 import {
   RequestCardContainer,
   RequestCardText,
@@ -34,8 +35,10 @@ const RequestCardComponent: React.ElementType<RequestCardComponentProps> = ({
   endDate,
   finished
 }: RequestCardComponentProps) => {
+  const navigation=useNavigation();
+  const onPress = () => {navigation.navigate("RequestConfirmationFinalizar", {userName:userName, userLocation:userLocation, startDate:startDate, endDate:endDate, stars:stars})}
   return (
-    <RequestCardContainer>
+    <RequestCardContainer onPress={onPress}>
       <UserImage source={profilePic as ImageSourcePropType}/>
       <RequestCardTitleContainer>
         <RequestCardTitle>{userName}</RequestCardTitle>

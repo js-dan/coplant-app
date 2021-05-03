@@ -19,7 +19,7 @@ const Initial: React.FC = () => {
   const [password, setPassword] = useState('')
 
   function login() {
-    axios.post('http://192.168.0.3:3001/login', {
+    axios.post('http://192.168.5.207:3001/login', {
       email: email,
       password: password,
     })

@@ -18,13 +18,14 @@ import { LoginContext, loginInitialValue, loginReducer } from './src/helpers/log
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+const isUser = false;
 
 
 function RequestStack(){
   return(
     <Stack.Navigator>
       <Stack.Screen name="RequestList" component={RequestList} />
-      <Stack.Screen name="RequestConfirmation" component={RequestConfirmation} />
+      <Stack.Screen name="RequestConfirmation" component={RequestConfirmation}/>
       <Stack.Screen name="RequestConfirmationFinalizar" component={RequestConfirmationFinalizar} />
     </Stack.Navigator>
   );
@@ -57,7 +58,7 @@ function UserStack(){
   );
 }
 
-function tabBar() {
+function tabBar(user) {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -83,10 +84,10 @@ function tabBar() {
         inactiveTintColor: 'gray',
       }}
     >
-      <Tab.Screen name="Cuidadores" component={CaregiverStack} />
+      <Tab.Screen name="Cuidadores" component={isUser?CaregiverStack:RequestStack} />
       <Tab.Screen name="Histórico" component={HistoricStack} />
       <Tab.Screen name="Cupons" component={Promotion} />
-      <Tab.Screen name="Perfil" component={true ? UserStack : CaregiverProfile} />
+      <Tab.Screen name="Perfil" component={isUser ? UserStack : CaregiverProfile} />
     </Tab.Navigator>
   )
   }
@@ -94,7 +95,6 @@ function tabBar() {
 const App: React.FC = () => {
   const [authorization, authorizationDispatch] = useReducer(loginReducer, loginInitialValue);
   const [user, userDispatch] = useReducer(userReducer, userInitialValue);
-  const isUser = true
   const [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,

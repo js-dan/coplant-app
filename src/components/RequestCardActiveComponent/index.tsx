@@ -36,7 +36,7 @@ const RequestCardActiveComponent: React.ElementType<RequestCardActiveComponentPr
   finished
 }: RequestCardActiveComponentProps) => {
   const navigation = useNavigation()
-  const onPress = () => {navigation.navigate("RequestConfirmation")}
+  const onPress = () => {navigation.navigate("RequestConfirmation", {userName:userName, userLocation:userLocation, startDate:startDate, endDate:endDate, stars:stars})}
   return (
     <RequestCardActiveContainer onPress={onPress}>
       <UserImage source={profilePic as ImageSourcePropType}/>
