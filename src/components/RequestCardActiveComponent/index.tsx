@@ -25,6 +25,7 @@ export interface RequestCardActiveComponentProps {
   startDate?:Date;
   endDate?:Date
   finished?: string
+  description?:string
 }
 
 const RequestCardActiveComponent: React.ElementType<RequestCardActiveComponentProps> = ({
@@ -33,10 +34,12 @@ const RequestCardActiveComponent: React.ElementType<RequestCardActiveComponentPr
   userLocation,
   startDate,
   endDate,
-  finished
+  finished,
+  description,
+
 }: RequestCardActiveComponentProps) => {
   const navigation = useNavigation()
-  const onPress = () => {navigation.navigate("RequestConfirmation", {userName:userName, userLocation:userLocation, startDate:startDate, endDate:endDate, stars:stars})}
+  const onPress = () => {navigation.navigate("RequestConfirmation", {userName:userName, userLocation:userLocation, startDate:startDate, endDate:endDate, stars:stars, description:description})}
   return (
     <RequestCardActiveContainer onPress={onPress}>
       <UserImage source={profilePic as ImageSourcePropType}/>

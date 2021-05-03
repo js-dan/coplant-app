@@ -16,20 +16,20 @@ export interface ButtonPostPlantComponentProps {
   postPlant?:boolean;
   name?:string;
   qtd?:number;
-  onButtonPress: () => void;
+  
+
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
 // If this view is in the screen size, you can use default width by only passing size props
 
 const ButtonPostPlantComponent: React.ElementType<ButtonPostPlantComponentProps> = ({
-  buttonColor, textColor, buttonText, size, icon, width, stage, postPlant, name, qtd, onButtonPress
+  buttonColor, textColor, buttonText, size, icon, width, stage, postPlant, name, qtd
 }: ButtonPostPlantComponentProps) => {
   const navigation = useNavigation()
   const onPress = () => {
-    onButtonPress()
     
-    axios.post('http://192.168.0.3:3001/plant/create', {
+    axios.post('http://192.168.5.207:3001/plant/create', {
       name: name,
       imageURL: 'Flintstone',
       qtd: qtd

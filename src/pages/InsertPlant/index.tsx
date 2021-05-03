@@ -1,24 +1,21 @@
 import React from 'react';
 import InsertImageComponent from '../../components/InsertImageComponent';
-import { ButtonComponent, Screen, Divider } from "../../components";
+import { ButtonComponent, Screen, Divider, Back } from "../../components";
 import { Alert, Modal } from 'react-native';
 
+import {Background} from './style'
 
 export interface InsertPlantProps {
   visibility?: boolean 
-  setModalVisible: (any: boolean) => void;
+  setModalVisible?: (any: boolean) => void;
 }
 
 const InsertPlant: React.FC<InsertPlantProps> = ({visibility, setModalVisible}) => (
-  <Modal
-  animationType="slide"
-  transparent={true}
-  visible={visibility}
-  onRequestClose={() => {
-    Alert.alert("Modal has been closed.");
-  }}>
-    <InsertImageComponent setModalVisible={setModalVisible}/>
-  </Modal>
+  <Screen>
+    <Background>
+      <InsertImageComponent/>
+    </Background>
+  </Screen>
 
 );
 

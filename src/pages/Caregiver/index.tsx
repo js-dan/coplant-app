@@ -11,13 +11,9 @@ import YoutubePlayer from "react-native-youtube-iframe";
 
 const Caregiver: React.FC = () => {
 
-  const [modalVisible, setModalVisible] = useState(false);
-
   return(
     <Screen>
-      <Darkforeground isModalOpen={modalVisible} />
       <Background>
-        <ConfirmationComponent value={20} visibility={modalVisible} setModalVisible={setModalVisible}/>
         <PresentCardComponent
           userName="Caio Andrade"
           stars={3}
@@ -60,7 +56,7 @@ const Caregiver: React.FC = () => {
             buttonText="Contratar"
             size="large"
             textColor="white" 
-            onButtonPress={() => {setModalVisible(true); }}
+            stage="Confirmation"
           />
         </ButtonContainer>
       </Background>

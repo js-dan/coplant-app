@@ -14,7 +14,7 @@ const RequestConfirmation: React.FC = () => {
       userLocation={String(route.params.userLocation)}
       startDate={new Date(String(route.params.startDate))}
       endDate={new Date(String(route.params.endDate))}
-      plants={["coentro", "onze-horas"]}
+      plants={String(route.params.description)}
       before={true}
     />
   </Screen>

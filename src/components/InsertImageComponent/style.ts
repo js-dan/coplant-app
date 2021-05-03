@@ -8,13 +8,12 @@ type InsertImageComponentProps = {};
 export const InsertImageContainer = styled.View<InsertImageComponentProps>`
   background-color: ${theme.mainColors.background};
   width: 329px
-  height: 264px
+  height: 500px
   border-radius: 10px
   padding-left: 11px
   padding-top: 20px
-  position: absolute
-  top: 40%
-  left: 10%
+  top: 4%
+  left: 5%
   justify-content: center;
   align-items: center;
 `;

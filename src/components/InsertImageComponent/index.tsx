@@ -8,13 +8,11 @@ import {
 } from './style';
 
 export interface InsertImageComponentProps {
-  setModalVisible: (any: boolean) => void
 }
 
 // function
 
 const InsertImageComponent: React.ElementType<InsertImageComponentProps> = ({
-  setModalVisible
 }: InsertImageComponentProps) => {
   const [namePlant, setNamePlant] = React.useState('');
   const [qtdPlant, setQtdPlant] = React.useState('');
@@ -34,7 +32,6 @@ const InsertImageComponent: React.ElementType<InsertImageComponentProps> = ({
       postPlant={true}
       name={namePlant}
       qtd={Number(qtdPlant)}
-      onButtonPress={() => {setModalVisible(false)}}
     />
   </InsertImageContainer>
 );

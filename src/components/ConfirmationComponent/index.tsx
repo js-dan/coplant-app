@@ -5,35 +5,24 @@ import { Alert, ImageSourcePropType, Modal } from 'react-native';
 import ButtonPostOrderComponent from '../ButtonPostOrderComponent';
 
 import {
-  ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea,
+  ConfirmationContainer, DescriptionText, ConfirmationText, ConfirmationArea, ConfirmationTitle
 } from './style';
 
 export interface ConfirmationComponentProps {
   value:number;
-  visibility: boolean;
   description?:string;
-  setModalVisible: (any: boolean) => void;
 }
 
 const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
-  value, description, visibility, setModalVisible
+  value, description
 }: ConfirmationComponentProps) => {
   const [startDate, setStartDate] = React.useState(new Date());
   const [endDate, setEndDate] = React.useState(new Date());
-  let modalVisible: boolean = visibility
-
+  const [descriptionText, setdescriptionText] = React.useState('')
   return (
-    <Modal
-    animationType="slide"
-    transparent={true}
-    visible={modalVisible}
-    onRequestClose={() => {
-      Alert.alert("Modal has been closed.");
-      () => {modalVisible = !modalVisible}
-    }}>
-      <ConfirmationContainer>
-        <DescriptionText placeholder="Descrição..." />
-
+    <ConfirmationContainer>
+      <ConfirmationTitle>{"Digite aqui detalhes da transação"}</ConfirmationTitle>
+      <DescriptionText placeholder="Descrição..." onChangeText={setdescriptionText}/>
       <ConfirmationArea>
         <ConfirmationText>{`Valor: R$ ${value}`}</ConfirmationText>
         <ButtonPostOrderComponent
@@ -41,13 +30,14 @@ const ConfirmationComponent: React.ElementType<ConfirmationComponentProps> = ({
           buttonText="Confirmar"
           size="small"
           width="40%"
-          stage="Chat"
+          stage="Cuidadores"
+          description={descriptionText}
           postOrder={true}
-          onButtonPress={() => setModalVisible(false)}
+
         />
       </ConfirmationArea>
     </ConfirmationContainer>
-    </Modal>
+
 
   );
 };

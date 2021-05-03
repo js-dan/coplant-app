@@ -8,6 +8,7 @@ import axios from 'axios';
 var order_order_status:string;
 var order_start_date: string;
 var order_end_date: string;
+var order_description:string;
 var orders;
 const RequestList: React.FC = () =>
 {
@@ -15,6 +16,7 @@ const RequestList: React.FC = () =>
   const [start_date, setStartDate] = React.useState([]);
   const [end_date, setEndDate] = React.useState([]);
   const [numberOrders, setNumberOrders] = React.useState(0);
+  const [description, setDescription] = React.useState([])
   const [Passed, setPassed] = React.useState(false);
   (!Passed &&  axios.get('http://192.168.5.207:3001/order/list')
     .then(res => {
@@ -22,6 +24,7 @@ const RequestList: React.FC = () =>
        setOrderStatus([]);
        setStartDate([]);
        setEndDate([]);
+       setDescription([]);
        setNumberOrders(orders.length);
        if(numberOrders>0){
         setPassed(true)
@@ -31,10 +34,12 @@ const RequestList: React.FC = () =>
          order_order_status = orders[i].order_status;
          order_start_date = orders[i].start_date;
          order_end_date = orders[i].end_date;
+         order_description= orders[i].description
          console.log(order_start_date,order_end_date);
          setOrderStatus(os=>[...os, order_order_status]);
          setStartDate(sd=>[...sd, order_start_date]);
          setEndDate(ed=>[...ed, order_end_date]);
+         setDescription(d=>[...d, order_description]);
         }
      }))
  
@@ -53,6 +58,7 @@ return(
             userLocation={"Casa Amarela"}
             startDate={new Date(String(start_date[index]))}
             endDate={new Date(String(end_date[index]))}
+            description={String(description[index])}
             />)
           ))}
         </ScrollView>

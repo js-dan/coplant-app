@@ -17,7 +17,7 @@ const AddPlantButtonComponent: React.ElementType<AddPlantButtonComponentProps> =
   const navigation = useNavigation()
   const onPress = () => {
     setModalVisible(true)
-    //navigation.navigate("InsertPlant")
+    navigation.navigate("InsertPlant")
   };
   return (
     <AddPlantButtonContainer onPress={onPress}>

@@ -29,18 +29,9 @@ const User: React.FC = () =>
   const [isUpdated, setUpdated] = React.useState(false);
 
 
-  useEffect(() => {
-    if(modalVisible) {
-      getData()
-    }
-  })
-
-  const getData =()=>{
+  const onPress =()=>{
     
-    console.log("Pressionei")
-
-    if (!isUpdated) {
-      axios.get('http://192.168.0.3:3001/plant/')
+      axios.get('http://192.168.5.207:3001/plant/')
       .then(res => {
          persons = res.data;
         console.log(persons)
@@ -60,16 +51,13 @@ const User: React.FC = () =>
          }
          
        })
-    }
 
   }
   
 
 return (
   <Screen>
-    <Darkforeground isModalOpen={modalVisible} />
     <Background>
-      <InsertPlant visibility={modalVisible} setModalVisible={setModalVisible} />
       <PresentCardComponent
         userName={user.name}
         stars={user.score}
@@ -83,7 +71,7 @@ return (
       <SectionTitle>
         Minhas Plantas
       </SectionTitle>
-      <TouchableOpacity style={{ height: 150, marginTop: 0 }}>
+      <TouchableOpacity style={{ height: 150, marginTop: 0 }} onPress={onPress}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}> 
           {[...Array(numberPlants)].map((prop, index) => 
           (

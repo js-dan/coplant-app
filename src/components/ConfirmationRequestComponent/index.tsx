@@ -29,7 +29,7 @@ export interface ConfirmationRequestComponentProps {
   startDate?:Date;
   endDate?:Date
   finished?: string
-  plants?: Array<string>
+  plants?: string
   before?: Boolean
 }
 
@@ -62,8 +62,8 @@ const ConfirmationRequestComponent: React.ElementType<ConfirmationRequestCompone
         <ConfirmationRequestFieldText>{endDate.toLocaleDateString()}</ConfirmationRequestFieldText>
         <ConfirmationRequestText>{"Localização"}</ConfirmationRequestText>
         <ConfirmationRequestFieldText>{userLocation}</ConfirmationRequestFieldText>
-        <ConfirmationRequestText>{"Plantas:"}</ConfirmationRequestText>
-        <ConfirmationRequestFieldText>{plants.join(", ")}</ConfirmationRequestFieldText>
+        <ConfirmationRequestText>{"Descrição:"}</ConfirmationRequestText>
+        <ConfirmationRequestFieldText>{plants}</ConfirmationRequestFieldText>
       </InfoContainer>
       
       <ButtonContainer>

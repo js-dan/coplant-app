@@ -15,18 +15,17 @@ export interface ButtonPostOrderComponentPropsProps {
   stage?: string;
   postOrder?:boolean;
   description?:string;
-  onButtonPress: () => void;
 }
 
 // Propriety width works to personalize your button based on the view that's wrapping it.
 // If this view is in the screen size, you can use default width by only passing size props
 
 const ButtonPostOrderComponentProps: React.ElementType<ButtonPostOrderComponentPropsProps> = ({
-  buttonColor, textColor, buttonText, size, icon, width, stage, postOrder, onButtonPress, description
+  buttonColor, textColor, buttonText, size, icon, width, stage, postOrder, description
 }: ButtonPostOrderComponentPropsProps) => {
   const navigation = useNavigation()
   const onPress = () => {postOrder? 
-    axios.post('http://192.168.5.17:3001/order/create', {
+    axios.post('http://192.168.5.207:3001/order/create', {
     start_date: "11/11/11",
     end_date: "10/10/10",
 	  id_client: "1",
@@ -39,19 +38,11 @@ const ButtonPostOrderComponentProps: React.ElementType<ButtonPostOrderComponentP
       order_status:"opened"
     })
     .then(function (response) {
-      onButtonPress()
       navigation.navigate(stage);
       console.log(response);
     })
     .catch(function (error) {
       console.log(error);
-      Alert.alert(
-        "Erro de conexão",
-        "Não conseguimos fazer seu pedido",
-        [
-          { text: "Ok", onPress: () => onButtonPress() }
-        ]
-      );
        
     })
   :navigation.navigate(stage);}

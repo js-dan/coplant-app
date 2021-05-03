@@ -18,7 +18,7 @@ import { LoginContext, loginInitialValue, loginReducer } from './src/helpers/log
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-const isUser = false;
+const isUser = false
 
 
 function RequestStack(){

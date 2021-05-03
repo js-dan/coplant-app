@@ -7,10 +7,10 @@ type ConfirmationProps = {};
 export const ConfirmationContainer = styled.View<ConfirmationProps>`
   background-color: ${theme.mainColors.background};
   width: 329px
-  position: absolute;
-  top: 35%
-  left: 10%
-  height: 200px
+
+  top: 30%
+  left: 4%
+  height: 400px
   border-radius: 10px
   padding-left: 11px
 `;
@@ -35,6 +35,15 @@ export const ConfirmationText = styled.Text<ConfirmationProps>`
   color: #000000;
   font-size: ${theme.fonts.secondary.size};
   font-family: ${theme.fonts.secondary.family};
+  margin-bottom: 5px;
+  margin-top: 10px
+  margin-right: 15px
+`;
+
+export const ConfirmationTitle = styled.Text<ConfirmationProps>`
+  color: #000000;
+  font-size: ${theme.fonts.h1.size};
+  font-family: ${theme.fonts.h1.family};
   margin-bottom: 5px;
   margin-top: 10px
   margin-right: 15px

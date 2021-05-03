@@ -1,12 +1,16 @@
 import React from 'react';
 import ConfirmationComponent from '../../components/ConfirmationComponent';
 import { ButtonComponent, Screen, Divider } from '../../components';
+import {Background} from './style'
 
 const Confirmation: React.FC = () => (
   <Screen>
-    <ConfirmationComponent
-      value={122.5}
-    />
+    <Background>
+      <ConfirmationComponent
+        value={122.5}
+      />
+    </Background>
+    
   </Screen>
 );
 
