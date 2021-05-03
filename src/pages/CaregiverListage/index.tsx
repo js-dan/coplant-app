@@ -16,61 +16,68 @@ const CaregiverListage: React.FC = () => {
         skill1="Correr"
         skill2="Contar piada"
         skill3="Levar bala"
-        name="Pietro"
+        name="Pietra Almeida"
         rating={3}
         district="Recife"
+        userImage="liz"
       />
       <CaregiverCardComponent
         skill1="Correr"
         skill2="Contar piada"
         skill3="Levar bala"
-        name="Pietro"
+        name="Edson Castro"
         rating={4}
         district="Recife"
+        userImage="caio"
       />
       <CaregiverCardComponent
         skill1="Orquídeas"
         skill2="Rosas"
         skill3="Tulipas"
-        name="João Pereira"
+        name="Iberê Tenório"
         rating={5}
         district="Olinda"
-      />
-
-      <CaregiverCardComponent
-        skill1="Orquídeas"
-        skill2="Rosas"
-        skill3="Tulipas"
-        name="João Pereira"
-        rating={5}
-        district="Olinda"
+        userImage="ligia"
       />
 
       <CaregiverCardComponent
         skill1="Orquídeas"
         skill2="Rosas"
         skill3="Tulipas"
-        name="João Pereira"
+        name="Roberta Alves"
         rating={5}
         district="Olinda"
+        userImage="claudia"
       />
 
       <CaregiverCardComponent
         skill1="Orquídeas"
         skill2="Rosas"
         skill3="Tulipas"
-        name="João Pereira"
+        name="Mario Peixoto"
         rating={5}
         district="Olinda"
+        userImage="c"
       />
 
       <CaregiverCardComponent
         skill1="Orquídeas"
         skill2="Rosas"
         skill3="Tulipas"
-        name="João Pereira"
+        name="Leticia Albuquerque"
         rating={5}
         district="Olinda"
+        userImage="b"
+      />
+
+      <CaregiverCardComponent
+        skill1="Orquídeas"
+        skill2="Rosas"
+        skill3="Tulipas"
+        name="Joana Pereira"
+        rating={5}
+        district="Olinda"
+        userImage="a"
       />
       </ScrollView>
     </Screen>

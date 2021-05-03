@@ -19,15 +19,45 @@ export interface CaregiverCardProps {
   skill1?: string;
   skill2?: string;
   skill3?: string;
+  userImage: string
+}
+
+const images = {
+  liz: require("../../assets/img/users/LizAndrade.png"),
+  caio: require("../../assets/img/users/CaioAndrade.png"),
+  ligia: require("../../assets/img/users/ligia.png"),
+  claudia: require("../../assets/img/users/claudia.png"),
+  a: require("../../assets/img/users/a.png"),
+  b: require("../../assets/img/users/b.png"),
+  c: require("../../assets/img/users/c.png")
+}
+
+function getImage(name) {
+  switch (name) {
+    case "liz":
+      return images.liz
+    case "caio":
+      return images.caio
+    case "ligia":
+      return images.ligia
+    case "claudia":
+      return images.claudia
+    case "c":
+      return images.c
+    case "b":
+      return images.b
+    case "a":
+      return images.a
+  }
 }
 
 const CaregiverCard: React.ElementType<CaregiverCardProps> = (
-  {name, rating, district, skill1, skill2, skill3,}: CaregiverCardProps,) => {
+  {name, rating, district, skill1, skill2, skill3, userImage}: CaregiverCardProps,) => {
     const navigation = useNavigation()
 
     return (
       <Item onPress={() => {navigation.navigate("Cuidador", {name: name, rating: rating})}}>
-        <Icon source={profilePic as ImageSourcePropType} />
+        <Icon source={getImage(userImage) as ImageSourcePropType} />
         <ProfileInfos>
           <Name>
             {name}

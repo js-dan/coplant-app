@@ -29,6 +29,27 @@ export interface HistoricCardComponentProps {
   finished?: boolean;
   rated?: boolean;
   remainingDays?: number;
+  userImage: string
+}
+
+const images = {
+  liz: require("../../assets/img/users/LizAndrade.png"),
+  caio: require("../../assets/img/users/CaioAndrade.png"),
+  ligia: require("../../assets/img/users/ligia.png"),
+  claudia: require("../../assets/img/users/claudia.png")
+}
+
+function getImage(name) {
+  switch (name) {
+    case "liz":
+      return images.liz
+    case "caio":
+      return images.caio
+    case "ligia":
+      return images.ligia
+    case "claudia":
+      return images.claudia
+  }
 }
 
 const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
@@ -36,6 +57,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   endDate,
   finished,
   rated,
+  userImage,
   remainingDays
 }: HistoricCardComponentProps) => {
   const navigation = useNavigation()
@@ -43,7 +65,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   if (finished && rated) {
     return (
       <HistoricCardContainer>
-        <UserImage source={profilePic2 as ImageSourcePropType}/>
+        <UserImage source={getImage(userImage)as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitle>{userName}</HistoricCardTitle>
           <HistoricCardRating>
@@ -62,7 +84,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   if (finished && !rated) {
     return (
       <HistoricCardContainer onPress={() => {navigation.navigate("Avaliação")}}>
-        <UserImage source={profilePic2 as ImageSourcePropType}/>
+        <UserImage source={getImage(userImage) as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitle>{userName}</HistoricCardTitle>
           <HistoricCardRating>
@@ -77,7 +99,7 @@ const HistoricCardComponent: React.ElementType<HistoricCardComponentProps> = ({
   if (!finished) {
     return (
       <HistoricCardContainer onPress={() => {navigation.navigate("Chat")}}>
-        <UserImage source={profilePic2 as ImageSourcePropType}/>
+        <UserImage source={getImage(userImage) as ImageSourcePropType}/>
         <HistoricCardInfoContainer>
           <HistoricCardTitleContainer>
             <HistoricCardTitle>{userName}</HistoricCardTitle>
